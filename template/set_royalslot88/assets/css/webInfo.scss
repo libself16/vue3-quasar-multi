@@ -1,0 +1,13 @@
+.info-title {
+  @apply flex text-[1.875rem] font-bold mb-5;
+  color: rgb(170 30 116);
+  text-transform: uppercase;
+}
+
+.info-content {
+  @apply text-[.8125rem] text-white mb-[.8125rem] font-bold;
+}
+
+.content-title {
+  color: rgb(98 55 240);
+}

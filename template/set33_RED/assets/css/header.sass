@@ -1,0 +1,86 @@
+@import "src/common/css/_variable.sass"
+
+
+// icon 區塊
+.custom-icon
+  width: 30px
+  height: 30px
+  background-size: 80% !important
+  background-position: center center !important
+  background-repeat: no-repeat !important
+  +setFlex
+  &.wallet
+    background: url("app/template/set33_RED/assets/images/mobile/ico-wallet.png")
+  &.profile
+    background: url('app/template/set33_RED/assets/images/mobile/icon-profile.png')
+  &.history
+    background: url('app/template/set33_RED/assets/images/mobile/ico-history.png')
+  &.order
+    background: url('app/template/set33_RED/assets/images/mobile/icon-rebate.svg')
+    filter: brightness(0) invert(1)
+  &.promotion
+    background: url('app/template/set33_RED/assets/images/mobile/ico-promo.png')
+  &.vip
+    background: url('app/template/set33_RED/assets/images/mobile/icon-vip.png')
+  &.logout
+    background: url('app/template/set33_RED/assets/images/mobile/icon-logout.svg')
+  &.home
+    background: url('app/template/set33_RED/assets/images/mobile/icon-home-w.png')
+  &.poker
+    background: url('app/template/set33_RED/assets/images/mobile/icon-poker-w.png')
+  &.sports
+    background: url('app/template/set33_RED/assets/images/mobile/icon-sports-w.png')
+  &.slots
+    background: url('app/template/set33_RED/assets/images/mobile/icon-slots-w.png')
+  &.fishing
+    background: url('app/template/set33_RED/assets/images/mobile/icon-fishing-w.png')
+
+.header
+  width: 100vw
+  background: rgb(0, 121, 78)
+  background: -moz-linear-gradient(180deg, rgba(215, 47, 47, 1) 0%, rgba(143, 0, 0, 1) 100%)
+  background: -webkit-linear-gradient(180deg, rgba(215, 47, 47, 1) 0%, rgba(143, 0, 0, 1) 100%)
+  background: linear-gradient(180deg, rgba(215, 47, 47, 1) 0%, rgba(143, 0, 0, 1) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#D72F2F", endColorstr="#410000", GradientType=1)
+  background-size: cover
+  height: 130px
+  +pad-width
+    height: 14vw
+  .global-row
+    min-height:115px
+    +phone-width
+      min-height:100%
+
+
+.logo
+  width: 12vw
+  +phone-width
+    width: 26vw
+  +iphone-width
+    width: 30vw
+    margin-left: 2vw
+
+.toolbar
+  // flex: 1
+
+.bg-login
+  background: $btn-login
+  box-shadow: inset 0 0 5px #fff
+  color: #000 !important
+  width: 100px
+  +iphone-width
+    width: 16vw
+    font-size: 10px
+
+.bg-register
+  background: $btn-register
+  box-shadow: inset 0 0 5px #fff
+  color: #000 !important
+  width: 100px
+  +iphone-width
+    width: 22vw
+    font-size: 10px
+
+.toolbarBottom
+  font-size: 12px
+

@@ -1,0 +1,118 @@
+.global-row
+  width: 100%
+  max-width: $main-row-width
+
+.clock
+  color: #b3b3b3
+
+.mainWrapper
+  background: #030f1f url("app/template/set33/assets/images/bg.jpg") no-repeat center top
+  min-height: 32.1rem !important
+  padding-bottom: 1.875rem
+  padding-top: 2.125rem
+  +iphone-width
+    margin-top: unset
+    padding-top: 0
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+ -webkit-background-clip: text
+
+.reg-area
+  +setFlex
+  flex-direction: column
+  padding: 0 1vw 1vw 1vw
+  width: 100%
+  .con-info
+   +setFlex
+   flex-direction: row
+   width:102%
+   .con
+    color: #ffffff
+    background: rgb(0 0 0 / 50%)
+    margin: 10px 20px
+    padding: 20px
+    +iphone-width
+      width:100%
+      margin: 0
+      padding: 14px
+    +pad-width
+      width:100%
+      margin: 0
+      padding: 14px
+  .manred
+    color: red
+    float: right
+  .title
+    font-size: 24px
+    font-weight: 700
+    margin-left:15px
+    +iphone-width
+      font-size: 5.5vw
+  .input-area
+    +setFlex
+    margin-bottom: 20px
+    align-items: center
+    width: 100%
+    .field-input
+      margin-left: 20px
+      width: 100%
+      .form-style
+        padding: 5px 0px 5px 0px
+        width: 100%
+        box-shadow: none
+        border-radius: 35px
+      +iphone-width
+        margin-left: 0px
+      +pad-width
+         margin-left: 0px
+      label
+        width: 95%
+        +iphone-width
+          width: 100%
+        +pad-width
+          width: 100%
+    .input-text
+      margin-left: 7%
+      width: 580px
+      +iphone-width
+        width: 100%
+        margin: 0px
+        text-align: center
+      +pad-width
+        width: 100%
+        margin: 0px
+        text-align: center
+    +iphone-width
+      flex-direction: column
+      align-items: baseline
+      ::v-deep(.q-field--error)
+        margin-bottom: 1rem
+    +pad-width
+      flex-direction: column
+      align-items: baseline
+    label
+      font-size: 16px
+      width: 25%
+      +iphone-width
+        width: 100%
+        display: flex
+        gap: 10px
+      +pad-width
+        width: 100%
+        display: flex
+        gap: 10px
+  .btn-submit
+    background: linear-gradient(to bottom, rgb(169, 211, 32) 0%, rgb(56, 131, 18) 100%)
+    padding: 10px 30px
+    font-size: 18px
+    width: 250px
+    border-radius: 20px
+    +iphone-width
+      margin: 0px
+      width: 100%
+    +pad-width
+      margin: 0px
+      width: 100%

@@ -1,0 +1,17 @@
+@import "src/common/css/_variable.sass";
+@import "app/template/set_r024/assets/css/_variable.sass";
+
+.calendar-content {
+  ::v-deep(.q-date__header) {
+    background: $primary-01;
+    color: $neutral-01;
+  }
+
+  ::v-deep(.bg-primary) {
+    background: $primary-01 !important;
+  }
+
+  ::v-deep(.q-date__today) {
+    box-shadow: 0 0 0 .0625rem $primary-01;
+  }
+}

@@ -1,0 +1,171 @@
+@import "src/common/css/_variable.sass";
+@import "app/template/okbet_blackGold/assets/css/_variable.sass";
+
+.pc {
+  .game-item {
+    @apply relative rounded-xl;
+    width: 100%;
+    height: auto;
+    background-color: $primary-black-color;
+
+    .img-container {
+      @apply rounded-xl relative overflow-hidden;
+      width: 100%;
+      height: auto;
+
+      .game-img {
+        @apply w-full h-full relative overflow-hidden z-0;
+      }
+
+      .play-btn-container {
+        @apply absolute top-0 right-0 bottom-0 left-0 z-10 rounded-xl hidden;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+      }
+
+      .btn-favorite {
+        @apply absolute z-20 top-2 right-2 min-w-0 min-h-0;
+        background-color: $primary-white-color;
+
+        img {
+          @apply w-8 h-8;
+        }
+      }
+    }
+
+    .title-container {
+      @apply overflow-hidden text-ellipsis flex flex-col justify-start items-start;
+      font-family: "OpenSans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.575rem;
+      color: $primary-white-color;
+      padding: 0.75rem 0.625rem 0.5rem 0.625rem;
+
+      .game-name {
+        @apply w-full text-left overflow-hidden whitespace-nowrap text-ellipsis;
+        font-family: OpenSans;
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+
+      .game-favorites {
+        @apply flex items-center gap-2 mt-1 text-left;
+        color: #CECECE;
+        font-family: "Open Sans";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+
+        img {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+
+    &:hover {
+      .play-btn-container {
+        @apply flex justify-center items-center;
+      }
+    }
+  }
+}
+
+.h5 {
+  .game-item {
+    @apply relative rounded-3xl pb-4;
+    width: 100%;
+    height: 21rem;
+    font-family: Helvetica;
+    font-weight: 400;
+    color: $primary-white-color;
+    font-size: 1.75rem;
+    background-color: $primary-black-color;
+
+    @include iphone-width {
+      @apply rounded-xl;
+      width: 7rem;
+      height: 11rem;
+      font-size: 0.875rem;
+    }
+
+    .img-container {
+      @apply rounded-3xl relative overflow-hidden;
+      width: 100%;
+      height: 14.125rem;
+
+      @include iphone-width {
+        @apply rounded-xl;
+        width: auto;
+        height: 7.925rem;
+
+        img {
+          @apply rounded-xl;
+        }
+      }
+
+      .game-img {
+        width: 100%;
+        @apply relative overflow-hidden z-0 opacity-100;
+        transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .btn-favorite {
+        @apply absolute z-20 top-0 right-0 m-2 min-w-0 min-h-0;
+        background-color: $primary-white-color;
+
+        @include iphone-width {
+          @apply m-1;
+        }
+
+        img {
+          @apply w-12 h-12;
+
+          @include iphone-width {
+            @apply w-6 h-6;
+          }
+        }
+      }
+    }
+
+    .game-name {
+      @apply w-full h-8 mt-4 px-4 leading-8 whitespace-nowrap overflow-hidden text-ellipsis;
+      font-size: 1.75rem;
+
+      @include iphone-width {
+        @apply h-4 mt-2 px-2 leading-4;
+        font-size: 0.875rem;
+      }
+    }
+
+    .game-favorites {
+      @apply flex items-center w-full h-8 mt-4 px-4;
+
+      @include iphone-width {
+        @apply h-4 mt-2 px-2;
+      }
+
+      img {
+        @apply w-8 h-8;
+
+        @include iphone-width {
+          @apply w-4 h-4;
+        }
+      }
+
+      span {
+        @apply ml-2 leading-8;
+        font-family: Helvetica;
+        font-weight: 400;
+        font-size: 1.5rem;
+        color: #CECECE;
+
+        @include iphone-width {
+          @apply ml-1 leading-4;
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}

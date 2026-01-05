@@ -1,0 +1,487 @@
+@import "src/common/css/_variable.sass";
+@import "app/template/set_ed3/assets/css/_variable.scss";
+
+
+.calendar-content {
+  ::v-deep(.q-date__header) {
+    background: $gradient03;
+    color: $green10;
+  }
+
+  ::v-deep(.bg-primary) {
+    background: $green03 !important;
+  }
+
+  ::v-deep(.q-date__today) {
+    box-shadow: 0 0 0 .0625rem $pink-shadow-color;
+  }
+}
+
+.referral-rebate {
+  .referral-rebate-header {
+    @apply w-full bg-black/70;
+    @apply aspect-[1570/354] bg-cover bg-center;
+  }
+
+  .referral-rebate-content {
+    @apply w-[62.5rem] mt-[2rem] max-w-[82.5%] mx-auto;
+    @apply p-[2.5rem] text-white/70;
+    border-radius: 0.75rem;
+
+    @include phone-width() {
+      @apply w-full mt-0 max-w-[100%];
+      @apply p-[28px];
+      border-radius: 0;
+    }
+
+    .title {
+      @apply flex leading-none items-center;
+      @apply font-bold text-[1.5rem];
+      color: #fff;
+
+      span {
+        &:first-child {
+          color: $white01;
+        }
+
+        &:last-child {
+          color: $white01;
+        }
+      }
+    }
+
+    .currency-select {
+      @apply flex items-center gap-[0.75rem] mt-[4.25rem];
+
+      @include phone-width() {
+        @apply flex-row items-start mt-[3rem];
+      }
+
+      .currency-select-title {
+        @apply text-[1.25rem] font-semibold;
+        color: $white01;
+      }
+
+
+
+      :deep(.q-btn-dropdown) {
+        @apply text-black shadow-none;
+        border-radius: 2rem;
+        background: $white01;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    .currency-dropdown-item {
+
+    }
+
+    .summary-wrapper {
+      @apply flex gap-[2.5rem] mt-[1.25rem];
+
+      @include phone-width() {
+        @apply flex-col items-start gap-[.75rem];
+      }
+
+      .summary {
+        @apply flex-1 flex flex-col gap-[.625rem];
+
+        @include phone-width() {
+          @apply w-full;
+        }
+
+        .summary-content {
+          @apply py-[.75rem] px-6 text-center;
+          @apply flex flex-col justify-between items-center;
+
+          border-radius: 4rem;
+          background-color: $green12;
+
+          @include phone-width() {
+            @apply text-sm pt-[0.625rem] pb-[0.4375rem];
+            background-color: $green12;
+          }
+
+          .summary-title {
+            @apply font-bold mb-4;
+          }
+
+          .summary-value {
+            @apply font-['OpenSans'] font-extrabold text-[2rem] text-white;
+
+            @include phone-width() {
+              @apply text-sm;
+            }
+          }
+        }
+      }
+
+      .referral-code {
+        @apply flex-1;
+        @apply flex flex-col items-center justify-center;
+        background-color: $green12;
+        border: 1px solid $green12;
+        border-radius: 0.5rem;
+
+        @include phone-width() {
+          @apply w-full py-[20px];
+        }
+
+        .referral-code-title {
+          @apply font-semibold text-[1.25rem];
+          color: $white01;
+        }
+
+        .referral-code-value {
+          @apply mt-[1.25rem];
+          background-color: $white01;
+          color: $primary-color;
+          border: none;
+          border-radius: 0.3rem;
+
+          @include phone-width() {
+            @apply mt-[4px];
+          }
+
+          :deep(.q-field__inner) {
+            @apply px-4;
+            background-color: $white01;
+            border-radius: 0.3rem;
+            color: rgba(238, 9, 116, 0.2);
+          }
+
+          :deep(.q-field__native) {
+            color: $primary-color;
+            background-color: $white01;
+            font-weight: 600;
+          }
+
+          :deep(.q-field__append) {
+            background-color: $white01;
+            color: $green01;
+          }
+        }
+      }
+    }
+
+    .proxy-tabs {
+      margin-top: 3.75rem;
+      margin-bottom: 1.25rem;
+
+      :deep(.q-tabs__content) {
+        gap: 10px;
+
+        .q-tab {
+          min-height: 0;
+          padding: 0.5rem 2rem;
+          border-radius: 0.5rem;
+          background: $tab-default-color;
+          color: $white01;
+
+          .q-tab__content {
+            padding: 0;
+          }
+        }
+
+        .q-tab--active {
+          background: $gradient03;
+          color: $green01;
+
+          .q-tab__indicator {
+            @apply h-0;
+          }
+
+          .q-tab__label {
+            @apply font-bold leading-none;
+          }
+        }
+      }
+    }
+
+    .proxy-tab-panels {
+      color: $white01;
+      border-radius: 0.625rem;
+      background: $green13;
+
+      @include phone-width() {
+        background: $green13;
+      }
+    }
+
+    .events-detail-header {
+      @apply flex justify-end mb-4 mt-12;
+
+      .back-btn {
+        @apply px-6;
+        border: 1px solid;
+        color: $white01;
+        border-color: $white01 !important;
+        border-radius: 2rem;
+
+        :deep(.q-icon) {
+          color: $white01 !important;
+        }
+      }
+    }
+  }
+}
+
+.table-content {
+  &.events-detail {
+    @apply p-4;
+    border-radius: 0.625rem;
+    background-color: $green13;
+
+    @include phone-width() {
+      background-color: $green13;
+    }
+  }
+
+  .search-content-title {
+    @apply font-bold text-[1.5rem] mb-[1.5rem];
+    color: $white01;
+  }
+
+  .member-number {
+    @apply flex items-center gap-[1.5rem];
+
+    @include phone-width() {
+      @apply flex-col items-start gap-[.5rem];
+    }
+
+    .label {
+      @apply text-[1rem];
+      color: $white01;
+    }
+
+    :deep(.q-field__inner) {
+      @apply px-4;
+      background: $white01;
+      border-radius: 0.3rem;
+      color: rgba(28, 30, 34, 0.2);
+    }
+
+    :deep(.q-field__control) {
+      border-radius: 0.5rem;
+    }
+  }
+
+  .actions {
+    @apply flex items-center gap-[1.25rem] mt-[1.5rem];
+
+    @include phone-width() {
+      @apply flex-col items-start mt-[1rem] w-full;
+    }
+
+    .currency-action {
+      @include phone-width() {
+        @apply w-full;
+      }
+
+      .currency-select {
+        @apply flex items-center gap-[1.25rem] mt-0;
+
+        @include phone-width() {
+          @apply flex-col items-start gap-[.5rem];
+        }
+
+        .currency-select-title {
+          @apply text-[1rem] font-normal;
+        }
+
+        :deep(.q-btn-dropdown) {
+          @apply text-black;
+          border-radius: 2rem;
+          background: $white01;
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .gametype-action {
+      @include phone-width() {
+        @apply w-full;
+      }
+
+      .gametype-select {
+        @apply flex items-center gap-[1.25rem];
+
+        @include phone-width() {
+          @apply flex-col items-start gap-[.5rem];
+        }
+
+        .gametype-select-title {
+          @apply text-[1rem] font-normal;
+          color: $white01;
+        }
+
+        :deep(.q-btn-dropdown) {
+          @apply text-black shadow-none;
+          border-radius: 2rem;
+          background: $white01;
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .date-action {
+      @include phone-width() {
+        @apply w-full;
+      }
+
+      .date-select {
+        @apply flex items-center gap-[1.25rem];
+
+        @include phone-width() {
+          @apply flex-col items-start gap-[.5rem];
+        }
+
+        .date-select-title {
+          @apply text-[1rem] font-normal;
+          color: $white01;
+        }
+
+        :deep(.q-btn-dropdown) {
+          @apply text-black shadow-none;
+          border-radius: 2rem;
+          background: $white01;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        :deep(.q-field__control) {
+          border-radius: 10rem;
+        }
+      }
+    }
+
+    .search-btn {
+      @apply leading-none;
+      background: $gradient03;
+      padding: 0.7rem 2rem;
+      border-radius: 0.5rem;
+      min-height: 0;
+      color: $green01;
+      @include phone-width() {
+        @apply w-full;
+      }
+    }
+  }
+
+  .tables {
+    @apply mt-[40px];
+
+    .no-data {
+      @apply text-center text-sm font-bold py-12;
+      color: $white01;
+      background: $green13;
+      border-radius: 1rem;
+    }
+
+    .q-table__card {
+      @apply bg-transparent shadow-none;
+      color: $white01;
+
+      :deep(th) {
+        @apply text-[18px] font-bold text-center;
+        @apply border-b;
+        border-color: $white01;
+      }
+
+      :deep(tr) {
+        @apply border-b;
+
+        &:hover {
+          background: #FFFFFF66;
+          border-radius: 1.5rem;
+        }
+      }
+
+      :deep(td) {
+        @apply text-center;
+        @apply border-b;
+        border-color: #DDDDDF;
+      }
+    }
+
+    .r-pagination {
+      @apply justify-end mt-[2rem];
+
+      :deep(.q-pagination__middle) {
+        gap: 2px;
+
+        .q-btn {
+          background-color:transparent;
+          color: $white01;
+        }
+      }
+
+      :deep(.q-btn) {
+        border-radius: 0.35rem;
+      }
+
+      :deep(.q-icon) {
+        color: $white01;
+      }
+
+      :deep(.q-btn--standard) {
+        background-color: transparent !important;
+        color: $text01 !important;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    :deep(.q-table__grid-content) {
+      @apply flex flex-col gap-4;
+
+      .q-card {
+        @apply flex flex-col gap-[0.25rem];
+        @apply p-4;
+        border-radius: 0.5rem;
+        color: $white01;
+        background-color: $game-item-bg-color;
+
+        .row-item {
+          @apply flex justify-between text-sm font-bold;
+          @apply border-b border-white pb-2;
+
+          &:last-child {
+            @apply border-b-0 pb-0;
+          }
+        }
+
+        .detail-btn {
+          @apply text-white;
+          @apply w-full mt-2;
+          background: $gradient03;
+          border-radius: 0.5rem;
+        }
+      }
+    }
+  }
+
+
+  .q-menu {
+
+  }
+
+  .currency-dropdown-list {
+    background-color: $white01!important;
+  }
+
+
+}

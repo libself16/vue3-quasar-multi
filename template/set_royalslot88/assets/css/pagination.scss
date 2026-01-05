@@ -1,0 +1,48 @@
+.q-pagination {
+  :deep(.q-pagination__middle) {
+    .text-pagination {
+      margin: 0;
+      font-size: 1rem;
+      background: transparent !important;
+
+      &::before {
+        border-color: #6237f0;
+      }
+    }
+
+    .bg-pagination-active {
+      margin: 0;
+      font-size: 1rem;
+      box-shadow: inset 0px -2px 7px #2b061d, inset 0px 1px 3px 1px #ffb6e3;
+      text-shadow: 2px 2px 7px #000;
+      background: #aa1e74;
+
+      &::before {
+        border: 1px solid #6237f0;
+      }
+    }
+  }
+
+  :deep(.q-btn) {
+    margin: 0;
+    box-shadow: inset 0px -2px 7px #2b061d, inset 0px 1px 3px 1px #ffb6e3;
+    text-shadow: 2px 2px 7px #000;
+    opacity: 1 !important;
+    font-size: 0.4375rem;
+    width: 2.125rem;
+    height: 2.375rem;
+
+    &::before {
+      border: 1px solid #6237f0;
+    }
+
+    &:hover {
+      background: #aa1e74 !important;
+    }
+
+    .q-focus-helper {
+      opacity: 0 !important;
+      background-color: transparent !important;
+    }
+  }
+}

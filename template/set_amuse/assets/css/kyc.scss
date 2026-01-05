@@ -1,0 +1,214 @@
+/** 優先調整 variable */
+// .kyc-card
+$kyc-card-text-color: #fff;
+$kyc-card-color: #212121;
+$kyc-card-color-on-dragenter: #555555;
+$kyc-card-gap: 1.25rem;
+$kyc-card-border-radius: 1rem;
+
+// .kyc-card body
+$kyc-card-body-gap: 1rem;
+$kyc-card-body-color: #171717;
+$kyc-card-body-border: 2px dashed #505050;
+$kyc-card-body-border-radius: calc($kyc-card-border-radius / 2);
+
+// .dropzone
+$dropzone-desc-color: #EDEDED;
+$dropzone-limit-color: #727272;
+$dropzone-btn-color: #000;
+$dropzone-btn-text-color: #fff;
+$dropzone-btn-border: #ED772E;
+$dropzone-btn-border-radius: .5rem;
+
+// .uploaded
+$uploaded-filename-color: #fff;
+$uploaded-date-color: #727272;
+
+// .kyc-status
+$kyc-status-success-color: #21BE85;
+$kyc-status-failed-color: #F55C5C;
+$kyc-status-pending-color: #FFBB6B;
+
+.kyc-form-container {
+    @apply flex flex-col justify-end;
+
+    .kyc-inner-form {
+        @apply grid grid-cols-2;
+        gap: $kyc-card-gap;
+
+        .kyc-card {
+            @apply relative;
+            @apply flex flex-col;
+            gap: $kyc-card-body-gap;
+            padding: $kyc-card-gap;
+            color: $kyc-card-text-color;
+            background: $kyc-card-color;
+            border-radius: $kyc-card-border-radius;
+
+            .header {
+                @apply font-semibold text-[1rem];
+            }
+
+            .body {
+                @apply relative overflow-hidden flex-1;
+                @apply flex items-center justify-center;
+                @apply p-6;
+
+                background-color: $kyc-card-body-color;
+                border: $kyc-card-body-border;
+                border-radius: $kyc-card-body-border-radius;
+
+                .kyc-placeholder {
+                    @apply w-72 min-h-48 md:min-h-56;
+                    @apply flex flex-col items-center justify-center;
+                    @apply gap-2 pointer-events-none select-none;
+
+                    .dropzone-icon {
+                        @apply w-12 h-10 mb-5 pointer-events-none;
+                    }
+
+                    .dropzone-desc {
+                        @apply text-center text-sm pointer-events-none;
+                        @apply max-w-full break-all;
+                        color: $dropzone-desc-color;
+                    }
+
+                    .dropzone-btn {
+                        @apply w-full pointer-events-auto;
+                        border: 1px solid $dropzone-btn-border;
+                        border-radius: $dropzone-btn-border-radius;
+                        color: $dropzone-btn-text-color;
+                        background-color: $dropzone-btn-color;
+
+                    }
+
+                    .dropzone-limit {
+                        @apply text-xs pointer-events-none;
+                        color: $dropzone-limit-color;
+                    }
+                }
+
+                .uploaded {
+                    @apply flex flex-col gap-4;
+
+                    .preview {
+                        @apply rounded-lg;
+                    }
+
+                    .kyc-status {
+                        @apply flex flex-col items-center justify-center;
+                        @apply gap-1;
+                        background-color: $kyc-card-color;
+                        border-radius: $kyc-card-body-border-radius;
+
+                        .kyc-status-img {
+                            @apply w-20 h-20;
+                        }
+
+                        p {
+                            @apply text-xs;
+                        }
+
+                        &.success {
+                            color: $kyc-status-success-color;
+                        }
+
+                        &.failed {
+                            color: $kyc-status-failed-color;
+                        }
+
+                        &.pending {
+                            color: $kyc-status-pending-color;
+                        }
+                    }
+
+                    .info {
+                        @apply flex justify-between w-72;
+
+                        .stats {
+                            @apply max-w-[85%];
+
+                            .filename {
+                                @apply text-sm;
+                                @apply truncate;
+                                color: $uploaded-filename-color;
+                            }
+
+                            .upload-date {
+                                @apply text-xs;
+                                color: $uploaded-date-color;
+                            }
+                        }
+
+                        .kyc-operation {
+                            @apply p-0;
+
+                            .kyc-operation-img {
+                                @apply w-8 h-8;
+                            }
+                        }
+                    }
+                }
+
+                .dropzone {
+                    @apply absolute w-full h-full left-0 top-0;
+                    @apply pointer-events-none;
+
+                    &.dragging {
+                        @apply pointer-events-auto;
+                    }
+                }
+
+                &.drag-enter {
+                    background-color: $kyc-card-color-on-dragenter;
+                }
+            }
+        }
+    }
+
+    .kyc-send {
+        @apply pointer-events-auto mt-8 px-24;
+        @apply self-end;
+        border: 1px solid $dropzone-btn-border;
+        border-radius: $dropzone-btn-border-radius;
+        color: $dropzone-btn-text-color;
+        background-color: $dropzone-btn-color;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .kyc-form-container {
+
+        .kyc-inner-form {
+            @apply grid-cols-1;
+
+            .kyc-card {
+                .body {
+                    @apply p-4;
+
+                    .kyc-placeholder {
+                        @apply w-full;
+
+                        .dropzone-limit {
+                            @apply text-center;
+                        }
+                    }
+
+                    .uploaded {
+                        @apply w-full;
+
+                        .info {
+                            @apply w-auto;
+                        }
+                    }
+                }
+            }
+        }
+
+        .kyc-send {
+            @apply w-full;
+        }
+    }
+
+}

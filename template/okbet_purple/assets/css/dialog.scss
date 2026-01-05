@@ -1,0 +1,54 @@
+@import "app/template/okbet_purple/assets/css/_variable.sass";
+
+.dialog-title-wrapper {
+  @apply flex items-center justify-center text-[1.25rem] relative;
+
+  .dialog-title-text {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .dialog-title-icon {
+    @apply absolute right-0;
+  }
+
+  .close-icon {
+    @apply w-[1.8125rem] h-[1.8125rem];
+  }
+}
+
+.btn-wrapper {
+  @apply grid grid-cols-3 gap-2;
+
+  .quick-btn {
+    @apply flex items-center justify-center rounded-[.5625rem] h-[2.875rem];
+    background: $border-dark-secondary;
+
+    &-active {
+      border: 1px solid $bg-secondary;
+    }
+  }
+}
+
+.amount-wrapper {
+  @apply mt-5;
+
+  :deep(.q-field__control) {
+    border-bottom: 2px solid $text-light-secondary;
+    background: transparent;
+  }
+
+  :deep(.q-field__native) {
+    color: $text-light-secondary !important;
+  }
+}
+
+.action-btns {
+  @apply my-2;
+
+  .submit-btn {
+    @apply w-full h-[3.4375rem] text-base font-semibold;
+    border-radius: 0.625rem;
+    color: $text-light-secondary;
+    background: $bg-secondary;
+  }
+}

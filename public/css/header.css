@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;@charset "utf-8";400;600;700;800&display=swap');
+html {
+    font-family:"Nunito", sans-serif;
+    font-size: 12px
+}
+.header-balance--loading .loading-icon {
+    animation-name: spin;
+    animation-duration: 400ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear
+}
+@keyframes spin {
+from {
+transform:rotate(0deg)
+}
+to {
+transform:rotate(360deg)
+}
+}
+.header-balance--hidden .header-balance__hidden-hide, .header-balance__hidden-show {
+    display: none
+}
+.header-balance--hidden .header-balance__hidden-show {
+    display: initial
+}
+.header-balance__wallet__total, .header-balance__wallet__na, .header-balance__wallet__maintenance {
+    display: none
+}
+.header-balance__wallet[data-outcome="success"] .header-balance__wallet__total {
+    display: initial
+}
+.header-balance__wallet[data-outcome="na"] .header-balance__wallet__na {
+    display: initial
+}
+.header-balance__wallet[data-outcome="maintenance"] .header-balance__wallet__maintenance {
+    display: initial
+}
+.header-logo img {
+    max-height: 100px;
+}
+.header-balance .arrow-icon {
+    position: initial !important;
+    margin-left: 8px;
+    width: 8px;
+    height: 5px;
+    transition: transform 0.3s ease
+}
+.header-balance .loading-icon {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    -webkit-mask: url(../_/static/images/icons/icon-refresh.svg);
+    background-color: var(--neutral-2);
+    margin: 0 4px
+}
+
+@media (min-width: 767.5px) {
+.menu-container {
+    justify-content: center
+}
+}
+.header-container {
+    padding: 0 8px !important
+}
+.new-sticky {
+    position: fixed !important;
+    width: 100%;
+    z-index: 199
+}
+

@@ -1,0 +1,18 @@
+::v-deep(.q-expansion-item) {
+  background: none;
+  margin-bottom: 15px;
+  padding: 0px;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+::v-deep(.q-expansion-item) .q-item {
+  padding: 1rem;
+}
+::v-deep(.q-expansion-item) .q-card {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+::v-deep(.q-expansion-item) .q-card__section {
+  padding: 15px;
+  display: flex;
+  justify-content: flex-start;
+} /*# sourceMappingURL=menu.css.map */

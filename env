@@ -1,0 +1,11 @@
+# .env
+VITE_APP_TITLE = 'Quasar Core'
+
+SSR=false
+
+VITE_APP_BASE_API = ''
+
+VITE_APP_STATIC_RESOURCE_URL = ''
+
+#環境變數
+VITE_PROJECT_ENV = 'development'

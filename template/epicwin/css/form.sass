@@ -1,0 +1,72 @@
+@import 'src/common/css/_variable.sass'
+
+.form-control
+  display: block
+  width: 100%
+  font-size: 1rem
+  font-weight: 400
+  line-height: 2
+  background-clip: padding-box
+  border: 1px solid #ced4da
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  border-radius: .25rem
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+  border-color: $member-form-border-color
+  background-color: #000000
+  color: #ad6abc
+  padding-left: .8rem
+  margin-top: .8rem
+  color: #fff
+  &:focus
+    outline: none
+    border-color: #ffffff
+    box-shadow: none
+    color: #ffffff
+  ::v-deep(.q-field__control)
+    height: 3.5rem
+    .q-field__native
+      color: #fff
+
+.select-row
+  @apply pt-5 px-5 mb-3 flex flex-wrap overflow-auto
+  .select-item
+    @apply py-3 px-10 my-1 cursor-pointer relative text-center flex items-center text-base
+    .checked-selected
+      display: none
+    &.active
+      border: 1px solid $member-payment-type-border-color
+      .checked-selected
+        @apply block absolute top-0 right-0 w-5
+        background-color: $member-payment-type-border-color
+    &.currency
+      @apply w-1/6
+      +pc-width
+        @apply w-1/5
+      +pad-width
+        @apply w-1/4
+      +phone-width
+        @apply w-1/3
+      +iphone-width
+        @apply w-1/2
+    &.payment
+      @apply w-1/3
+      +pc-width
+        @apply w-1/2
+      +phone-width
+        @apply w-full
+
+.card
+  @apply mt-4
+  width: 48%
+  border: 1px solid $member-bank-card-header-bg
+  +phone-width
+    @apply mt-6 w-full
+  .card-header
+    @apply py-4 px-5
+    background-color: $member-bank-card-header-bg
+  .card-row
+    @apply py-4 px-6
+    .icon
+      @apply mr-5

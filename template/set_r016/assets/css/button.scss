@@ -1,0 +1,6 @@
+.hide-hover {
+  :deep(.q-focus-helper) {
+    opacity: 0 !important;
+    background-color: transparent !important;
+  }
+}

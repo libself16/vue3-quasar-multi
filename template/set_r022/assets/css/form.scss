@@ -1,0 +1,145 @@
+@import "src/common/css/_variable.sass";
+@import "app/template/set_r022/assets/css/_variable.scss";
+
+.form-input {
+  margin-top: 3px;
+  height: 3.75rem;
+  position: relative;
+  align-items: center;
+
+  @include pad-large-width {
+    width: 100%;
+    margin-bottom: .5rem;
+    padding: 1rem .75rem 0.5rem;
+    position: relative;
+
+    &.border-bottom {
+      &::before {
+        content: "";
+        display: block;
+        width: calc(100% - 3.5rem);
+        height: 1px;
+        background: var(--neutral-03);
+        position: absolute;
+        bottom: -2px;
+        right: .75rem;
+      }
+
+    }
+  }
+
+  &.q-field--error {
+    @include pad-large-width {
+      padding-bottom: 1rem;
+      height: 4.375rem;
+    }
+
+    :deep(.q-field__inner) {
+      .divider-error {
+        width: 2px;
+        height: 32px;
+        background: var(--emotional-danger-02);
+      }
+
+      .q-field__append {
+        .q-icon {
+          display: none;
+
+          &.eye-icon {
+            display: block;
+          }
+        }
+      }
+
+      .q-field__bottom {
+        color: var(--emotional-danger-02);
+
+        @include pad-large-width {
+          font-size: .8125rem;
+          line-height: 1.0625rem;
+          margin: .25rem 0;
+          padding: 0.5rem 0.2rem;
+        }
+      }
+    }
+  }
+
+  :deep(.q-field__inner) {
+    border: 1px solid var(--neutral-03);
+    border-radius: 0.375rem;
+
+    @include pad-large-width {
+      border: none;
+      border-radius: unset;
+    }
+
+    .q-field__prepend {
+      padding: 0;
+
+      .form-icon {
+        cursor: auto;
+        margin: 0.75rem;
+
+        @include pad-large-width {
+          margin: unset;
+        }
+
+        img {
+          width: 1rem;
+          height: 1rem;
+
+          @include pad-large-width {
+            width: 1.625rem;
+            height: 1.625rem;
+          }
+        }
+      }
+
+      .divider {
+        width: 1px;
+        height: 1.25rem;
+        background: var(--neutral-03);
+
+        @include pad-large-width {
+          display: none;
+        }
+      }
+    }
+
+    .q-field__append {
+      .eye-icon {
+        font-size: .9375rem;
+        margin: .375rem .75rem;
+        color: var(--primary-02);
+        cursor: pointer;
+
+        @include pad-large-width {
+          font-size: 1.1rem;
+          margin: 0 .5rem 0 .25rem;
+        }
+      }
+    }
+
+    .q-field__control-container {
+      width: 100%;
+      margin-left: 12px;
+      border: none;
+      font-size: 14px;
+      font-weight: 400;
+      background: transparent;
+      overflow-wrap: break-word;
+      font-family: Noto Sans TC;
+
+
+      @include pad-large-width {
+        margin-left: .75rem;
+        font-size: .9647rem;
+
+      }
+
+      .q-field__native {
+        color: var(--neutral-09);
+      }
+    }
+  }
+}

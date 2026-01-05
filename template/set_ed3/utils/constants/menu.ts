@@ -1,0 +1,31 @@
+export const RouterNameMapping: Record<string, string> = {
+  homepage: "Home",
+  promotion: "promotion",
+  app_download: "download",
+  website_information: "webInformation",
+  news: "News",
+  // 登入狀態時，不允許進入以下頁面, 由於此判斷會影響active 狀態,  所以當format 不到就undefined 沒關係
+  // register: "home",
+  // forget_password: "home",
+  // 登入狀態時，允許進入以下頁面
+  basic_information: "memberProfile",
+  withdrawal_setting: "memberBank",
+  change_password: "memberChangePassword",
+  site_message: "memberInbox",
+  history: "history",
+  deposit: "MemberDeposit",
+  withdrawal: "MemberWithdrawal",
+  processing_order: "orders",
+  kyc: "MemberKyc",
+  member_level: "vip",
+  vip: "vip",
+  saba_page: "SabaPage",
+  strategy_detail: "Proxy",
+  agent_collaboration_strategy: "Collaboration",
+  referral_rebate: "ReferralRebate",
+  // okbet 版型尚無以下頁面，統一跳回首頁, 等有這些頁面時再加入
+  // announcement: "home",
+  // vip: "home",
+  // affiliate_detail: "home",
+  // receive_bonus: "home"
+}

@@ -1,0 +1,27 @@
+@import "src/common/css/_variable.sass";
+
+@mixin useProfileIcon {
+  background-image: url("app/template/set_r022/assets/images/member/profile-icon.png");
+  background-size: 689.231px;
+  background-position-y: -9.84615px;
+  background-repeat: no-repeat;
+  margin: 0px;
+  display: inline-block;
+
+  @include pad-large-width {
+    background-size: 385.897px;
+    background-position-y: -5.51282px;
+  }
+}
+
+@mixin useFundSprite {
+  background-image: url("app/template/set_r022/assets/images/member/funds-sprite.webp");
+  background-size: 6635.32px;
+  background-position-y: -9.84615px;
+  background-repeat: no-repeat;
+
+  @include pad-large-width {
+    background-size: 3715.09px;
+    background-position-y: -5.51282px;
+  }
+}

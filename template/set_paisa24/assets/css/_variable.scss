@@ -1,0 +1,41 @@
+// color
+$primary-color: #1a1a1a;
+$secondary-color: #1f1f1f;
+$body-color: $secondary-color;
+$primary-color-light: #292929;
+$select-standout-color: #212529;
+$header-bg-color: $primary-color;
+$header-text-gray: #676767;
+$navigation-active-bg: linear-gradient(to right, #ae7b2b 0%, #faf167 100%);
+$pink-color: #a57412;
+$pink-shadow-color: $pink-color;
+$bg-footer: transparent;
+$bg-footer-text: #400001;
+$menu-text-color: #cba354;
+$game-label-title-color: $menu-text-color;
+$home-title-color: #fff;
+$game-item-bg-color: #292929;
+$game-item-title-color: #fff;
+$input-bg-color: $primary-color-light;
+$input-placeholder-color: #676767;
+$input-text-color: #fff;
+$primary-btn-bg-color: $menu-text-color;
+
+// gradient
+$pink-button-gradient: linear-gradient(to right, #ae7b2b 0%, #faf167 100%);
+
+$wallet-checked-color: #97c618;
+
+// modal
+$modal-bg-light: #1c1c1c;
+$modal-bg-color: #1c1c1c;
+$modal-header-bg-color: #cba354;
+$modal-heder-text-color: #fff;
+$modal-text-color: #fff;
+
+$white-color: #fff;
+$black-color: #000;
+$text-gray: #666;
+$danger-color: #FF0000;
+
+$history-search-wrapper-bg: $primary-color-light;

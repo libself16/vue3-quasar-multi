@@ -1,0 +1,176 @@
+@import "src/common/css/_variable.sass";
+@import "app/template/set_r017/assets/css/_variable.scss";
+
+.pc {
+  .form-input {
+    margin-top: 3px;
+    height: 3.75rem;
+    position: relative;
+    align-items: center;
+
+    &.q-field--error {
+      :deep(.q-field__inner) {
+        .divider-error {
+          width: 2px;
+          height: 32px;
+          background: $primany02;
+        }
+
+        .q-field__append {
+          .q-icon {
+            display: none;
+
+            &.eye-icon {
+              display: block;
+            }
+          }
+        }
+
+        .q-field__bottom {
+          color: $primany02;
+        }
+      }
+    }
+
+    :deep(.q-field__inner) {
+      border: 1px solid $primany01;
+      border-radius: 0.375rem;
+
+      .q-field__prepend {
+        padding: 0;
+
+        .form-icon {
+          cursor: auto;
+          margin: 0.75rem;
+
+          img {
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+
+        .divider {
+          width: 1px;
+          height: 1.25rem;
+          background: $primany01;
+        }
+      }
+
+      .q-field__append {
+        .eye-icon {
+          font-size: .9375rem;
+          margin: .375rem .75rem;
+          color: $primany01;
+          cursor: pointer;
+        }
+      }
+
+      .q-field__control-container {
+        width: 100%;
+        border: none;
+        font-size: 14px;
+        font-weight: 400;
+        background: transparent;
+        overflow-wrap: break-word;
+      }
+    }
+  }
+}
+
+.h5 {
+  .form-input {
+    width: 100%;
+    margin-bottom: .5rem;
+    padding: 1rem .75rem 0.5rem;
+    position: relative;
+
+    &.border-bottom {
+      &::before {
+        content: "";
+        display: block;
+        width: calc(100% - 3.5rem);
+        height: 1px;
+        background: $primany01;
+        position: absolute;
+        bottom: -2px;
+        right: .75rem;
+      }
+
+    }
+
+    &.q-field--error {
+      padding-bottom: 1rem;
+      height: 4.375rem;
+
+      :deep(.q-field__inner) {
+
+        .q-field__append {
+          .q-icon {
+            display: none;
+
+            &.eye-icon {
+              display: block;
+            }
+          }
+        }
+
+        .q-field__bottom {
+          color: $primany02;
+          font-size: .8125rem;
+          line-height: 1.0625rem;
+          margin: .25rem 0;
+          padding: 0.5rem 0.2rem;
+        }
+      }
+    }
+
+    :deep(.q-field__inner) {
+      .q-field__prepend {
+        padding: 0;
+
+        .form-icon {
+          cursor: auto;
+
+          img {
+            width: 1.625rem;
+            height: 1.625rem;
+          }
+        }
+      }
+
+      .q-field__append {
+        position: absolute;
+        right: 0.75rem;
+
+        .eye-icon {
+          font-size: 1.1rem;
+          margin: 0 .5rem 0 .25rem;
+          color: $primany02;
+          cursor: pointer;
+        }
+      }
+
+      .q-field__control-container {
+        width: 100%;
+        border: none;
+        font-size: .9647rem;
+        font-weight: 400;
+        background: transparent;
+        overflow-wrap: break-word;
+      }
+    }
+  }
+}
+
+.form-input {
+  ::v-deep(.q-field__native) {
+
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 30px var(--secondary-10) inset !important;
+      -webkit-text-fill-color: var(--neutral-01) !important;
+      box-shadow: 0 0 0 30px var(--secondary-10) inset !important;
+      color: var(--neutral-01) !important;
+      border-radius: 0 !important;
+    }
+  }
+}

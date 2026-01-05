@@ -1,0 +1,64 @@
+@import "app/template/okbet_purple/assets/css/_variable.sass";
+
+.hide-hover {
+  :deep(.q-focus-helper) {
+    opacity: 0 !important;
+    background-color: transparent !important;
+  }
+}
+
+:deep(.bg-submit) {
+  background: linear-gradient(90deg, rgb(113, 173, 255) 0%, rgb(25, 113, 253) 100%) !important;
+}
+
+.btn-play {
+  @apply text-white capitalize z-20;
+  padding: 0.5rem 1.875rem;
+  background: $bg-secondary;
+  border-radius: 2.375rem;
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 510;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+
+  :deep(.q-btn__content) {
+    @apply whitespace-nowrap;
+  }
+}
+
+@mixin btn-common {
+  position: relative;
+  font-style: normal;
+  min-width: 5.375rem;
+  color: rgb(68, 78, 87) !important;
+  background-color: rgb(231, 234, 241) !important;
+  height: 1.875rem;
+  min-height: 1.875rem;
+  text-transform: capitalize;
+}
+
+@mixin btn-common-purple {
+  @apply relative min-h-[1.875rem] min-w-[5.375rem];
+  font-style: normal;
+  color: $text-light-secondary !important;
+  background-color: $bg-secondary !important;
+  text-transform: capitalize;
+}
+
+@mixin btn-mail-purple {
+  @apply relative min-h-[1.875rem] min-w-[5.375rem];
+  color: $bg-secondary !important;
+  background-color: #996AFF66 !important;
+  text-transform: capitalize;
+}
+
+@keyframes reFreshAni {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

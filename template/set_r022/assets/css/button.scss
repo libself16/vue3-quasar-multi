@@ -1,0 +1,29 @@
+@import "app/template/set_r022/assets/css/_variable.scss";
+
+.hide-hover {
+  :deep(.q-focus-helper) {
+    opacity: 0 !important;
+    background-color: transparent !important;
+  }
+}
+
+:deep(.bg-primary) {
+  background: var(--primary-01) !important;
+}
+
+:deep(.text-primary) {
+  color: var(--primary-01) !important;
+}
+
+.btn-play {
+  @apply capitalize z-20;
+  padding: 0.5rem 1.875rem;
+  background: var(--primary-01);
+  color: var(--neutral-01);
+  border-radius: 2.375rem;
+  font-weight: 510;
+
+  :deep(.q-btn__content) {
+    @apply whitespace-nowrap;
+  }
+}

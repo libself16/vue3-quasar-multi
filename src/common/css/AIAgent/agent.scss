@@ -1,0 +1,159 @@
+@import "src/common/css/_variable.sass";
+@import "src/common/css/AIAgent/theme.scss";
+
+.separator {
+  @apply my-4;
+  background: var(--separator01);
+}
+
+.setting-input-container {
+  @apply flex gap-[.625rem] mt-[.625rem];
+
+  :deep(.q-field--outlined .q-field__control) {
+    @apply h-[2.25rem] rounded-[.25rem];
+    background: var(--secondary06);
+    border: 1px solid var(--neutral04);
+  }
+
+  :deep(.q-field__native) {
+    color: var(--neutral01);
+  }
+
+  :deep(.q-field--outlined.q-field--highlighted .q-field__control:after) {
+    border: none;
+  }
+}
+
+.bet-item-container {
+  @apply flex flex-col items-start gap-1;
+}
+
+.bet-item-title {
+  @apply text-sm font-bold;
+  color: var(--neutral02);
+}
+
+.bet-item-text {
+  @apply inline-flex py-1 px-2 rounded-[.5rem] justify-center items-center;
+  background: var(--neutral04);
+  color: var(--neutral01);
+}
+
+.card-edit-btn {
+  @apply flex w-full rounded-[.5rem] mt-4;
+  border: 2px solid var(--primary01);
+  color: var(--primary01);
+}
+
+.betting-disk-container {
+  :deep(.q-btn__content) {
+    justify-content: space-between !important;
+    color: var(--neutral01);
+  }
+
+  :deep(.q-btn:before) {
+    box-shadow: none !important;
+    border: 1px solid var(--edit-border01);
+    background: var(--bettingDisk01);
+  }
+}
+
+.setting-input-tips {
+  @apply text-[.625rem];
+  color: var(--tips-text);
+}
+
+.card-wrapper {
+  @apply rounded-[.75rem];
+  background: var(--secondary02);
+}
+
+.card-header {
+  @apply flex items-center justify-between;
+
+  .card-header-title {
+    @apply flex items-center gap-2;
+
+    .title-icon {
+      @apply flex w-[.1875rem] h-[1.125rem];
+      background: var(--primary01);
+    }
+
+    .title-text {
+      @apply text-base font-bold;
+      color: var(--neutral01);
+    }
+  }
+}
+
+.card-disk-item {
+  @apply flex flex-1 flex-col items-start gap-1;
+}
+
+.condition-wrapper {
+  @apply p-[.75rem];
+
+  .condition-card {
+    @apply flex flex-col p-4 rounded-[.75rem];
+    background: var(--secondary01);
+
+    :deep(.q-card__section) {
+      background: var(--secondary01);
+    }
+  }
+}
+
+.toggle-btn-container {
+  .toggle-btn {
+    @apply w-[3.1875rem] h-[1.9375rem] p-[.125rem] rounded-[6.25rem] cursor-pointer;
+    background: var(--toggle-inactive-btn-bg);
+    transition: background-color 0.3s ease;
+
+    &.active {
+      background: var(--toggle-active-btn-bg);
+    }
+  }
+
+  .btn-circle {
+    @apply flex w-[1.6875rem] h-[1.6875rem] rounded-[50%];
+    background: var(--white-color);
+    transition: transform 0.3s ease;
+  }
+}
+
+.dialog-amount {
+  @apply flex flex-col flex-1 gap-[.25rem];
+}
+
+// Edit Dialog - Dropdown Menu
+.q-list {
+  background: var(--secondary01);
+  color: var(--neutral01);
+  border: 1px solid var(--edit-border01);
+
+  .active-item {
+    color: var(--primary01);
+    background: var(--separator01);
+  }
+}
+
+// Desktop
+.card-footer {
+  @apply flex justify-between items-center gap-2;
+}
+
+.desktop-edit-btn {
+  @apply flex justify-center items-center mt-4;
+
+  .edit-btn {
+    @apply flex items-center justify-center w-[25rem] h-[2.3125rem] rounded-[.5rem];
+    padding: 0.625rem 0.25rem;
+    border: 2px solid var(--primary01);
+    color: var(--primary01);
+  }
+}
+
+.product-img-wrapper {
+  @apply p-3 rounded-[.5rem] flex justify-center items-center w-[7.5rem] h-[3.125rem];
+  background: var(--neutral04);
+}

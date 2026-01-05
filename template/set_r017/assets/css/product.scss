@@ -1,0 +1,48 @@
+@import "src/common/css/_variable.sass";
+@import "app/template/set_r017/assets/css/_variable.scss";
+
+.product-item {
+  .img-container {
+    @apply w-full h-auto relative;
+    // position: relative;
+    // width: 13.675rem;
+    // height: 10.0781rem;
+
+    .product-img {
+      @apply w-full h-full relative overflow-hidden z-0;
+    }
+
+    .play-btn-container {
+      @apply absolute top-0 right-0 bottom-0 left-0 z-10 hidden;
+      border-radius: .5rem;
+      background-color: #00000099;
+
+      .btn-play {
+        background: $gradient01;
+        padding: .25rem 1rem;
+        box-shadow: $shadoe02;
+        border-radius: .25rem;
+        font-family: NotoSans;
+        font-weight: 700;
+        font-size: .875rem;
+        line-height: 1.1875rem;
+        min-height: auto;
+        color: $neutral01;
+      }
+    }
+
+    .btn-favorite {
+      @apply absolute z-20 top-2 right-2 min-w-0 min-h-0;
+
+      img {
+        @apply w-8 h-8;
+      }
+    }
+  }
+
+  &:hover {
+    .play-btn-container {
+      @apply flex justify-center items-center;
+    }
+  }
+}

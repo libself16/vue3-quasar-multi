@@ -1,0 +1,19 @@
+:deep(.bg-pagination) {
+  background: linear-gradient(to bottom, rgb(16, 183, 243) 0%, rgb(12, 112, 170) 33%, rgb(8, 93, 143) 100%);
+}
+
+:deep(.q-pagination__content) {
+  border-radius: 0.1875rem;
+  overflow: hidden;
+}
+:deep(.q-pagination__content) .q-btn {
+  margin: 0;
+  border-radius: 0;
+  border: 1px solid rgba(79, 194, 236, 0.768627451);
+}
+:deep(.q-pagination__content) .q-btn:disabled {
+  opacity: 1 !important;
+}
+:deep(.q-pagination__content) .q-pagination__middle button[aria-current=false] {
+  background: #021524 !important;
+}/*# sourceMappingURL=pagination.css.map */

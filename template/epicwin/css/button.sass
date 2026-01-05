@@ -1,0 +1,25 @@
+@import 'src/common/css/_variable.sass'
+
+.btn
+  text-transform: uppercase
+  border: 2px solid #b46ffd
+  border-radius: 1.875rem
+  font-weight: 700
+  color: #ffffff
+  background: linear-gradient(180deg, #c102fd 0%, #8901ff 100%)
+  font-size: .875rem
+  line-height: 1.875rem
+  padding: 0 1.875rem
+  cursor: pointer
+  &.outline
+    background: transparent
+
+.btn-search-type
+  width: 11rem
+  font-size: 0.75rem
+  margin-right: 0.5rem
+  margin-bottom: 1.25rem
+  +iphone-width
+    width: 47%
+    &.submit
+      width: 100%

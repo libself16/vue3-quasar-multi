@@ -1,0 +1,19 @@
+:deep(.bg-pagination) {
+  background: rgba(61, 2, 2, 1);
+}
+
+:deep(.q-pagination__content) {
+  border-radius: 0.1875rem;
+  overflow: hidden;
+}
+:deep(.q-pagination__content) .q-btn {
+  margin: 0;
+  border-radius: 0;
+  border: 1px solid rgba(209, 68, 68, 1);
+}
+:deep(.q-pagination__content) .q-btn:disabled {
+  opacity: 1 !important;
+}
+:deep(.q-pagination__content) .q-pagination__middle button[aria-current=false] {
+  background: rgba(61, 2, 2, 1) !important;
+}/*# sourceMappingURL=pagination.css.map */

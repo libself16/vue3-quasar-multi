@@ -1,0 +1,106 @@
+@import "src/common/css/_variable.sass";
+@import "app/template/okbet_blackGold/assets/css/_variable.sass";
+
+.hide-hover {
+  :deep(.q-focus-helper) {
+    opacity: 0 !important;
+    background-color: transparent !important;
+  }
+}
+
+:deep(.bg-submit) {
+  background: $primary-gradient-color !important;
+}
+
+.btn-play {
+  @apply text-black capitalize z-20;
+  padding: 0.5rem 1.875rem;
+  background: $primary-gradient-color;
+  border-radius: 2.375rem;
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 510;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+
+  :deep(.q-btn__content) {
+    @apply whitespace-nowrap;
+  }
+}
+
+@mixin btn-common {
+  position: relative;
+  font-family: "PingFang SC";
+  font-style: normal;
+  min-width: 5.375rem;
+  background: $primary-gradient-color;
+  color: $primary-text-black !important;
+  height: 1.875rem;
+  min-height: 1.875rem;
+  text-transform: capitalize;
+}
+
+@keyframes reFreshAni {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.q-checkbox.q-checkbox--truthy .q-checkbox__bg {
+  background-color: $primary-gold-color !important;
+}
+
+.btn-send {
+  background: $primary-gradient-color !important;
+  color: $primary-text-black !important;
+}
+
+.btn-submit {
+  background: $primary-gradient-color !important;
+  color: $primary-text-black !important;
+}
+
+.btn-reset {
+  border: 1px solid $secondary-gold-color !important;
+  color: $secondary-gold-color !important;
+}
+
+.shadow-effect-button {
+  &:hover {
+    border: 1px solid $white-border-color;
+    box-shadow: $border-shadow-sm;
+    color: $primary-white-color;
+    text-shadow: 0 0 6px rgba(255, 233, 191, 1);
+  }
+}
+
+.btn-common-active {
+  border: 1px solid $white-border-color;
+  box-shadow: $border-shadow-sm;
+  color: $primary-white-color;
+  text-shadow: 0 0 6px rgba(255, 233, 191, 1);
+
+  span {
+    color: $primary-white-color;
+    filter: $effect-shadow-sm;
+  }
+
+  @include phone-width {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.btn-title-active {
+  color: $primary-white-color;
+}
+
+.forgot-password-btn {
+  width: 12.5rem;
+  font-size: 1rem;
+  height: 2.5rem;
+}

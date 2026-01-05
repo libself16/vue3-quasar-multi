@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "963429361528",
+    "project_id": "gsi-notify",
+    "storage_bucket": "gsi-notify.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963429361528:android:27a51ffd869a93471c8a8d",
+        "android_client_info": {
+          "package_name": "gsi.cordova.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcTFExvE8f8WlKc6cvn56YqnwaqyVw2zM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

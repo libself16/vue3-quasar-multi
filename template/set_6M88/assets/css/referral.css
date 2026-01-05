@@ -1,0 +1,606 @@
+.af-ref {
+    display: flex;
+    gap: 15px;
+}
+
+.af-af-content-all {
+    color: #0897be;
+    display: flex;
+    margin-top: 8px;
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #0897be;
+    flex-direction: column;
+}
+
+.af-ref-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #0897be;
+    padding: 10px 15px;
+}
+
+.af-ref-sel {
+    /* padding: 12px 15px; */
+}
+
+.af-sel-form {
+    border-radius: 5px;
+    padding: 5px 15px;
+    background: #fff;
+    color: #0897be;
+    border: 1px solid #0897be;
+    outline: 0;
+    box-shadow: none;
+}
+
+.af-sel-form option {
+    border: 1px solid #0897be;
+    padding: 5px;
+}
+
+.af-ref-ttl {
+    padding: 15px 15px;
+    border-bottom: 1px solid #0897be;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.af-ref-item ul {
+    list-style: none;
+    padding: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    gap: 15px;
+}
+
+.af-ref-item {
+    padding: 15px 15px 0px 15px;
+}
+
+.af-ref-item ul li {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    height: 95px;
+    background: linear-gradient(to bottom, #3fecff 0%, #2597ff 100%);
+    border-radius: 10px;
+    gap: 8px;
+    color: #000;
+}
+
+.af-ref-item p {
+    text-align: end;
+    color: #f00;
+    font-size: 10px;
+}
+
+span.af-rel-top {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+span.af-rel-bot {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.af-ref-inp {
+    margin: 0px auto;
+    background: #fff;
+    margin-top: 20px;
+    width: 90%;
+    height: 35px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.af-ref-inp input {
+    background: none;
+    border: none;
+    height: 35px;
+}
+
+.af-ref-link {
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    width: 110px;
+    height: 30px;
+    font-size: 13px;
+    /* margin-right: 5px; */
+    background: linear-gradient(to bottom, #3fecff 0%, #2597ff 100%);
+    margin: 0px auto;
+    margin-top: 25px;
+    color: #000;
+}
+
+.af-ref-cpy {
+    border: none;
+    background: none;
+    font-size: 16px;
+    color: #005f79;
+}
+
+.af-ref-nm {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.af-af-content-1 {
+    width: 60%;
+}
+
+.af-af-content-2 {
+    width: 40%;
+    /* padding: 15px; */
+}
+
+.af-ref-wrap {
+    color: #fff;
+    display: flex;
+    margin-top: 25px;
+    width: 100%;
+    border-radius: 8px;
+    flex-direction: column;
+}
+
+.af-ref-wrap ul li a {
+    background: #011f33;
+    padding: 15px 0px;
+    width: 200px;
+    text-align: center;
+    color: #005f79;
+    border: 1px solid #0897be !important;
+}
+
+.af-ref-wrap ul li a.active,
+.af-ref-wrap ul li a:hover,
+.af-ref-wrap ul li a:focus {
+    background: linear-gradient(to bottom, #3fecff 0%, #2597ff 100%);
+    color: #000 !important;
+    border: 1px solid #0897be !important;
+}
+
+.af-ref-wrap ul {
+    border: none !important;
+    width: 100%;
+}
+
+.af-ref-wrap .tab-content {
+    color: #0897be;
+    display: flex;
+    width: 100%;
+    background: #fff;
+    border-radius: 0px 0px 8px 8px;
+    border: 1px solid #0897be;
+    flex-direction: column;
+    padding: 15px 15px;
+}
+
+.af-ref-wrap-all .tab-content {
+    color: #0897be;
+    display: flex;
+    width: 100%;
+    background: #fff;
+    border-radius: 0px 0px 8px 8px;
+    border: 1px solid #0897be;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.form-control {
+    text-align: left;
+}
+
+.fa-sync-alt {
+    color: #007bff;
+    /* Bootstrap primary color */
+}
+
+.referral-pop .modal-body {
+    padding: 0px;
+}
+
+.referral-pop .modal-content {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #0897be;
+}
+
+.table-anoun {
+    border-collapse: collapse;
+    border-radius: 8px 8px 0px 0px;
+    overflow: hidden;
+}
+
+.tranc-table {
+    border-collapse: collapse;
+    border-radius: 8px 8px 0px 0px;
+    overflow: hidden;
+}
+
+.referral-pop-in {
+    color: #fff;
+}
+
+input.ref-input {
+    width: 75px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    height: 26px;
+    font-size: 12px;
+}
+
+.referral-pop-in .card-title {
+    margin: 0px;
+    border-bottom: 1px solid #0897be;
+    padding: 15px;
+    text-align: center;
+    color: #000;
+}
+
+.ref-form-group {
+    margin: 15px;
+    border: 1px solid #0897be;
+    border-collapse: collapse;
+    border-radius: 8px 8px 0px 0px;
+    overflow: hidden;
+}
+
+.re-ttl {
+    padding: 10px 20px;
+    border-bottom: 1px solid #0897be;
+    background: #0897be;
+    color: #000;
+}
+
+.referral-row {
+    margin: 15px;
+    border-collapse: collapse;
+    /* border-radius: 8px 8px 0px 0px; */
+    overflow: hidden;
+}
+
+.referral-row tr td {
+    border: 1px solid #0897be;
+    color: #fff;
+    padding: 10px 6px;
+    background: #2b2b2b;
+}
+
+.referral-row tr th {
+    background: #0897be;
+    border: 1px solid #0897be;
+    color: #000;
+    padding: 5px;
+    text-align: center;
+    font-weight: 100;
+}
+
+.ref-td {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+}
+
+.referral-row .table {
+    margin: 0px;
+}
+
+.ref-bth {
+    padding: 0px 15px;
+    padding-bottom: 20px;
+    justify-content: center;
+}
+
+.ref-bth button {
+    font-size: 12px;
+}
+
+.referral-pop .close {
+    position: absolute;
+    top: 15px;
+    opacity: 1;
+    right: 9px;
+    background: none;
+    border: none;
+    font-size: 20px;
+}
+
+.af-ref-wrap-all .tab-content td {
+    padding: 10px;
+    border: 1px solid #0897be;
+}
+
+.tranc-table table {
+    border-radius: 0px;
+}
+
+.custom-table {
+    /* background-color: #4B0082; */
+    /* Dark purple background */
+    color: #fff;
+    /* White text color */
+}
+
+.custom-table th,
+.custom-table td {
+    border: 1px solid #fff;
+    /* White borders */
+}
+
+.custom-table .fa-search {
+    color: #fff;
+    /* White color for icons */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+}
+
+.tranc-table tr th {
+    vertical-align: middle;
+    border: 1px solid #0897be;
+    background: linear-gradient(to bottom, #3fecff 0%, #2597ff 100%);
+    text-align: center;
+    color: #fff;
+}
+
+.custom-table {
+    background-color: #4B0082;
+    /* Dark purple background */
+    color: #fff;
+    /* White text color */
+    border: 1px solid #fff;
+    /* White borders */
+}
+
+.fa-search,
+.fa-angle-left {
+    /* White color for icons */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+}
+
+.hidden {
+    display: none;
+    /* CSS for hiding elements */
+}
+
+.ref-search {
+    background: none;
+    border: none;
+    color: #0897be !important;
+}
+
+.flg-ref img {
+    height: 15px;
+}
+
+.flg-ref {
+    /* display: flex; */
+    align-items: center;
+}
+
+.af-ref-col {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    color: #000;
+}
+
+span.re-col-user {
+    background: #0897be;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 3px;
+    display: block;
+    color: #000;
+}
+
+.in-history .table-ref {
+    padding: 0px;
+    border: none;
+    width: 100%;
+}
+
+.tranc-table table {
+    border-collapse: collapse;
+    overflow: hidden;
+    border: 1px solid #0897be;
+}
+
+.table-ref table tr td:first-child {
+    width: 50%;
+    color: #0897be;
+    text-align: left;
+}
+
+.table-ref table tr td {
+    padding: 10px;
+    font-size: 12px;
+    text-align: center !important;
+}
+
+.table-ref table {
+    border-collapse: collapse;
+    overflow: hidden;
+    width: 100%;
+}
+
+.ref-tbl-in {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+#tranc-mtable2 {
+    display: none;
+}
+
+#back-btn2 {
+    margin-left: 10px;
+    background: linear-gradient(to bottom, #3fecff 0%, #2597ff 100%);
+    color: #000;
+    border: none;
+}
+
+.bg-ref td {
+    background: #0897be;
+}
+
+tr.bg-ref td {
+    background: #0897be;
+    color: #000 !important;
+}
+
+.af-search {
+    color: #005f79;
+}
+
+.hidden {
+    display: none;
+}
+
+.re-col-ttl {
+    margin: 10px 0;
+}
+
+.af-ref-wp {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+@media (max-width: 767px) {
+    .af-ref {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .af-af-content-1 {
+        width: 100%;
+    }
+
+    .af-af-content-2 {
+        width: 100%;
+        padding-bottom: 15px;
+    }
+
+    .af-af-content {
+        padding: 0px 15px;
+    }
+
+    .af-ref-wrap-all {
+        padding: 0px 15px;
+    }
+
+    .af-ref-wrap ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .af-ref-wrap ul li a {
+        width: 99.7%;
+    }
+
+    .af-ref-wrap {
+        margin-top: 15px;
+    }
+
+    .referral-row tr th {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .referral-row tr td {
+        display: flex;
+    }
+
+    .referral-row .table tbody {
+        display: flex;
+        width: 100%;
+    }
+
+    .referral-row tr {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    input.ref-input {
+        width: 100%;
+    }
+
+    .ref-bth {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ref-bth button {
+        width: 100%;
+    }
+
+    .bg-ref td {
+        background: #0897be;
+    }
+
+    tr.bg-ref td {
+        background: #0897be;
+        color: #000 !important;
+    }
+
+    .af-ref-wp {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 10px;
+        color: #000;
+    }
+
+    .af-ref-col {
+        /* flex-direction: column; */
+    }
+
+    .af-ref-c .re-col-user {
+        width: 100%;
+        background: #0897be;
+        color: #000;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .af-ref-c {
+        width: 100%;
+        color: #000;
+    }
+
+    .af-ref-col-2 {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .af-ref-r .re-col-user {
+        font-size: 12px;
+        text-align: center;
+    }
+}

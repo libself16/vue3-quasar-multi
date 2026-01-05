@@ -1,0 +1,148 @@
+@import "app/template/set_sjpn2/assets/css/_variable.sass"
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap')
+
+*
+  font-family: "Jost", sans-serif
+  font-optical-sizing: auto
+  font-style: normal
+
+.global-row
+  width: 100%
+  max-width: $main-row-width
+
+.clock
+  color: #b3b3b3
+
+.q-layout
+  background: #000 url("app/template/set_sjpn2/assets/images/bg.png")  center top
+  background-size: contain
+
+.mainWrapper
+  min-height: 32.1rem !important
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+ -webkit-background-clip: text
+
+//捲軸寬度
+::-webkit-scrollbar
+  width: .1875rem
+  height: .1875rem
+//捲軸本體顏色
+::-webkit-scrollbar-thumb
+  cursor: pointer
+  background-color: $gold-color
+
+.reg-area
+  +setFlex
+  flex-direction: column
+  padding: 1vw
+  width: 100%
+  margin-top: 1.25rem
+  .con-info
+   +setFlex
+   flex-direction: row
+   width:102%
+   .con
+    color: #ffffff
+    background: rgb(0 0 0 / 50%)
+    margin: 10px 20px
+    padding: 20px
+    +iphone-width
+      width:100%
+      margin: 0
+      padding: 14px
+    +pad-width
+      width:100%
+      margin: 0
+      padding: 14px
+  .manred
+    color: red
+    float: right
+  .title
+    font-size: 24px
+    font-weight: 700
+    margin-left:15px
+    +iphone-width
+      font-size: 5.5vw
+  .input-area
+    +setFlex
+    margin-bottom: 20px
+    align-items: center
+    width: 100%
+    .field-input
+      margin-left: 20px
+      width: 100%
+      .form-style
+        padding: 5px 0px 5px 0px
+        width: 100%
+        box-shadow: none
+        border-radius: 35px
+      +iphone-width
+        margin-left: 0px
+      +pad-width
+         margin-left: 0px
+      label
+        width: 95%
+        +iphone-width
+          width: 100%
+        +pad-width
+          width: 100%
+    .input-text
+      margin-left: 7%
+      width: 580px
+      +iphone-width
+        width: 100%
+        margin: 0px
+        text-align: center
+      +pad-width
+        width: 100%
+        margin: 0px
+        text-align: center
+    +iphone-width
+      flex-direction: column
+      align-items: baseline
+    +pad-width
+      flex-direction: column
+      align-items: baseline
+    label
+      font-size: 16px
+      width: 25%
+      +iphone-width
+        width: 100%
+        display: flex
+        gap: 10px
+      +pad-width
+        width: 100%
+        display: flex
+        gap: 10px
+
+.btn-submit
+  position: relative
+  border-radius: 4px
+  border: 1px solid #D37139
+  background: #000
+  color: #fff
+  font-size: 1rem
+  width: 100%
+  max-width: 21.875rem
+  height:  3.125rem
+  line-height: 3.125rem
+  padding: 0
+  text-align: center
+  .icon
+    position: absolute
+    top: 1.2019rem
+    right: 1.1019rem
+    width: 1.5625rem
+    height: .5625rem
+.q-menu
+  background-color: #131313
+  color: #fff
+  .q-date
+    background: transparent
+  .q-item--active
+    .q-item__label
+      color: #917D60

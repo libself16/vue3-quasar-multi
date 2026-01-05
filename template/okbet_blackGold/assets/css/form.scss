@@ -1,0 +1,199 @@
+@import "src/common/css/_variable.sass";
+@import "app/template/okbet_blackGold/assets/css/_variable.sass";
+
+.pc {
+  .form-input {
+    margin-top: 3px;
+    height: 3.75rem;
+    position: relative;
+    align-items: center;
+
+    &.q-field--error {
+      :deep(.q-field__inner) {
+        .divider-error {
+          width: 2px;
+          height: 32px;
+          background: $color-error;
+        }
+
+        .q-field__append {
+          .q-icon {
+            display: none;
+
+            &.eye-icon {
+              display: block;
+            }
+          }
+        }
+
+        .q-field__bottom {
+          color: $color-error;
+        }
+      }
+    }
+
+    :deep(.q-field__inner) {
+      border: 1px solid $gray-border-color;
+      border-radius: 0.375rem;
+
+      .q-field__prepend {
+        padding: 0;
+
+        .form-icon {
+          cursor: auto;
+          margin: 0.75rem;
+
+          img {
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+
+        .divider {
+          width: 1px;
+          height: 1.25rem;
+          background: $color-border;
+        }
+      }
+
+      .q-field__append {
+        .eye-icon {
+          font-size: .9375rem;
+          margin: .375rem .75rem;
+          color: $primary-gold-color;
+          cursor: pointer;
+        }
+      }
+
+      .q-field__control-container {
+        width: 100%;
+        margin-left: 12px;
+        border: none;
+        font-size: 14px;
+        font-weight: 400;
+        background: transparent;
+        overflow-wrap: break-word;
+      }
+    }
+  }
+}
+
+.h5 {
+  .form-input {
+    width: 100%;
+    margin-bottom: .5rem;
+    padding: 1rem .75rem 0.5rem;
+    position: relative;
+
+    &.border-bottom {
+      &::before {
+        content: "";
+        display: block;
+        width: calc(100% - 3.5rem);
+        height: 1px;
+        background-color: $gray-border-color;
+        position: absolute;
+        bottom: -2px;
+        right: .75rem;
+      }
+
+    }
+
+    &.q-field--error {
+      padding-bottom: 1rem;
+      height: 4.375rem;
+
+      :deep(.q-field__inner) {
+
+        .q-field__append {
+          .q-icon {
+            display: none;
+
+            &.eye-icon {
+              display: block;
+            }
+          }
+        }
+
+        .q-field__bottom {
+          color: $color-error;
+          font-size: .8125rem;
+          line-height: 1.0625rem;
+          margin: .25rem 0;
+          padding: 0.5rem 0.2rem;
+        }
+      }
+    }
+
+    :deep(.q-field__inner) {
+      .q-field__prepend {
+        padding: 0;
+
+        .form-icon {
+          cursor: auto;
+
+          img {
+            width: 1.625rem;
+            height: 1.625rem;
+          }
+        }
+      }
+
+      .q-field__append {
+        .eye-icon {
+          font-size: 1.1rem;
+          margin: 0 .5rem 0 .25rem;
+          color: $primary-gold-color;
+          cursor: pointer;
+        }
+      }
+
+      .q-field__control-container {
+        width: 100%;
+        margin-left: .75rem;
+        border: none;
+        font-size: .9647rem;
+        font-weight: 400;
+        background: transparent;
+        overflow-wrap: break-word;
+      }
+    }
+  }
+}
+
+:deep(.q-field__native,
+  .q-field__prefix,
+  .q-field__suffix,
+  .q-field__input) {
+  color: $primary-white-color !important;
+}
+
+.form-input {
+  ::v-deep(.q-field__native) {
+    @apply text-white;
+
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 30px $primary-black-color inset !important;
+      -webkit-text-fill-color: #fff !important;
+      box-shadow: 0 0 0 30px $primary-black-color inset !important;
+      color: #fff !important;
+      border-radius: 0 !important;
+    }
+  }
+}
+
+.form-bottom-line {
+  :deep(.q-field__control) {
+    &::after {
+      background: $secondary-gold-color;
+    }
+  }
+
+  &.q-field--error {
+    :deep(.q-field__control) {
+      &::after {
+        background: rgb(193, 0, 21);
+      }
+    }
+  }
+}

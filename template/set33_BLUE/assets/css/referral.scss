@@ -1,0 +1,146 @@
+@import "app/template/okbet/assets/css/_variable.sass";
+
+.referral-table {
+  -ms-overflow-style: block;
+  scrollbar-width: block;
+
+  ::-webkit-scrollbar {
+    height: 8px;
+    /* 橫向滾動條高度 */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #00794E;
+    /* 軌道顏色 */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: #4caf50;
+    /* 滾動條滑塊顏色 */
+    border-radius: 10px;
+  }
+
+  @apply mb-[4.25rem];
+
+  :deep(.q-table__card) {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+.referral-table-content {
+  color: #fff;
+
+  :deep(th) {
+    @apply font-bold;
+    color: #fff;
+    font-size: 1rem;
+    background: var(--Linear, linear-gradient(180deg, #00794E 0%, #023D27 100%)) !important;
+
+    &:first-child {
+      border-top-left-radius: 12px;
+
+      &.special-column {
+        border-radius: 0px;
+      }
+    }
+
+    &:last-child {
+      border-top-right-radius: 12px;
+
+      &.special-column {
+        border-radius: 0px;
+      }
+    }
+  }
+
+  :deep(td) {
+    @apply text-base font-normal;
+  }
+
+  :deep(.table-setting-btn) {
+    @apply text-base font-normal cursor-pointer capitalize;
+    color: $color-success !important;
+  }
+
+  :deep(.no-data-container) {
+    @apply w-full flex flex-col justify-center items-center py-40;
+
+    img {
+      width: 7.5rem;
+      height: auto;
+    }
+
+    span {
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.referral-pagination-wrapper {
+  @apply flex justify-end mt-4;
+  color: #fff
+}
+
+
+// 手機板
+.expansion-header {
+  div {
+    display: flex;
+    justify-content: flex-start;
+
+    span {
+      text-align: center;
+    }
+  }
+}
+
+.af-ref-col {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem 0;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+}
+
+span.re-col-user {
+  background: #1EAF2C;
+  color: #fff;
+  border-radius: 5px;
+  padding: 1px 5px;
+  margin-top: 3px;
+  display: block;
+}
+
+.table-ref table {
+  border-radius: 8px 8px 0px 0px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #47B83D;
+  overflow: hidden;
+  width: 100%;
+
+  tr td {
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid #47B83D;
+    text-align: center !important;
+
+    &:first-child {
+      width: 50%;
+      color: #1EAF2C;
+      text-align: left;
+    }
+  }
+}
+
+::v-deep(.q-expansion-item) {
+  .q-card__section {
+    background: rgb(15, 78, 44) !important;
+  }
+}

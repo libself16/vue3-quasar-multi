@@ -1,0 +1,131 @@
+@import "src/common/css/_variable.sass";
+@import "app/template/set_paisa24/assets/css/_variable.scss";
+
+.field-input {
+  @apply px-2 mb-4;
+  border: 1px solid $primary-color;
+  border-radius: .625rem;
+  height: 2.75rem;
+  color: #fff !important;
+  background-color: $input-bg-color;
+
+  ::v-deep(input) {
+    color: $input-text-color !important;
+  }
+
+  ::v-deep(.q-field__label) {
+    color: $input-placeholder-color !important;
+
+  }
+
+  .field-icon {
+    @apply text-base ml-1;
+    color: $input-text-color;
+  }
+}
+
+.btn-submit {
+  @apply w-full text-white capitalize my-[1.25rem];
+  background: $primary-btn-bg-color;
+  border-radius: 0.625rem;
+}
+
+::v-deep(.q-field__control) {
+  background-color: $input-bg-color !important;
+
+  .q-field__label {
+    color: $input-placeholder-color !important;
+  }
+
+  .q-icon {
+    color: $input-text-color !important;
+  }
+
+  .q-field__native {
+    color: $input-text-color !important;
+
+  }
+
+  input {
+    color: $input-text-color !important;
+  }
+}
+
+.bg-input {
+  background-color: $modal-bg-light !important;
+}
+
+.form-btn-wrapper {
+  @apply mt-[1.25rem] mb-4 flex;
+
+  .form-btn-submit {
+    @apply w-full text-white font-extrabold text-[.875rem];
+    background: $pink-shadow-color;
+
+    &:hover {
+      color: $primary-color;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+.calendar-content {
+  ::v-deep(.q-date__header) {
+    @apply text-white;
+    background: $pink-button-gradient;
+  }
+
+  ::v-deep(.bg-primary) {
+    background: $pink-button-gradient !important;
+  }
+
+  ::v-deep(.q-date__today) {
+    box-shadow: 0 0 0 .0625rem $pink-shadow-color;
+  }
+}
+
+// History & Pending Transaction
+.transaction-history-wrapper {
+  .btn-submit {
+    @apply w-full mt-2 mb-0 text-white;
+    background: $pink-button-gradient;
+  }
+}
+
+.history-search-wrapper {
+  @apply flex flex-col justify-center p-2 gap-1;
+  background: $history-search-wrapper-bg;
+
+  @include phone-width() {
+    @apply p-0;
+    background: transparent;
+  }
+
+  .search-type-content {
+    @apply flex w-full gap-1;
+
+    @include phone-width() {
+      @apply p-2 flex-wrap;
+      background: $history-search-wrapper-bg;
+    }
+  }
+
+  .search-type-time {
+    @include phone-width() {
+      @apply mt-1;
+
+      .btn-history {
+        flex: 0 0 calc(50% - 0.25rem);
+      }
+    }
+  }
+
+  .btn-history {
+    @apply text-white flex-1 h-[3.125rem];
+    background: $primary-color;
+
+    &.active {
+      color: $pink-shadow-color;
+    }
+  }
+}

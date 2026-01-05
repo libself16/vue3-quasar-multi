@@ -1,0 +1,17 @@
+$pagination-color: linear-gradient(to bottom,rgb(16,183,243) 0%,rgb(12,112,170) 33%,rgb(8,93,143) 100%)
+
+:deep(.bg-pagination)
+  background: $pagination-color
+
+:deep(.q-pagination__content)
+  border-radius: .1875rem
+  overflow: hidden
+  .q-btn
+    margin:0
+    border-radius: 0
+    border: 1px solid rgba(79,194,236,.768627451)
+    &:disabled
+      opacity: 1 !important
+  .q-pagination__middle
+    button[aria-current="false"]
+      background: #021524 !important

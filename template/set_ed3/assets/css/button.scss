@@ -1,0 +1,62 @@
+@import "app/template/set_ed3/assets/css/_variable.scss";
+
+.hide-hover {
+  :deep(.q-focus-helper) {
+    opacity: 0 !important;
+    background-color: transparent !important;
+  }
+}
+
+:deep(.bg-primary) {
+  background: $primary-color !important;
+}
+
+:deep(.text-primary) {
+  color: $primary-color !important;
+}
+
+:deep(.text-term) {
+  color: $primary-color !important;
+}
+
+:deep(.bg-submit) {
+  background: $pink-button-gradient;
+}
+
+.btn-play {
+  @apply capitalize z-20;
+  padding: 0.5rem 1.875rem;
+  background: $gradient03;
+  color: $green10;
+  border-radius: 2.375rem;
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 510;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+
+  :deep(.q-btn__content) {
+    @apply whitespace-nowrap;
+  }
+}
+
+@mixin btn-common {
+  position: relative;
+  font-style: normal;
+  min-width: 5.375rem;
+  color: $text-gray !important;
+  background-color: $bg-gray !important;
+  height: 1.875rem;
+  min-height: 1.875rem;
+  text-transform: capitalize;
+}
+
+@keyframes reFreshAni {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,259 @@
+@import "src/common/css/_variable.sass";
+@import "app/template/okbet/assets/css/_variable.sass";
+
+.referral-table {
+  @apply mt-[3.75rem] mb-[4.25rem];
+
+  :deep(.q-table__card) {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+.referral-table-content {
+  :deep(th) {
+    @apply text-[1.125rem] font-bold;
+    color: rgba($text-dark-color, 0.7);
+  }
+
+  :deep(td) {
+    @apply text-base font-normal;
+    color: $text-steel-blue-color;
+
+    .commission-status {
+      @apply inline-block px-3 py-2 min-w-[4.5rem] min-h-[2.375rem] rounded-lg capitalize;
+
+      &.red {
+        background-color: $referral-table-danger;
+        color: $text-danger-color;
+      }
+
+
+      &.green {
+        background-color: $referral-table-success;
+        color: $referral-text-success;
+      }
+
+      &.blue {
+        background-color: $referral-table-info;
+        color: $referral-text-info;
+      }
+
+      &.orange {
+        background-color: $referral-table-warning;
+        color: $referral-text-warning;
+      }
+    }
+
+    .text-expired {
+      color: $text-danger-secondary-color;
+      font-weight: 700;
+    }
+  }
+
+  :deep(.table-setting-btn) {
+    @apply text-base font-normal cursor-pointer capitalize;
+    color: $success-color !important;
+  }
+
+  :deep(.q-table__top) {
+    padding: 0;
+  }
+}
+
+.referral-pagination-wrapper {
+  @apply flex justify-end mt-2;
+}
+
+.mobile-details-list {
+  @apply my-4 pb-14;
+
+  .list-item {
+    @apply mb-4;
+    border: 1px solid $primary-color;
+  }
+
+  .list-item-section {
+    @apply flex flex-col;
+  }
+
+  .list-item-separator {
+    @apply my-[.625rem];
+    background: $primary-color;
+  }
+
+  .list-item-range {
+    @apply flex;
+
+    .range-title {
+      @apply font-bold mr-2;
+    }
+
+    @include iphone-width {
+      @apply text-[.75rem];
+    }
+  }
+
+  .expansion-wrapper {
+    :deep(.q-item) {
+      @apply p-0;
+    }
+
+    :deep(.expansion-info) {
+      @apply text-base;
+
+      @include iphone-width {
+        @apply text-[.75rem];
+      }
+    }
+
+    :deep(.expansion-info-title) {
+      @apply font-bold;
+    }
+
+    :deep(.q-card__section) {
+      color: $text-light-color;
+      background: $secondary-color;
+    }
+
+    .revenue-item {
+      @apply flex py-1;
+      border-bottom: 1px solid $border-pale-gray-color;
+
+      span {
+        @apply w-1/2;
+      }
+
+      .revenue-currency {
+        @apply font-bold;
+      }
+    }
+
+    .revenue-wrapper {
+      @apply relative;
+
+      .expansion-detail-img {
+        @apply absolute top-2 right-3 w-[1.25rem] h-[1.25rem];
+      }
+
+      .mobile-back-btn-img {
+        @apply absolute top-2 right-4 w-[1.375rem] h-[.75rem];
+      }
+    }
+  }
+}
+
+:deep(.referral-no-data-container) {
+  @apply w-full flex flex-col justify-center items-center py-10;
+  @apply font-bold text-[1.5rem];
+  color: $primary-color;
+
+  .q-img {
+    width: 10rem;
+    height: auto;
+
+    @include pad-width {
+      width: 8rem;
+    }
+  }
+
+  span {
+    @apply mt-[.5rem];
+  }
+}
+
+.mobile-invite-list {
+  @apply my-4 pb-14;
+
+  .list-item {
+    @apply mb-4;
+    border: 1px solid $primary-color;
+  }
+
+  .list-item-section {
+    @apply flex flex-col p-0;
+  }
+
+  .list-item-separator {
+    @apply my-[.625rem];
+    background: $primary-color;
+  }
+
+  .list-item-range {
+    @apply flex;
+
+    .range-title {
+      @apply font-bold mr-2;
+    }
+
+    @include iphone-width {
+      @apply text-[.75rem];
+    }
+  }
+
+  .expansion-wrapper {
+
+    :deep(.q-item) {
+      @apply px-[.875rem] py-4;
+    }
+
+    :deep(.expansion-info) {
+      @apply text-base justify-start;
+
+      @include iphone-width {
+        @apply text-[.75rem];
+      }
+    }
+
+    :deep(.expansion-info-title) {
+      @apply font-bold;
+    }
+
+    :deep(.expansion-info-value) {
+      margin-top: .4375rem;
+      color: rgba($text-dark-gray-color, 0.4);
+    }
+
+    :deep(.q-card__section) {
+      color: $text-light-color;
+      background: $secondary-color;
+    }
+
+    .revenue-wrapper {
+      @apply px-[2.0625rem];
+    }
+
+    .revenue-item {
+      @apply flex justify-between py-2 font-bold;
+      border-bottom: 1px solid rgba($border-light-color, 0.1);
+      font-size: .625rem;
+
+
+    }
+  }
+
+  .revenue-status {
+    @apply text-xs text-center inline-block px-3 py-2 min-w-[3.75rem] min-h-[2rem] rounded-lg capitalize;
+
+    &.red {
+      background-color: $referral-table-danger;
+      color: $text-danger-color;
+    }
+
+
+    &.green {
+      background-color: $referral-table-success;
+      color: $referral-text-success;
+    }
+
+    &.blue {
+      background-color: $referral-table-info;
+      color: $referral-text-info;
+    }
+
+    &.orange {
+      background-color: $referral-table-warning;
+      color: $referral-text-warning;
+    }
+  }
+}

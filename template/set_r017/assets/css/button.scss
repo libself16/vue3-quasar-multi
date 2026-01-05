@@ -1,0 +1,62 @@
+@import "app/template/set_r017/assets/css/_variable.scss";
+
+.hide-hover {
+  :deep(.q-focus-helper) {
+    opacity: 0 !important;
+    background-color: transparent !important;
+  }
+}
+
+:deep(.bg-primary) {
+  background: $gradient01 !important;
+}
+
+:deep(.text-primary) {
+  color: $primany01 !important;
+}
+
+:deep(.text-term) {
+  color: $primany01;
+}
+
+// :deep(.bg-submit) {
+//   background: linear-gradient(90deg, $background-bright-blue-color 0%, $background-vivid-blue-color 100%) !important;
+// }
+
+.btn-play {
+  @apply max-w-[5.5rem] max-h-[1.6875rem];
+  @apply capitalize z-20;
+  padding: .25rem 1rem;
+  background: $gradient01;
+  color: $neutral01;
+  border-radius: .25rem;
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 510;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+
+  :deep(.q-btn__content) {
+    @apply whitespace-nowrap;
+  }
+
+  @include phone-width {
+    @apply max-w-[4.125rem] max-h-[1.25rem];
+  }
+}
+
+@keyframes reFreshAni {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-refresh {
+  &.active {
+    animation: reFreshAni 1s linear infinite;
+  }
+}

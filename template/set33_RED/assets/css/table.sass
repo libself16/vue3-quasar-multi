@@ -1,0 +1,27 @@
+$bg-color: rgba(61, 2, 2, 1)
+$border-color: rgba(209, 68, 68, 1)
+$th-bg-color: rgb(8, 47, 26)
+
+::v-deep(.q-table)
+  background: rgba(61, 2, 2, 1)
+  color: #fff
+  th, td
+    border: 1px solid $border-color
+    border-collapse: collapse
+  th
+    background: linear-gradient(180deg, #D72F2F 0%, #8F0000 100%)
+
+::v-deep(.q-table__bottom)
+  background: $bg-color
+  color: #fff
+::v-deep(.q-table__bottom)
+  @apply flex justify-center items-center
+  background: $bg-color
+  color: #fff
+  border: 1px solid $border-color
+::v-deep(.q-table__control)
+  .q-select
+    span
+      color: #fff
+    i
+      color: #fff

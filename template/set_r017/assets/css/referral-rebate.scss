@@ -1,0 +1,471 @@
+@import "src/common/css/_variable.sass";
+@import "app/template/set_r017/assets/css/_variable.scss";
+@import "app/template/set_r017/assets/css/table.scss";
+
+
+.referral-rebate {
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+
+  @include phone-width() {
+    width: 100vw;
+    padding: 0.875rem;
+  }
+
+  .referral-rebate-header {
+    @apply w-full bg-black/70;
+    @apply aspect-[1570/354] bg-cover bg-center;
+  }
+
+  .referral-rebate-content {
+    @apply w-full mt-[2rem] text-white/70;
+
+    @include iphone-width() {
+      @apply w-full mt-0 max-w-[100%];
+      @apply p-0;
+      border-radius: 0;
+    }
+
+    .title {
+      @apply flex leading-none items-center;
+      @apply font-bold text-[1.5rem];
+      color: #fff;
+
+    }
+
+    .currency-select {
+      @apply flex items-center gap-[0.75rem] mt-[4.25rem];
+
+      @include iphone-width() {
+        @apply flex-row items-start mt-[3rem];
+      }
+
+      .currency-select-title {
+        @apply text-[1.25rem] font-semibold text-white;
+      }
+
+      :deep(.q-btn-dropdown) {
+        @apply text-black shadow-none;
+        background: $secondary06;
+        border: 2px solid $neutral04;
+        color: $neutral01;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    .summary-wrapper {
+      @apply flex gap-[2.5rem] mt-[1.25rem];
+
+      @include iphone-width() {
+        @apply flex-col items-start gap-[.75rem];
+      }
+
+      .summary {
+        @apply flex-1 flex flex-col gap-[.625rem];
+
+        @include iphone-width() {
+          @apply w-full;
+        }
+
+        .summary-content {
+          @apply py-[.75rem] text-center;
+          border-radius: 10px;
+          background-color: $secondary01;
+          border: 1px solid $neutral04;
+
+          @include iphone-width() {
+            @apply px-6;
+            background-color: $secondary01
+          }
+
+          .summary-title {
+            @apply font-bold;
+          }
+
+          .summary-value {
+            @apply font-['OpenSans'] font-extrabold text-[2rem] text-white;
+          }
+        }
+      }
+
+      .referral-code {
+        @apply flex-1;
+        @apply flex flex-col items-center justify-center;
+        background-color: $secondary02;
+        border: 1px solid $neutral04;
+        border-radius: 0.5rem;
+        color: $neutral01;
+
+        @include iphone-width() {
+          @apply w-full py-[20px];
+        }
+
+        .referral-code-title {
+          @apply text-white font-semibold text-[1.25rem];
+        }
+
+        .referral-code-value {
+          @apply mt-[1.25rem] text-white;
+          background-color: $secondary06;
+          border: 1px solid $neutral04;
+          border-radius: 0.3rem;
+
+          @include iphone-width() {
+            @apply mt-[4px];
+          }
+
+          :deep(.q-field__inner) {
+            @apply px-4;
+            background: $secondary06;
+            border-radius: 0.3rem;
+            color: rgba(28, 30, 34, 0.2);
+          }
+
+          :deep(.q-field__native) {
+            @apply text-white;
+            background: $secondary06;
+          }
+
+          :deep(.q-field__append) {
+            color: $primany01;
+          }
+        }
+      }
+    }
+
+    .proxy-tabs {
+      margin-top: 3.75rem;
+      margin-bottom: 1.25rem;
+
+      :deep(.q-tabs__content) {
+        padding: 10px;
+        flex: 0 1 auto;
+        border-radius: 50em;
+        background-color: $secondary06;
+
+        .q-tab {
+          min-height: 0;
+          padding: 0.5rem 2rem;
+          border-radius: 2rem;
+          background: transparent;
+          color: $neutral01;
+          white-space: wrap;
+
+          .q-tab__content {
+            padding: 0;
+          }
+        }
+
+        .q-tab--active {
+          background: $gradient01;
+          color: #fff;
+
+          .q-tab__indicator {
+            @apply h-0;
+          }
+
+          .q-tab__label {
+            @apply font-bold leading-none;
+            line-height: 1.715em;
+          }
+        }
+      }
+
+      :deep(.q-focus-helper) {
+        display: none;
+      }
+    }
+
+    .proxy-tab-panels {
+      border-radius: 0.625rem;
+      background: transparent;
+
+      @include iphone-width() {
+        background: transparent;
+      }
+    }
+
+    .events-detail-header {
+      @apply flex justify-end mb-4 mt-12;
+
+      .back-btn {
+        @apply px-6;
+        color: $neutral01;
+        background: $gradient01;
+
+        :deep(.q-icon) {
+          color: $neutral01 !important;
+        }
+      }
+    }
+  }
+}
+
+.table-content {
+  &.events-detail {
+    @apply p-4;
+    border-radius: 0.625rem;
+  }
+
+  .search-content-title {
+    @apply font-bold text-[1.5rem] mb-[1.5rem] text-white;
+  }
+
+  .member-number {
+    @apply flex items-center gap-[1.5rem];
+
+    @include iphone-width() {
+      @apply flex-col items-start gap-[.5rem];
+    }
+
+    .label {
+      @apply text-[1rem] text-white;
+    }
+
+    :deep(.q-field__inner) {
+      @apply px-4;
+      background: $secondary06;
+      border: 1px solid $neutral04;
+      border-radius: 0.3rem;
+      color: $neutral01;
+    }
+
+    :deep(.q-field__native) {
+      color: $neutral01;
+    }
+
+    :deep(.q-field__control) {
+      border-radius: 0.5rem;
+    }
+  }
+
+  .actions {
+    @apply flex items-center gap-[1.25rem] mt-[1.5rem];
+
+    @include iphone-width() {
+      @apply flex-col items-start mt-[1rem] w-full;
+    }
+
+    .currency-action {
+      @include iphone-width() {
+        @apply w-full;
+      }
+
+      .currency-select {
+        @apply flex items-center gap-[1.25rem] mt-0;
+
+        @include iphone-width() {
+          @apply flex-col items-start gap-[.5rem];
+        }
+
+        .currency-select-title {
+          @apply text-[1rem] font-normal;
+        }
+
+        :deep(.q-btn-dropdown) {
+          @apply text-white;
+          background: $secondary06;
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .gametype-action {
+      @include iphone-width() {
+        @apply w-full;
+      }
+
+      .gametype-select {
+        @apply flex items-center gap-[1.25rem];
+
+        @include iphone-width() {
+          @apply flex-col items-start gap-[.5rem];
+        }
+
+        .gametype-select-title {
+          @apply text-[1rem] font-normal text-white;
+        }
+
+        :deep(.q-btn-dropdown) {
+          @apply text-white shadow-none;
+          border: 1px solid $neutral04;
+          background: $secondary06;
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .date-action {
+      @include iphone-width() {
+        @apply w-full;
+      }
+
+      .date-select {
+        @apply flex items-center gap-[1.25rem];
+
+        @include iphone-width() {
+          @apply flex-col items-start gap-[.5rem];
+        }
+
+        .date-select-title {
+          @apply text-[1rem] font-normal text-white;
+        }
+
+        .date-select-input {
+          background-color: $secondary06;
+
+          :deep(.q-field__native) {
+            color: $neutral01;
+          }
+
+          :deep(.q-field__append) {
+            color: $neutral01;
+          }
+        }
+
+        :deep(.q-btn-dropdown) {
+          @apply text-white shadow-none;
+          border: 1px solid $neutral04;
+          background: $secondary06;
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .search-btn {
+      @apply text-white leading-none;
+      background: $gradient01;
+      padding: 0.7rem 2rem;
+      min-height: 0;
+
+      @include iphone-width() {
+        @apply w-full;
+      }
+    }
+  }
+
+  .tables {
+    @apply mt-[40px];
+
+    tbody {
+      tr {
+        background: $secondary08;
+
+        &:nth-of-type(2n) {
+          background: $secondary09;
+        }
+
+        &:hover {
+          background: $secondary01;
+        }
+      }
+    }
+
+    .no-data {
+      @apply text-center text-sm font-bold py-12 text-white bg-transparent;
+    }
+
+    .q-table__card {
+      @apply bg-transparent shadow-none;
+      color: white;
+
+      :deep(th) {
+        @apply text-[18px] font-bold text-center;
+      }
+
+      :deep(tr) {
+
+        background: $secondary08;
+
+        &:nth-of-type(2n) {
+          background: $secondary09;
+        }
+
+        &:hover {
+          background: $secondary01;
+        }
+
+      }
+
+      :deep(td) {
+        @apply text-center;
+      }
+    }
+
+    .r-pagination {
+      @apply justify-end mt-[2rem];
+
+      :deep(.q-pagination__middle) {
+        gap: 2px;
+
+        .q-btn {
+          background-color: $secondary01;
+          color: $neutral01;
+        }
+      }
+
+      :deep(.q-btn) {
+        border-radius: 0.35rem;
+      }
+
+      :deep(.q-icon) {
+        color: $neutral01;
+      }
+
+      :deep(.q-btn--standard) {
+        background: $gradient01 !important;
+        color: $neutral01 !important;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    :deep(.q-table__grid-content) {
+      @apply flex flex-col gap-4;
+
+      .q-card {
+        @apply flex flex-col gap-[0.25rem];
+        @apply text-black p-4;
+        border-radius: 0.5rem;
+        border: 1px solid $secondary01;
+        background-color: $secondary02;
+        color: $neutral01;
+
+        .row-item {
+          @apply flex justify-between text-sm font-bold pb-2;
+          border-bottom: 1px solid $neutral02;
+
+          &:last-child {
+            @apply pb-0;
+            border-bottom: 1px solid transparent;
+          }
+        }
+
+        .detail-btn {
+          @apply text-white;
+          @apply w-full mt-2;
+          background: $gradient01;
+        }
+      }
+    }
+  }
+}
+
+:deep(.q-item) {
+  background-color: $secondary06;
+}

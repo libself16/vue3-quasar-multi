@@ -1,0 +1,144 @@
+.btn-afbtn {
+    background: linear-gradient(to bottom, #3fecff 0%, #2597ff 100%);
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    width: auto;
+    height: 32px;
+    font-size: 11px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+}
+.currency-drop .dropdown-menu {
+    background: #011422;
+    border: 1px solid #0897be;
+    padding: 5px;
+    border-radius: 7px;
+    min-width: 300px;
+    left: auto !important;
+    top: 42px !important;
+    right: auto !important;
+    top: 22px !important;
+    transform: translate3d(-85px, 32px, 0px) !important;
+}
+.currency-wrap {
+    margin: 0 auto;
+}
+.currency-head {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    /* display: flex; */
+    text-align: center;
+}
+.currency-head .pref {
+    background: linear-gradient(to bottom, #3fecff 0%, #2597ff 100%);
+    color: #000;
+    border-radius: 5px 0px 0px 0px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+.currency-head .bal {
+    background: linear-gradient(to bottom, #3fecff 0%, #2597ff 100%);
+    color: #000;
+    border-radius: 0px 5px 0px 0px;
+    padding: 5px 10px;
+    margin-left: 3px;
+    font-size: 14px;
+}
+.af-currency {
+    margin-top: 5px;
+}
+.af-amt label {
+    align-items: center;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 20% 75%;
+    background: #4d4d4d;
+    margin-bottom: 3px;
+    padding: 4px;
+}
+.option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    left: 26%;
+    height: 30px;
+    width: 30px;
+    transition: all 0.15s ease-out 0s;
+    background: #cbd1d8;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+}
+.option-input:hover {
+    background: #9faab7;
+}
+
+.option-input:checked::before {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    content: '\f00c';
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Font Awesome 5 Free';
+}
+.option-input:checked::after {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #40e0d0;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+.option-input.radio {
+    border-radius: 50%;
+}
+.option-input.radio::after {
+    border-radius: 50%;
+}
+.option-input.radio {
+    border-radius: 50%;
+}
+.option-input:checked {
+    background: linear-gradient(to bottom, #3fecff 0%, #2597ff 100%);
+    color: #000;
+}
+.currency-amt {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    margin-left: 3px;
+    color: #fff;
+}
+.currency-country {
+    color: #0897be;
+    font-weight: bold;
+}
+.right-af .bln-box:before{
+    display: none;
+}
+@media (max-width:600px){
+    .currency-drop .dropdown-menu {
+        transform: translate3d(-175px, 32px, 0px) !important;
+    }
+}

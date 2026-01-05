@@ -1,0 +1,12 @@
+.game-tab {
+  width: 90vw;
+  overflow-x: auto;
+
+  &.scrollX {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: $neutral04 transparent;
+    overflow: auto hidden;
+    transform: translate(0);
+  }
+}

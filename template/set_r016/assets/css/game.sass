@@ -1,0 +1,57 @@
+@import "src/common/css/_variable.sass"
+
+.game-item
+  @apply flex items-center justify-center overflow-hidden relative
+  border-radius: 1.25rem // 兼容 safari 瀏覽器
+  @include iphone-width
+    border-radius: .3125rem
+  &:before
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    top: 100%
+    content: ''
+    background-color: rgba(0, 0, 0, 0.8)
+    -webkit-transition: all 0.25s ease
+    transition: all 0.25s ease
+    -webkit-transition-delay: 0.25s
+    transition-delay: 0.25s
+    border-radius: 20px
+  // &:hover:before
+    // top:0
+    // transition-delay: inherit
+    // border-radius: 20px
+    // background-color: rgba(28, 30, 34, 0.3)
+  &:hover
+    .btn-play
+      opacity: 1
+      top: 50%
+      transition-delay: 0.3s
+  *
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+    -webkit-transition: all 0.25s ease
+    transition: all 0.25s ease
+  .game-img
+    @apply max-w-full max-h-full object-contain
+    border-radius: 1.25rem
+    @include iphone-width
+      border-radius: .3125rem
+  .btn-play
+    width: 2.5rem
+    height: 2.5rem
+    padding: 0 !important
+    color: #fff
+    border: none
+    border-radius: 1.25rem
+    position: absolute
+    left:50%
+    transform: translate(-50%, -50%)
+    top: 30%
+    opacity: 0
+    transition-delay: inherit
+  .btn-favorite
+      @apply absolute z-20 top-2 right-2 min-w-0 min-h-0
+      img
+        @apply w-8 h-8

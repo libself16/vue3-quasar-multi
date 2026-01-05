@@ -1,0 +1,569 @@
+@charset "UTF-8";
+/* CSS Document */
+/********************************************
+
+Common CSS
+
+********************************************/
+html {
+  font-size: 62.5%; /*フォントの基準を10pxに*/
+}
+body {
+  color: #484848;
+  background: #000;
+  font-size: 1rem;
+  width: 100%;
+  margin: 0;
+  font-family: "Noto Sans JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", 游ゴシック, YuGothic, メイリオ, Meiryo, sans-serif;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-feature-settings: "palt"1; /*文字詰め*/
+  letter-spacing: .08em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.txt_under {
+  text-decoration: underline;
+}
+img {
+  vertical-align: top;
+}
+/*テキストを選択した時の装飾*/ ::selection {
+  background: #537895;
+  color: #fff;
+}
+::-moz-selection {
+  background: #537895;
+  color: #fff;
+}
+li {
+  list-style-type: none;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  color: white;
+  display: none;
+  font-family: 'source_sans_proregular';
+  line-height: 25px;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+select, input[type=radio], input[type=date], input[type=time] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #000;
+  border-radius: 0px;
+  background: #fff;
+  color: #333;
+}
+input[type=date]::-webkit-date-and-time-value, input[type=time]::-webkit-date-and-time-value {
+  text-align: left;
+}
+.placeholder::before {
+  content: attr(placeholder);
+  color: rgb(117, 117, 117);
+}
+.placeholder::-webkit-datetime-edit-fields-wrapper {
+  display: none;
+}
+.placeholder::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.mgb_05em{
+  margin-bottom: .5rem !important;
+}
+.mgb_1rem {
+  margin-bottom: 1rem !important;
+}
+.width_50 {
+  width: 55% !important;
+}
+.width_100 {
+  width: 100% !important;
+}
+input[type="date"] {
+  height: 3.6rem;
+  position: relative;
+  text-align: left !important;
+}
+input[type="date"]::-webkit-date-and-time-value {
+  text-align: left !important;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  background: transparent;
+  z-index: 1;
+}
+input[type="date"]::after {
+  content: '';
+  background-image: url("../images/ico_calendar.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+input[type="time"] {
+  height: 3.6rem;
+}
+/*********************************
+
+Font
+
+**********************************/
+.bold_400 {
+  font-weight: 400 !important;
+}
+.bold_600 {
+  font-weight: 600 !important;
+}
+.bold_700 {
+  font-weight: 700 !important;
+}
+.bold_800 {
+  font-weight: 800 !important;
+}
+.bold_900 {
+  font-weight: 900 !important;
+}
+.txt_09em {
+  font-size: 1.4rem !important;
+  text-align: center!important;
+}
+.txt_14rem {
+  font-size: 1.4rem !important;
+}
+.txt_11em {
+  font-size: 1.1em !important;
+}
+.txt_12em {
+  font-size: 1.2em !important;
+}
+.txt_15em {
+  font-size: 1.5em !important;
+  font-weight: 900;
+}
+.txt_18em {
+  font-size: 1.8em !important;
+}
+.txt_20em {
+  font-size: 2em !important;
+}
+.txt_22em {
+  font-size: 2.2em !important;
+  font-weight: 900;
+}
+.txt_26em {
+  font-size: 2.2em !important;
+  font-weight: 900;
+}
+.color_r_red {
+  color: #BF0000 !important;
+}
+.color_yel {
+  color: #FBF91B !important;
+}
+.color_blue {
+  color: #406DD1 !important;
+}
+.color_white {
+  color: #fff !important;
+}
+.color_green {
+  color: #195c4e !important;
+}
+.txt_line {
+  text-decoration: line-through !important;
+}
+.bg_yel {
+  background: #eee8aa;
+}
+.bg_bk {
+  background-color: #000 !important;
+}
+.bg_r_red {
+  background-color: #BE0000 !important;
+}
+.bg_yel_txt {
+  background: #FBF91B !important;
+  color: #333 !important;
+  font-weight: 900;
+}
+.dot {
+  position: relative;
+}
+.dot::after {
+  position: absolute;
+  content: "";
+  background-image: url("../images/dot.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.1rem;
+  height: 1.1rem;
+  top: -3%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.under_line {
+  text-decoration: underline !important;
+}
+.mincho-seri {
+  font-family: 'Noto Serif JP', serif;
+}
+/*********************************
+PC/MOBILE 
+**********************************/
+.pc {
+  display: none;
+}
+.mb {
+  display: block;
+}
+/*********************************
+Main
+**********************************/
+main{
+  display: block;
+  /*max-width: 760px;*/
+  width: 100%;
+  margin: 0 auto;
+}
+header{
+  width: 100%;
+  text-align: center;
+  height: 7rem;
+  padding: 1em 0;
+  background:#000;
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(to right, #ed882d, #ffe68e,#ed882d) 1;
+}
+header h1{
+  margin: 0 auto;
+}
+header h1 img{
+  width: 35%;
+}
+/*********************************
+キービジュアル
+**********************************/
+.main-banner{
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.main-banner .bg-main{
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+}
+.main-banner .star{
+  position: absolute;
+  top: 40%;
+  left: 4%;
+  width: 18%;
+  z-index: 9;
+}
+.tikatika {
+  animation: tikatika 1.2s infinite;
+}
+@keyframes tikatika {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*********************************
+CTA
+**********************************/
+.cta{
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-top: -15%;
+  margin-bottom: -15%;
+}
+
+.cta .cta-bg{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: block;
+  margin: 0 auto;
+}
+.cta .container{
+  width: 95%;
+  position: relative;
+  margin: 0 auto;
+  display: block;
+}
+.cta .container img{
+  width: 100%;
+}
+.cta .container .cv-box{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.cta .container .cv-box img{
+  width: 80%;
+  display: block;
+  margin: 10% auto 0;
+}
+.kv-btn {
+  width: 80%;
+  height: 7rem;
+  display: flex;
+  margin: 0rem auto .5rem;
+  padding: 0;
+  text-align: center;
+  /* border-radius: 2.8rem;*/
+  border: none;
+  /*background: #ff6c00;*/
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 9;
+  background: url("../images/kv-btn.webp")no-repeat center;
+  background-size: contain;
+}
+.kv-btn a {
+  position: relative;
+  width: 100%;
+  display: block;
+  color: #fff;
+  font-size: 1.6rem;
+  height: 3rem;
+  font-weight: 900;
+  z-index: 2;
+}
+.cta .container .cv-box .txt{
+  width: 80%;
+  display: block;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+}
+.mgt-adj{
+  margin-top: 5%!important;
+}
+.overflow-h{
+  overflow: hidden!important;
+}
+/*********************************
+アニメーションエフェクト
+**********************************/
+.yureru-s {
+  animation: yureru-s 2s infinite;
+}
+@keyframes yureru-s {
+  0% {
+    transform: translate(5px, 0px);
+  }
+  5% {
+    transform: translate(-5px, 0px);
+  }
+  10% {
+    transform: translate(5px, 0px);
+  }
+  15% {
+    transform: translate(-5px, 0px);
+  }
+  20% {
+    transform: translate(5px, 0px);
+  }
+  25% {
+    transform: translate(-5px, 0px);
+  }
+  30% {
+    transform: translate(0px, 0px);
+  }
+}
+
+/*********************************
+ABOUT US
+**********************************/
+.about{
+  width: 100%;
+  position: relative;
+  display: block;
+  margin-top: 25%;
+}
+.about img{
+  width: 100%;
+  display: block;
+}
+
+/*********************************
+CONCERN
+**********************************/
+.concern{
+  width: 100%;
+  position: relative;
+  display: block;
+}
+.concern img{
+  width: 100%;
+  display: block;
+}
+
+/*********************************
+Bullet
+**********************************/
+.bullet{
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.bullet .bg{
+  display: block;
+  width: 100%;
+}
+.bullet .txt{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 75%;
+}
+
+/*********************************
+Solv
+**********************************/
+.solv{
+  width: 100%;
+  position: relative;
+  display: block;
+}
+.solv img{
+  width: 100%;
+  display: block;
+}
+
+/*********************************
+Feature
+**********************************/
+.feature{
+  width: 100%;
+  display: block;
+}
+
+.feature img{
+  width: 100%;
+}
+/*********************************
+Safe
+**********************************/
+.safe{
+  display: block;
+  width: 100%;
+  padding-top: 6rem;
+  position: relative;
+}
+.safe .so{
+  width: 40%;
+  position: absolute;
+  top: -7%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.safe .safe-img{
+  width: 100%;
+}
+.amuse-img{
+  width: 100%;
+}
+
+/**********************************
+footer
+***********************************/
+footer {
+  background: #000;
+  width: 100%;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: center;
+  padding: .3em 1em;
+  margin-top: 100px;
+}
+
+@media only screen and (min-width: 767px) {
+  main{
+    max-width: 760px;
+    box-shadow: 0 0 5px #999;
+  }
+  header {
+    padding: 1rem 0;
+}
+header h1 img {
+  width: 20%;
+}
+.cta .cta-bg {
+  width: 100%;
+}
+.cta .container .txt {
+  width: 80%;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: 0em;
+}
+
+.safe {
+  padding-top: 12rem;
+}
+.bonus p {
+  font-size: 3.2rem;
+  font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', '游明朝', 'Yu Mincho', 'ＭＳ Ｐ明朝', 'MS PMincho', serif !important;
+}
+.bullet .txt {
+  position: absolute;
+  width: 52%;
+}
+.cta-bullet-txt {
+  font-size: 3.6rem;
+  }
+  footer{
+    margin-top: 200px;
+  }
+}

@@ -1,0 +1,25 @@
+@import "app/template/okbet_blackGold/assets/css/_variable.sass";
+
+.text-gold {
+  color: $primary-gold-color !important;
+}
+
+.text-gold-gradient {
+  background: -webkit-linear-gradient(180deg, #F7D99D 0%, #A48155 100%);
+  background: linear-gradient(180deg, #F7D99D 0%, #A48155 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-effect-shadow {
+  &:hover {
+    color: $primary-white-color;
+    text-shadow: $primary-text-shadow;
+  }
+}
+
+.text-effect-shadow-active {
+  color: $primary-white-color;
+  text-shadow: $primary-text-shadow;
+}

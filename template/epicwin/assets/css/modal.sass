@@ -1,0 +1,222 @@
+@import "src/common/css/_variable.sass"
+@import 'src/css/form.sass'
+
+.cover
+  width: 100%
+  height: 100%
+  position: fixed
+  +setFlex
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background-color: rgba(0, 0, 0, 0.5)
+  z-index: 98
+
+.modal
+  z-index: 99
+  // position: fixed
+  pointer-events: auto
+  position: relative
+  // top: 2vw
+  // left: 35%
+  height: auto
+  border-radius: 24px
+  // overflow-y: auto
+  flex-shrink: 0
+  margin: 0 auto
+  &.form
+    width: 500px
+    background: #18032e
+    position: relative
+    +iphone-width
+      width: 100%
+    .close
+      cursor: pointer
+      position: relative
+      top: 10px
+      left: 450px
+      +iphone-width
+        top: 10px
+        left: 88vw
+  &.menu
+    width: 80%
+    max-width: 650px
+    +iphone-width
+      width: 100%
+      max-width: 100vw !important
+    .close
+      cursor: pointer
+      position: absolute
+      width: 2rem
+      top: 40px
+      right: -40px
+      +iphone-width
+        top: 10px
+        left: 88vw
+  +iphone-width
+    min-width: 375px
+    width: 100%
+    height: 100%
+  .tab-list
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-wrap: wrap
+    // margin-top: 40px
+    .game-box
+      width: 12vw
+      padding: 10px
+      &.sgfilter
+        background-color: #2f2f2f
+        border-radius: 6px
+        display: flex
+        justify-content: center
+        align-items: center
+        color: #ffffff
+        font-size: 16px
+        height: 60px
+        width: calc(33.33% - 16px)
+        margin: 8px
+        padding: 12px
+        filter: grayscale(1)
+        transition: all 0.3s
+        cursor: pointer
+        &:hover
+          filter: grayscale(0)
+          background-color: #2a054b
+          color: #ffffff
+      img
+        width: 90%
+  .logo-area
+    color: #c700ff
+    font-weight: bold
+    margin: 0
+    font-size: 2rem
+    +setFlex
+    flex-direction: column
+    .logo
+      padding: 20px 0
+    .title
+        width: 50%
+    .label
+      line-height: 2rem !important
+    +iphone-width
+      .logo
+        width: 50%
+      .title
+        width: 50%
+  .modal-menu
+    max-height: 90vh
+    overflow-y: auto
+    margin: 60px auto
+    +iphone-width
+      width: 90%
+  .modal-form
+    max-height: 65vh
+    overflow-y: auto
+    +iphone-width
+      width: 100%
+    .form-item
+      margin: 10px 0
+      p
+        margin-bottom: 5px
+        color: rgba(255, 255, 255, 0.70)
+        font-family: "Century Gothic"
+        font-size: 14px
+        font-style: normal
+        font-weight: 700
+        line-height: normal
+        text-transform: capitalize
+    .form-bottom
+      +setFlex
+      margin: 20px 0
+      .form-btn
+        cursor: pointer
+        // max-width: 180px
+        width: 48%
+        border-radius: 8px
+        display: inline-flex
+        padding: 10px 30px
+        justify-content: center
+        align-items: center
+        &.login
+          margin-right: 2%
+          color: #FFF
+          border: 2px solid #b46ffd
+          border-radius: 30px
+          background: linear-gradient(180deg, #c102fd 0%, #8901ff 100%)
+          font-family: "Century Gothic"
+          font-size: 18px
+          font-style: normal
+          font-weight: 700
+          line-height: normal
+          text-transform: uppercase
+        &.register
+          margin-right: 2%
+          color: #FFF
+          border: 2px solid #b46ffd
+          border-radius: 30px
+          background: linear-gradient(180deg, #c102fd 0%, #8901ff 100%)
+          font-family: "Century Gothic"
+          font-size: 18px
+          font-style: normal
+          font-weight: 700
+          line-height: normal
+          text-transform: uppercase
+        &.join
+          margin-left: 2%
+          color: #24262B
+          background: #FFC002
+          font-family: "Century Gothic"
+          font-size: 18px
+          font-style: normal
+          font-weight: 700
+          line-height: normal
+    .forgot-area
+      text-align: center
+      color: rgba(255, 255, 255, 0.40)
+      font-size: 16px
+      font-style: normal
+      font-weight: 500
+      line-height: normal
+      .reset-btn
+        text-transform: initial
+        &.reset-btn-forgot
+          margin: 0 5px
+          text-decoration-line: none
+          color: #9279a0
+      .go-login
+        color: #c700ff
+        cursor: pointer
+        text-transform: initial
+    .copyright
+      margin-top: 20px
+      p
+        margin: 0
+        color: rgba(255, 255, 255, 0.40)
+        text-align: center
+        font-family: "Century Gothic"
+        font-size: 12px
+        font-style: normal
+        font-weight: 500
+        line-height: normal
+    .faster-register-area
+      padding: 5px 0
+      ul
+        padding: 0
+        margin: 0
+        +setFlex
+        list-style: none
+        li
+          margin: 0 8px
+          cursor: pointer
+      p
+        color: rgba(255, 255, 255, 0.40)
+        font-family: "Noto Sans CJK TC"
+        font-size: 16px
+        font-style: normal
+        font-weight: 500
+        line-height: normal
+        text-align: center
+        margin: 0
+

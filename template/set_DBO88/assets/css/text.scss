@@ -1,0 +1,20 @@
+@import "app/template/set_DBO88/assets/css/_variable.scss";
+
+.primary-color-label {
+  color: $primary-color;
+}
+
+.blue-label {
+  color: #52a0d0;
+}
+
+.history-label {
+  @apply flex items-center;
+  border-right: 1px solid $primary-color;
+}
+
+.page-title {
+  @apply text-[2rem] font-bold mb-4;
+  line-height: 2rem;
+  color: $text-white;
+}

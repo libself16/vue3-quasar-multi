@@ -1,0 +1,408 @@
+@charset "UTF-8";
+/* CSS Document */
+#maintain-page {
+  width: 100%;
+  min-height: 700px;
+  height: 100vh;
+  text-align: center;
+  background-image: url('../images/cover.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#maintain-page .rocket {
+  width: 70%;
+}
+#maintain-page .rocket img {
+  width: 20vw;
+  min-width: 300px;
+}
+.api-response {
+  border: 1px solid #fff;
+  border-radius: 1em;
+  text-align: center;
+  width: 20vw;
+  margin: 0 auto;
+}
+html {
+  font-size: 62.5%; /*フォントの基準を10pxに*/
+}
+body {
+  color: #fff;
+  background-image: url('../images/bg.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font-size: 1rem;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  font-family: 'Noto Sans JP', 'Helvetica Neue', Arial,
+    'Hiragino Kaku Gothic ProN', 游ゴシック, YuGothic, メイリオ, Meiryo,
+    sans-serif;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-feature-settings: 'palt' 1; /*文字詰め*/
+  letter-spacing: 0.08em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.txt_under {
+  text-decoration: underline;
+}
+img {
+  vertical-align: top;
+}
+/*テキストを選択した時の装飾*/
+::selection {
+  background: #537895;
+  color: #fff;
+}
+::-moz-selection {
+  background: #537895;
+  color: #fff;
+}
+li {
+  list-style-type: none;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  color: white;
+  display: none;
+  font-family: 'source_sans_proregular';
+  line-height: 25px;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+select,
+input[type='radio'],
+input[type='date'],
+input[type='time'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #000;
+  border-radius: 0px;
+  background: #fff;
+  color: #333;
+}
+input[type='date']::-webkit-date-and-time-value,
+input[type='time']::-webkit-date-and-time-value {
+  text-align: left;
+}
+.my-radio {
+  position: relative;
+  display: block; /* 縦並びに */
+  margin: 0.2em 0; /* 前後のスペース */
+  padding-left: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+/* inputは非表示にする */
+.my-radio input {
+  display: none;
+}
+/* 常に表示する枠線の円 */
+.radio-mark {
+  position: absolute;
+  top: 0; /* 上からの位置 */
+  left: 0;
+  height: 22px; /* 大きさ */
+  width: 22px; /* 大きさ */
+  border: solid 2px #d4dae2; /* 線 */
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+/* 選択時に重ねる円 */
+.radio-mark:after {
+  content: '';
+  position: absolute;
+  background: #f1890e; /* 色 */
+  border-radius: 50%;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  opacity: 0; /* 透明にしておく */
+}
+/* 選択時に重ねた円の透明を解除 */
+.my-radio input:checked + .radio-mark:after {
+  opacity: 1;
+}
+/* 常に表示する枠線の円 */
+.radio-mark-en {
+  position: absolute;
+  top: 2px; /* 上からの位置 */
+  left: 0;
+  height: 22px; /* 大きさ */
+  width: 22px; /* 大きさ */
+  border: solid 2px #d4dae2; /* 線 */
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+/* 選択時に重ねる円 */
+.radio-mark-en:after {
+  content: '';
+  position: absolute;
+  background: #2e80ff; /* 色 */
+  border-radius: 50%;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  opacity: 0; /* 透明にしておく */
+}
+/* 選択時に重ねた円の透明を解除 */
+.mei-font {
+  font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', '游明朝',
+    'Yu Mincho', 'ＭＳ Ｐ明朝', 'MS PMincho', serif !important;
+}
+.my-radio input:checked + .radio-mark-en:after {
+  opacity: 1;
+}
+.placeholder::before {
+  content: attr(placeholder);
+  color: rgb(117, 117, 117);
+}
+.placeholder::-webkit-datetime-edit-fields-wrapper {
+  display: none;
+}
+.placeholder::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.mgb_05em {
+  margin-bottom: 0.5rem !important;
+}
+.mgb_1rem {
+  margin-bottom: 1rem !important;
+}
+.width_50 {
+  width: 55% !important;
+}
+.width_100 {
+  width: 100% !important;
+}
+input[type='date'] {
+  height: 3.6rem;
+  position: relative;
+  text-align: left !important;
+}
+input[type='date']::-webkit-date-and-time-value {
+  text-align: left !important;
+}
+input[type='date']::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  background: transparent;
+  z-index: 1;
+}
+input[type='date']::after {
+  content: '';
+  background-image: url('../images/ico_calendar.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+input[type='time'] {
+  height: 3.6rem;
+}
+/*********************************
+
+Font
+
+**********************************/
+.bold_400 {
+  font-weight: 400 !important;
+}
+.bold_600 {
+  font-weight: 600 !important;
+}
+.bold_700 {
+  font-weight: 700 !important;
+}
+.bold_800 {
+  font-weight: 800 !important;
+}
+.bold_900 {
+  font-weight: 900 !important;
+}
+.txt_09em {
+  font-size: 1.4rem !important;
+  text-align: center !important;
+}
+.txt_14rem {
+  font-size: 1.4rem !important;
+}
+.txt_11em {
+  font-size: 1.1em !important;
+}
+.txt_12em {
+  font-size: 1.2em !important;
+}
+.txt_15em {
+  font-size: 1.5em !important;
+  font-weight: 900;
+}
+.txt_18em {
+  font-size: 1.8em !important;
+}
+.txt_20em {
+  font-size: 2em !important;
+}
+.txt_22em {
+  font-size: 2.2em !important;
+  font-weight: 900;
+}
+.txt_26em {
+  font-size: 2.2em !important;
+  font-weight: 900;
+}
+.color_r_red {
+  color: #bf0000 !important;
+}
+.color_yel {
+  color: #fbf91b !important;
+}
+.color_blue {
+  color: #406dd1 !important;
+}
+.color_white {
+  color: #fff !important;
+}
+.color_green {
+  color: #195c4e !important;
+}
+.txt_line {
+  text-decoration: line-through !important;
+}
+.bg_yel {
+  background: #eee8aa;
+}
+.bg_bk {
+  background-color: #000 !important;
+}
+.bg_r_red {
+  background-color: #be0000 !important;
+}
+.bg_yel_txt {
+  background: #fbf91b !important;
+  color: #333 !important;
+  font-weight: 900;
+}
+.dot {
+  position: relative;
+}
+.dot::after {
+  position: absolute;
+  content: '';
+  background-image: url('../images/dot.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.1rem;
+  height: 1.1rem;
+  top: -3%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.under_line {
+  text-decoration: underline !important;
+}
+.mincho-seri {
+  font-family: 'Noto Serif JP', serif;
+}
+/*********************************
+PC/MOBILE
+**********************************/
+.pc {
+  display: none;
+}
+.mb {
+  display: block;
+}
+/*********************************
+Main
+**********************************/
+main {
+  display: block;
+  /*max-width: 760px;*/
+  width: 100%;
+  margin: 0 auto;
+}
+header {
+  width: 100%;
+  text-align: center;
+  height: 7rem;
+  padding: 1em 0;
+  background: #000;
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(to right, #ed882d, #ffe68e, #ed882d) 1;
+}
+
+/**********************************
+footer
+***********************************/
+footer {
+  background: #000;
+  width: 100%;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: center;
+  padding: 0.3em 1em;
+}
+
+@media only screen and (max-width: 854px) {
+  #maintain-page {
+    background-image: none;
+  }
+  .api-response {
+    width: 40vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #maintain-page {
+    background-image: none;
+  }
+  .api-response {
+    width: 300px;
+  }
+  #maintain-page .rocket {
+    width: 100%;
+  }
+}

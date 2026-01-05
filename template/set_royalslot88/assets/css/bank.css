@@ -1,0 +1,39 @@
+#addbank_modal{
+    z-index: 10000;
+}
+.af-btn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+.cancel_btn {
+    border-radius: 20px;
+    border: 1px solid #6237f0;
+    box-shadow: inset 0px -2px 7px #081f23, inset 0px 1px 3px 1px #93f1ff;
+    text-shadow: 2px 2px 7px #000;
+    background: url(../images/icon/texture.png),#1499ad;
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 20px;
+    border: none;
+    width: 150px;
+    font-weight: bold;
+}
+.cancel_btn:hover {
+    background: linear-gradient(to bottom, rgba(169,211,32,1) 0%, rgba(56,131,18,1) 100%);
+}
+.submit_btn {
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 20px;
+    border: none;
+    width: 150px;
+    background: url(../images/icon/texture.png),#aa1e74;
+    box-shadow: inset 0px 0px 5px #fff;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.submit_btn:hover {
+    background: #021c2d;
+}

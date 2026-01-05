@@ -1,0 +1,15 @@
+::v-deep(.q-expansion-item) {
+  background: none;
+  margin-bottom: 15px;
+  padding: 0px;
+  border-radius: 10px;
+  background: rgb(15, 78, 44);
+  border: double rgb(71, 184, 61);
+}
+::v-deep(.q-expansion-item) .q-item {
+  padding: 0 20px;
+}
+::v-deep(.q-expansion-item) .q-card__section {
+  background: #000;
+  padding: 15px;
+}/*# sourceMappingURL=menu.css.map */

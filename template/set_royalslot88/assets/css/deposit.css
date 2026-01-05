@@ -1,0 +1,450 @@
+.deposit-tab {
+  flex-direction: column;
+  border-bottom: none;
+  grid-gap: 10px;
+}
+
+.deposit-tab .nav-item {
+  width: 100%;
+}
+
+.deposit-tab .nav-link {
+  width: 100%;
+  background-color: #081c4c;
+  color: rgb(255 255 255 / 67%);
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #6237f0;
+  box-shadow: inset 0px -2px 7px #2b061d, inset 0px 1px 3px 1px #ffb6e3;
+  text-shadow: 2px 2px 7px #000;
+  text-align: center;
+}
+
+.deposit-tab .nav-link.active {
+  color: rgb(255, 255, 255);
+  border: 1px solid #6237f0;
+  box-shadow: inset 0px -2px 7px #2b061d, inset 0px 1px 3px 1px #ffb6e3;
+  text-shadow: 2px 2px 7px #000;
+  background: #aa1e74;
+}
+
+.deposit-tab .nav-link:focus,
+.deposit-tab .nav-link:hover {
+  color: rgb(255, 255, 255);
+  border: 1px solid #6237f0;
+  box-shadow: inset 0px -2px 7px #2b061d, inset 0px 1px 3px 1px #ffb6e3;
+  text-shadow: 2px 2px 7px #000;
+  background: #aa1e74;
+}
+
+.af-vip-wrap {
+  background: #081c4c;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  border-radius: 10px;
+  border: 1px solid #6237f0;
+  box-shadow: inset 0px -2px 7px #2b061d, inset 0px 1px 3px 1px #ffb6e3;
+}
+
+.af-vip-prog {
+  width: 100%;
+  padding: 10px 15px;
+  padding-bottom: 20px;
+  /* padding: 10px; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 3;
+}
+
+.af-prg-b .progress {
+  padding: 0;
+  width: 100%;
+  height: 12px;
+  overflow: hidden;
+  background: #000000;
+  border-radius: 6px;
+}
+
+.af-prg-b .bar {
+  position: relative;
+  float: left;
+  min-width: 1%;
+  height: 100%;
+  background: #aa1e74;
+}
+
+.af-prg-b .percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-family: tahoma, arial, helvetica;
+  font-size: 9px;
+  color: #fff;
+}
+
+.af-vip-ico {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  gap: 20px;
+  flex: 2;
+}
+
+.af-vi-det {
+  color: #aa1e74;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.af-vp-lvl {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.af-vip-lvl img {
+  max-height: 78px;
+}
+
+.provider-menu--wrap {
+  position: relative;
+  width: 100%;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #6237f0;
+  align-items: center;
+  padding-bottom: 15px;
+  margin-top: 10px;
+}
+
+.currency-selection ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  grid-gap: 10px;
+  margin: 0;
+  border-bottom: none;
+}
+
+.currency-selection .nav-item .nav-link {
+  background-color: #081c4c;
+  color: rgb(255 255 255 / 67%);
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #6237f0;
+  box-shadow: inset 0px -2px 7px #2b061d, inset 0px 1px 3px 1px #ffb6e3;
+  text-shadow: 2px 2px 7px #000;
+  min-width: 106px;
+  width: 100%;
+}
+
+.payment-sel .nav-tabs .nav-item .nav-link {
+  background-color: #081c4c;
+  color: rgb(255 255 255 / 67%);
+  padding: 0.5rem;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #6237f0;
+  box-shadow: inset 0px -2px 7px #2b061d, inset 0px 1px 3px 1px #ffb6e3;
+  text-shadow: 2px 2px 7px #000;
+}
+
+.payment-sel .nav-tabs .nav-item.show .nav-link,
+.payment-sel .nav-tabs .nav-link.active {
+  color: rgb(255, 255, 255);
+  border: 1px solid #6237f0;
+  box-shadow: inset 0px -2px 7px #2b061d, inset 0px 1px 3px 1px #ffb6e3;
+  text-shadow: 2px 2px 7px #000;
+  background: #aa1e74;
+}
+
+.currency-selection .nav-item.show .nav-link,
+.currency-selection .nav-link.active {
+  color: rgb(255, 255, 255);
+  box-shadow: inset 0px -2px 7px #2b061d, inset 0px 1px 3px 1px #ffb6e3;
+  text-shadow: 2px 2px 7px #000;
+  background: #aa1e74;
+}
+
+.payment-sel ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0px;
+  margin: 0px;
+  gap: 10px;
+  width: 100%;
+  border-bottom: 0px;
+}
+
+.payment-sel ul li {
+  list-style: none;
+  /* margin-right: 10px; */
+}
+
+.btn-check {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+.af-radio-tile-group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.af-radio-tile-group .input-container {
+  position: relative;
+  /* height: 40px; */
+  width: auto;
+}
+
+.af-radio-tile-group .input-container .radio-button {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.af-radio-tile-group .input-container .radio-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #081c4c;
+  color: rgb(255 255 255 / 67%);
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #6237f0;
+  box-shadow: inset 0px -2px 7px #2b061d, inset 0px 1px 3px 1px #ffb6e3;
+  text-shadow: 2px 2px 7px #000;
+  border-radius: 8px;
+  transition: transform 300ms ease;
+  padding: 10px;
+}
+
+.af-radio-tile-group .input-container .radio-tile-label {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #079ad9;
+}
+
+.af-radio-tile-group .input-container .radio-tile.active {
+  color: rgb(255, 255, 255) !important;
+  border: 1px solid #6237f0;
+  box-shadow: inset 0px -2px 7px #2b061d, inset 0px 1px 3px 1px #ffb6e3;
+  text-shadow: 2px 2px 7px #000;
+  background: #aa1e74;
+  transform: scale(1.1, 1.1);
+}
+
+.af-radio-tile-group .input-container .radio-tile.active .icon svg {
+  fill: white;
+  background-color: #079ad9;
+}
+
+.af-radio-tile-group .input-container .radio-tile.active .radio-tile-label {
+  color: white;
+  background-color: #079ad9;
+}
+
+.af-promo-in .radio-tile {
+  border: none !important;
+  padding: 15px !important;
+}
+
+.af-row {
+  flex-direction: column;
+  gap: 15px;
+  line-height: normal !important;
+}
+
+label.cl-l {
+  /* width: 100%; */
+}
+
+.af-bnk-account {
+  padding: 10px 6px;
+  background: #081c4c;
+  border-radius: 8px;
+  border: 1px solid #6237f0;
+}
+
+.bank_details_copy {
+  font-size: 14px;
+}
+
+.bank_details_copy i {
+  color: #ec0000;
+}
+
+.af-amt-wrap {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.af-min {
+  margin: 5px 0px;
+  padding-left: 10px;
+}
+
+.inputDeposit {
+  height: 38px;
+  padding: 5px 10px;
+  border: 1px solid #6237f0;
+  background: #081c4c;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.af-radio-tile-group.af-promo-in {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 12px;
+  /* flex-direction: column; */
+  gap: 10px;
+}
+
+.af-amt-wrap {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.depositBtn {
+  border: none;
+  background: #03233a;
+  color: #fff;
+  background-color: #081c4c;
+  color: rgb(255 255 255 / 67%);
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #6237f0;
+  box-shadow: inset 0px -2px 7px #2b061d, inset 0px 1px 3px 1px #ffb6e3;
+  text-shadow: 2px 2px 7px #000;
+  border: 1px solid #0c9bd5;
+  min-width: 3.75rem !important;
+  width: auto !important;
+  border-radius: 8px;
+}
+
+.depo-promotion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.depo-promotion .card {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #081c4c;
+  color: rgb(255 255 255 / 67%);
+  border-radius: 10px;
+  border: 1px solid #6237f0;
+  box-shadow: inset 0px -2px 7px #2b061d, inset 0px 1px 3px 1px #ffb6e3;
+  text-shadow: 2px 2px 7px #000;
+  text-align: center;
+  animation: all 0.5s ease;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.depo-promotion .card:hover .amount,
+.depo-promotion .card.active .amount {
+  border-top: 1px solid #ffffff;
+}
+
+.depo-promotion .card:hover,
+.depo-promotion .card.active {
+  color: rgb(255, 255, 255);
+
+  box-shadow: inset 0px -2px 7px #2b061d, inset 0px 1px 3px 1px #ffb6e3;
+
+  text-shadow: 2px 2px 7px #000;
+
+  background: #aa1e74;
+}
+
+.depo-promotion .card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.depo-promotion .card ul li {
+  margin-bottom: 10px;
+}
+
+.depo-promotion .card .amount {
+  font-size: 16px;
+  padding-top: 10px;
+  border-top: 1px solid #6237f0;
+  line-height: 1;
+}
+.form-promo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  gap: 0.5625rem;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+@media screen and (orientation: portrait) and (max-width: 999px) {
+  .depo-promotion .card {
+    font-size: 12px;
+  }
+  .depo-promotion .card .amount {
+    font-size: 14px;
+  }
+  .currency-selection .nav-item .nav-link {
+    font-size: 12px;
+  }
+  .payment-sel .nav-tabs .nav-item .nav-link {
+    font-size: 12px;
+  }
+  .currency-selection ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sidepanel_content_profile {
+    padding: 0;
+  }
+  .modal_share.modal_share_custom .modal-body {
+    padding: 0px;
+  }
+  .af-vip-wrap {
+    flex-direction: column;
+  }
+  .deposit-tab {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .af-promo-in .input-container {
+    width: 100%;
+    height: auto;
+  }
+  .form-promo {
+    width: 100%;
+  }
+}

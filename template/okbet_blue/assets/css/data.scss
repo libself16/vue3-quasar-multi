@@ -1,0 +1,13 @@
+@import "app/template/okbet_blue/assets/css/_variable.sass";
+
+.no-data {
+  @apply flex flex-col items-center justify-center text-[#eaeaea] text-[2rem];
+
+  img {
+    @apply opacity-50 max-w-[10rem] max-h-[10rem];
+  }
+
+  span {
+    @apply mt-2;
+  }
+}

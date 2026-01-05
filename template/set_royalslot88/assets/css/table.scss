@@ -1,0 +1,23 @@
+:deep(.q-table) {
+  tr th {
+    text-align: center;
+    padding: 10px 10px;
+    background: #aa1e74;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 1px solid #6237f0;
+    font-size: 1rem;
+  }
+}
+
+:deep(.q-table__bottom) {
+  @apply flex justify-center items-center;
+  background: #08192b;
+  color: #fff;
+  padding: 5px 10px;
+  text-align: center;
+  border: 1px solid #6237f0;
+  vertical-align: middle;
+  font-size: .75rem;
+}

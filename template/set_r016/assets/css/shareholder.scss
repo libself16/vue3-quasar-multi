@@ -1,0 +1,74 @@
+@import "src/common/css/_variable.sass";
+@import "app/template/set_r016/assets/css/_variable.scss";
+
+.table-content {
+  @apply mt-[1.25rem];
+  background: transparent !important;
+  box-shadow: none !important;
+
+  &.clickable {
+    ::v-deep(tbody > tr) {
+      @apply hover:bg-[#CF08081A]/10 hover:cursor-pointer;
+    }
+  }
+
+  &.hideHeader {
+
+    :deep(thead > tr) {
+      visibility: hidden;
+      height: .625rem;
+
+      th {
+        padding: 0 1rem;
+      }
+    }
+
+    @include phone-width {
+      &.no-padding {
+        :deep(thead > tr) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include phone-width {
+
+    ::v-deep(th),
+    ::v-deep(td) {
+      @apply text-[.625rem];
+    }
+
+    &.no-padding {
+
+      ::v-deep(th),
+      ::v-deep(td) {
+        @apply p-1 whitespace-normal;
+      }
+    }
+
+    ::v-deep(.details-btn) {
+      @apply bg-white text-[.625rem] rounded-md font-bold;
+      color: $primary09;
+    }
+  }
+}
+
+:deep(.shareholder-no-data-container) {
+  @apply w-full flex flex-col justify-center items-center py-10;
+  @apply font-bold text-[1.5rem];
+  color: $primary05;
+
+  .q-img {
+    width: 10rem;
+    height: auto;
+
+    @include pad-width {
+      width: 8rem;
+    }
+  }
+
+  span {
+    @apply mt-4;
+  }
+}

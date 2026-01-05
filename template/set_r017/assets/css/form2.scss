@@ -1,0 +1,102 @@
+@import "app/template/set_r017/assets/css/_variable.scss";
+
+.form-title {
+  font-family: NotoSans;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.6875rem;
+
+
+  &.required {
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -0.75rem;
+      width: .375rem;
+      height: .375rem;
+      background-color: transparent;
+      border-radius: 50%;
+    }
+  }
+}
+
+.form-input {
+  :deep(.q-field__inner) {
+    .q-field__control {
+      background: $secondary06;
+      border-radius: .25rem;
+      padding: 0 .75rem;
+      border: 2px solid $neutral04;
+      box-shadow: $shadoe01;
+      color: $neutral01;
+      box-sizing: content-box;
+
+      .q-field__native {
+        padding: 0;
+        color: $neutral01;
+        font-family: NotoSansTC;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 100%;
+        text-transform: uppercase;
+        justify-content: center;
+
+        &::placeholder {
+          color: $neutral01;
+        }
+      }
+
+      .q-field__append {
+        .q-icon {
+          color: $neutral02 !important;
+          font-size: 1.25rem !important;
+        }
+      }
+
+      &::after {
+        border: none
+      }
+    }
+  }
+}
+
+.game-search-input {
+  :deep(.q-field__inner) {
+    .q-field__control {
+      background: #0A0A0A;
+      border-radius: 62.4375rem;
+      padding: 0 1rem;
+      border: 1px solid #454545;
+      color: $neutral01;
+      box-sizing: content-box;
+
+      .q-field__native {
+        padding: 0;
+        color: $neutral01;
+        font-family: NotoSansTC;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 100%;
+        text-transform: uppercase;
+        justify-content: center;
+
+        &::placeholder {
+          color: $neutral01;
+        }
+      }
+
+      .q-field__append {
+        .q-icon {
+          color: $neutral02 !important;
+          font-size: 1.25rem !important;
+        }
+      }
+
+      &::after {
+        border: none
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.preferred-modal .modal-content{
+    background: transparent;
+    border: none;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #0897be;
+    padding: 10px;
+}
+
+.preferred-modal .modal-body{
+    padding: 0px;
+}
+
+.preferred-modal .close{
+    position: absolute;
+    top: -35px;
+    right: 0px;
+    z-index: 1;
+    color: #fff;
+    background: none;
+    font-size: 30px;
+    border: none;
+}
+.prefer-btn{
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-transition: all .6s ease-in-out;
+    background: linear-gradient(to bottom, #3fecff 0%, #2597ff 100%);
+    display: block;
+    text-align: center;
+    margin: 10px auto 0px;
+    width: 60%;
+}
+
+@media screen and (max-width: 750px) {
+    .preferred-modal .close{
+        top: -30px;
+        right: 0px;
+    }
+}

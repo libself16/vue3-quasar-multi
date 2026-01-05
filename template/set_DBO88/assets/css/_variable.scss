@@ -1,0 +1,91 @@
+// base color
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+$white: #fff;
+$gray: #6c757d;
+$gray-dark: #343a40;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+$white-color: $white;
+$black-color: #000;
+$bright-blue-color: #2283f6;
+$crimson-red-color: #ed1d49;
+$midnight-blue-color: #161f2c;
+$slate-gray-color: #55657e;
+$sky-blue-color: #93acd3;
+$deep-slate-color: #3d3f4b;
+$deep-navy-color: #111923;
+$charcoal-dark-color: #1a1c21;
+$steel-blue-color: #475c72;
+$medium-navy-color: #202a39;
+$dark-navy-color: #1c2532;
+$lime-green-color: #4cc700;
+$dark-slate-color: #2c2e34;
+$medium-slate-color: #36383e;
+$dark-blue-color: #08192b;
+$dark-charcoal-color: #24262b;
+
+// color variable
+$primary-color: $blue;
+$secondary-color: $gray;
+$danger-color: $danger;
+
+// old
+$primary-color-light: #531a1b;
+$header-text-gray: #676767;
+$navigation-active-bg: linear-gradient(to right, #d35861 0%, #fd857b 100%);
+$pink-shadow-color: #fd857b;
+$pink-color: #fd857b;
+$select-standout-color: #212529;
+$pink-button-gradient: linear-gradient(to right, #d35861 0%, #fd857b 100%);
+$wallet-checked-color: #97c618;
+$modal-bg-light: #ffffffe6;
+$history-search-wrapper-bg: #694848;
+
+// background
+$midnight-blue-bg: $midnight-blue-color;
+$deep-navy-bg: $deep-navy-color;
+$charcoal-dark-bg: $charcoal-dark-color;
+$medium-navy-bg: $medium-navy-color;
+$dark-navy-bg: $dark-navy-color;
+$deep-slate-bg: $deep-slate-color;
+$dark-slate-bg: $dark-slate-color;
+$medium-slate-bg: $medium-slate-color;
+$dark-blue-bg: $dark-blue-color;
+$dark-charcoal-bg: $dark-charcoal-color;
+$black-bg: $black-color;
+// text
+$text-white: $white;
+$text-black: $black-color;
+$text-sky-blue: $sky-blue-color;
+$text-gray: $gray;
+$text-lime-green: $lime-green-color;
+$text-success: $success;
+
+// button
+$login-button-bg: $bright-blue-color;
+$register-button-bg: $crimson-red-color;
+$deep-slate-button-bg: $deep-slate-color;
+
+// border
+$steel-blue-border: $steel-blue-color;
+$sky-blue-border: $sky-blue-color;
+
+// shadow
+$shadow-color: $gray;
+
+// component
+$footer-bg: $midnight-blue-color;
+$footer-text: $slate-gray-color;

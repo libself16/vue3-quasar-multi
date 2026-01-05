@@ -1,0 +1,6 @@
+# Ignore artifacts:
+dist
+.quasar
+.quasar
+tool
+src/i18n/locales/*.ts

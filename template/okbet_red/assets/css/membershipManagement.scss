@@ -1,0 +1,420 @@
+@import "src/common/css/_variable.sass";
+@import "app/template/okbet_red/assets/css/_variable.sass";
+@import "app/template/okbet_red/assets/css/menu.sass";
+@import "app/template/okbet_red/assets/css/button.scss";
+
+.management-area {
+
+  .manage-panel,
+  .detail-panel,
+  .bet-report-panel,
+  .bet-record-query-panel {
+    width: 100%;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    background: $primary-color;
+
+    @include phone-width {
+      padding: 0.625rem;
+    }
+
+    .manage-table,
+    .detail-table,
+    .bet-report-table,
+    .bet-record-query-table {
+      width: 100%;
+      box-shadow: none;
+      border-radius: 0;
+      background: $primary-color;
+      color: $white-color;
+    }
+
+    :deep(.q-table__top) {
+      padding: 0;
+    }
+
+    .search-form {
+      width: 100%;
+
+      @include phone-width {
+        margin-bottom: 1.25rem;
+      }
+
+      .search-form-row {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 1.25rem;
+
+        @include phone-width {
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 0;
+        }
+
+        .search-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 1.25rem;
+          font-size: 0.875rem;
+          overflow: hidden;
+
+          @include phone-width {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 1.25rem;
+            flex-direction: column;
+          }
+
+          :deep(.q-checkbox__inner) {
+            color: $white-color;
+          }
+
+          &.manage,
+          &.bet-report,
+          &.bet-record-report {
+            margin-right: 2.25rem;
+
+            @include phone-width {
+              margin-right: 0;
+            }
+          }
+
+          &.checkbox {
+            @include phone-width {
+              justify-content: flex-start;
+              flex-direction: row;
+              flex-wrap: wrap;
+              gap: 1rem;
+            }
+          }
+
+          .search-item-label {
+            color: $white-color;
+            font-weight: 400;
+            margin-bottom: 0.25rem;
+            margin-right: 0.625rem;
+
+            @include phone-width {
+              width: 100%;
+              margin-bottom: 0.375rem;
+              margin-right: 0;
+            }
+
+            &.manage,
+            &.bet-report,
+            &.bet-record-report {
+              font-size: 1.25rem;
+              font-weight: 600;
+              margin-right: 1.25rem;
+
+              @include phone-width {
+                margin-right: 0;
+                font-size: 0.875rem;
+                font-weight: 400;
+              }
+            }
+          }
+
+          .search-item-input {
+            color: black;
+            background-color: #f0f1f4;
+            overflow: hidden;
+
+            @include phone-width {
+              width: 100%;
+            }
+
+            &::placeholder {
+              color: #797979;
+            }
+
+            &.account {
+              width: 8.6875rem;
+              border-radius: 0.625rem;
+
+              @include phone-width {
+                width: 100%;
+              }
+
+              &.manage,
+              &.bet-report,
+              &.bet-record-report {
+                width: 13.75rem;
+
+                @include phone-width {
+                  width: 100%;
+                }
+              }
+            }
+
+            &.type {
+              min-width: 7.5rem;
+              border-radius: 6.25rem;
+
+              @include phone-width {
+                width: 100%;
+              }
+
+              &.bet-report {
+                border-radius: 0.625rem;
+              }
+
+              :deep(.q-field__append) {
+                margin-right: 0.875rem;
+              }
+            }
+
+            &.date {
+              min-width: 18rem;
+              height: 1.5rem;
+              background-color: transparent;
+
+              @include phone-width {
+                width: 100%;
+                height: 2.25rem;
+              }
+
+              :deep(.q-field__control) {
+                height: 1.5rem;
+
+                @include phone-width {
+                  height: 2.25rem;
+
+                  &::before {
+                    border: 1px solid #cacaca;
+                  }
+                }
+
+                .q-field__native {
+                  width: 100%;
+                  height: 100%;
+                  font-family: Songti TC;
+                  padding: 0;
+                  color: $white-color;
+
+                  @include phone-width {
+                    padding: 0.59375rem 0.5rem;
+                  }
+
+                  &::placeholder {
+                    color: $white-color;
+                  }
+                }
+
+                .q-field__append {
+                  padding: 0;
+
+                  i {
+                    color: $white-color;
+                  }
+
+                  @include phone-width {
+                    padding: 0 0.5rem 0 0;
+                  }
+                }
+              }
+            }
+
+            :deep(.q-field__control) {
+              padding: 0;
+              height: 2.4375rem;
+              background: transparent;
+              box-shadow: none;
+
+              &::before {
+                border: none;
+              }
+
+              .q-field__native {
+                color: #797979;
+                padding: 0.625rem 0.875rem;
+                padding-right: 0;
+                font-size: 0.875rem;
+              }
+
+              .q-field__append {
+                height: 100%;
+
+                .q-icon {
+                  color: #6d7693;
+                  width: 1.5rem;
+                  height: 1.5rem;
+                }
+              }
+            }
+          }
+        }
+
+        .search-btn {
+          background: $secondary-color;
+          border-radius: 6.25rem;
+          padding: 0.625rem 1.25rem;
+
+          &.manage,
+          &.bet-report,
+          &.bet-record-report {
+            font-size: 1.25rem;
+            padding: 0.4375rem 2.6875rem;
+            min-height: auto;
+            line-height: normal;
+
+            @include phone-width {
+              font-size: 1rem;
+              padding: 0.625rem 0;
+            }
+          }
+
+          @include phone-width {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 1.25rem;
+
+      :deep(.q-btn) {
+        &.text-active-pagination {
+          color: $secondary-color;
+        }
+      }
+
+    }
+  }
+
+  :deep(.q-table) {
+    thead {
+      color: $white-color;
+    }
+
+    tbody {
+      color: $white-color;
+    }
+
+    th {
+      font-size: 1.125rem;
+      padding-top: 0.59375rem;
+      padding-bottom: 0.59375rem;
+      text-align: center;
+      border-color: #D25C5C;
+    }
+
+    td {
+      font-size: 1rem;
+      padding-top: 0.6875rem;
+      padding-bottom: 0.6875rem;
+      text-align: center;
+    }
+
+    .page-total,
+    .search-result-total {
+      background-color: #cd2e2b;
+      color: $white-color;
+      font-weight: 700;
+    }
+  }
+
+  :deep(.q-table__bottom) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary-color;
+    color: $white-color;
+
+    .no-data {
+      color: $white-color !important;
+      font-size: 0.75rem !important;
+    }
+  }
+
+  .expansion-menu {
+    font-size: 12px;
+    font-weight: 400;
+    background-color: $primary-color;
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+    color: $white-color;
+
+    .expansion-item {
+      background-color: $primary-color;
+      border: 0.0625rem solid $secondary-color;
+      border-radius: 0.625rem;
+      overflow: hidden;
+      margin-bottom: 1.25rem;
+    }
+
+    :deep(.q-item) {
+      padding: 0.625rem 1rem;
+    }
+
+    :deep(.q-icon) {
+      color: $white-color;
+    }
+
+    .expansion-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: self-start;
+      gap: 0.625rem;
+
+      &-top {
+        width: 100%;
+        display: flex;
+        align-items: self-start;
+        justify-content: space-between;
+        color: $white-color;
+
+      }
+
+      &-bottom {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $white-color;
+
+        .operating-btn {
+          color: $secondary-color;
+          cursor: pointer;
+        }
+      }
+
+      .expansion-header-item {
+        width: 50%;
+      }
+
+      .text-gray {
+        color: $sky-gray-color;
+        margin-top: 0.375rem;
+      }
+    }
+
+    .expansion-detail {
+      width: 100%;
+      background: #cd2e2b;
+      color: #fff;
+      border-radius: 0.25rem;
+      font-size: 0.625rem;
+      font-weight: 700;
+
+      .expansion-detail-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem;
+        border-top: 0.0625rem solid rgba(255, 255, 255, 0.2);
+
+        &:first-child {
+          border-top: none;
+        }
+      }
+    }
+  }
+}

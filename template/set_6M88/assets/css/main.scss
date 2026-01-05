@@ -1,0 +1,201 @@
+@import "./variable.scss";
+@import "src/common/css/_variable.sass";
+
+.btn-submit {
+  @apply flex justify-center items-center;
+  @apply w-full h-[40px] text-white p-[12px] mt-[5px];
+  background: $gradient-to-bottom;
+  border-radius: 1.25rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    @apply text-white;
+    transform: scale(1.01);
+  }
+}
+
+.field-input {
+  @apply mb-2;
+
+  ::v-deep(.q-field__control) {
+    @apply h-[50px];
+  }
+
+  ::v-deep(.q-field__prepend) {
+    @apply h-[50px];
+  }
+
+  ::v-deep(.q-field__append) {
+    @apply h-[50px];
+  }
+
+  ::v-deep(.q-field__native) {
+    padding-left: .25rem;
+  }
+
+  ::v-deep(.q-field__label) {
+    padding-left: .25rem;
+  }
+}
+
+.change-tab {
+  @apply flex w-full justify-center items-center text-white cursor-pointer text-center;
+  background-color: $dark-bg;
+
+  .tab-item {
+    @apply flex w-1/2 text-center h-full items-center justify-center;
+
+    &.active {
+      background: $gradient-to-bottom;
+      color: $dark-bg;
+      text-shadow: 0 .0625rem .0625rem #767676;
+      font-weight: bold;
+      border-radius: .625rem .625rem 0 0;
+    }
+  }
+}
+
+.input-style {
+  @apply w-10/12;
+
+  @include phone-width {
+    @apply w-8/12;
+  }
+}
+
+.counting-text {
+  @apply text-center w-[40px] h-[40px] whitespace-nowrap ml-2;
+  font-size: 1rem;
+  color: $primary;
+  font-weight: bold;
+}
+
+.otp-btn {
+  @apply flex justify-center items-center h-[50px] text-black p-[12px] ml-2;
+  background: $gradient-to-bottom;
+  border-radius: 1.875rem;
+
+  &:hover {
+    @apply text-white;
+  }
+}
+
+.mask {
+  @apply fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-10;
+  @apply flex justify-center items-center;
+}
+
+.currency-code {
+  @apply w-[30px] h-[20px];
+  background: $primary;
+  border-radius: 3.125rem;
+  color: $dark-bg;
+  font-weight: bold;
+  font-size: .625rem;
+}
+
+.text-yellow-primary {
+  color: $primary;
+}
+
+.text-green {
+  color: #99cc0d !important;
+}
+
+.right-primary-border {
+  border-right: 1px solid $primary;
+}
+
+.bottom-primary-border {
+  border-bottom: 1px solid $primary;
+}
+
+.calendar-content {
+  ::v-deep(.q-date__header) {
+    background: $gradient-to-bottom;
+    color: $gradient-to-bottom;
+  }
+
+  ::v-deep(.bg-primary) {
+    background: $gradient-to-bottom !important;
+  }
+
+  ::v-deep(.text-primary) {
+    color: $dark !important;
+  }
+}
+
+.currency-list {
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  border-bottom: 1px solid #f0e15e;
+}
+
+.payment-type-container {
+  @apply grid gap-[10px] font-medium;
+  grid-template-columns: repeat(2, 1fr);
+
+  li {
+    @apply flex items-center justify-center cursor-pointer p-[10px] text-white;
+    font-size: .875rem;
+    border-radius: 3.125rem;
+    background: $light;
+    color: $primary;
+
+    @include iphone-width {
+      font-size: .625rem;
+    }
+
+    &:hover,
+    &.active {
+      color: #000;
+      border: 1px solid $border-blue;
+    }
+  }
+}
+
+.search-type-content {
+  @apply flex flex-wrap gap-[10px];
+}
+
+.btn-history {
+  @apply min-w-[140px] h-[38px] rounded-md font-semibold;
+  border: 1px solid $secondary;
+  border-radius: 1.5625rem;
+  transition: all 0.3s ease;
+  color: $secondary;
+
+  &.active,
+  &:hover {
+    background: $gradient-to-bottom;
+    color: $dark;
+  }
+}
+
+.time-label {
+  @apply text-base font-semibold mb-2;
+  color: $primary;
+}
+
+.expansion-item {
+  @apply p-4 text-xs;
+  background: #fff;
+  border-radius: .625rem;
+  margin-bottom: 1rem;
+  border: 1px solid $primary;
+
+  @include phone-width {
+    @apply px-5;
+
+    ::v-deep(.q-item__section--side) {
+      padding-left: 0;
+    }
+  }
+}
+
+.no-data {
+  @apply py-2 mb-4;
+  border-radius: .625rem;
+  border: 1px solid $secondary;
+}

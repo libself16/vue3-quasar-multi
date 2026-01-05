@@ -1,0 +1,248 @@
+.pending-transaction {
+    padding-top: 10%;
+}
+
+.af-in-content {
+    color: #fff;
+    display: flex;
+    margin-top: 8px;
+    padding: 25px;
+    padding: 10px;
+    /* min-height: 450px; */
+    width: 100%;
+
+    border-radius: 8px;
+}
+
+.af-dater {
+    position: relative;
+    width: 100%;
+}
+
+.date-from .input-group-text {
+    background: #fff;
+    height: 100%;
+    border-radius: 0 5px 5px 0;
+}
+
+.btn-group-toggle>.btn input[type=checkbox],
+.btn-group-toggle>.btn input[type=radio],
+.btn-group-toggle>.btn-group>.btn input[type=checkbox],
+.btn-group-toggle>.btn-group>.btn input[type=radio] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+}
+
+.af-in-content-all {
+    width: 100%;
+}
+
+.btn-gender {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.af-btn-hst {
+    width: 140px;
+    padding: 6px;
+    border-radius: 20px;
+    border: 1px solid #0897be;
+    background: none;
+    color: #0897be;
+    font-weight: bold;
+    font-size: 14px;
+}
+.btn-check:checked + .btn.active {
+    background: linear-gradient(to bottom, #3fecff 0%, #2597ff 100%);
+    color: white; /* Optional: Set text color to white for better contrast */
+}
+.af-btn-hst.active,
+.af-btn-hst:hover,
+.af-btn-hst:focus {
+    background: linear-gradient(to bottom, #3fecff 0%, #2597ff 100%);
+    color: #000!important;
+}
+
+.af-btn-green .af-btn-hst {
+    border: 1px solid #0897be;
+}
+
+.in-col {
+    margin: 0px 10px;
+}
+
+.pay-status .card {
+    background: none;
+    margin-bottom: 15px;
+    padding: 0px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #0897be;
+}
+
+.pen-top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.pen-code {
+    border-bottom: 1px solid #0897be;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+span.pen-ttl {
+    font-weight: normal;
+}
+
+.pentop-l {
+    display: flex;
+    gap: 0px;
+    width: 100%;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+.pen-l {
+    border-right: 1px solid #0897be;
+    padding: 0px 0px;
+    width: 50%;
+}
+
+.pen-l p {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.pen-suc {
+    color: #96c61e;
+}
+
+.pen-unsuc {
+    color: #ff0000;
+}
+
+.pen-time {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.pen-r {
+    width: 50%;
+    margin: 0px auto;
+    text-align: right;
+}
+
+.pen-time small {
+    font-weight: bold;
+    font-size: 12px;
+    background: linear-gradient(to bottom, #3fecff 0%, #2597ff 100%);
+    padding: 0px 5px;
+    border-radius: 2px;
+    color: #000;
+}
+
+.penttop-r {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.btnmr-if {
+    color: #005f79;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    background: linear-gradient(to bottom, #3fecff 0%, #2597ff 100%);
+}
+
+.pay-status .card-body {
+    padding-top: 0px;
+}
+
+.table-pen {
+    border-top: 1px solid #0897be;
+    padding-top: 20px;
+}
+
+.table-pen table th {
+    background: linear-gradient(to bottom, #3fecff 0%, #2597ff 100%);
+    color: #000;
+    padding: 10px;
+    border: 1px solid #0897be;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.table-pen table {
+    border-collapse: collapse;
+    overflow: hidden;
+    width: 100%;
+}
+
+.table-pen table tr:nth-child(even) {
+    background: #fff;
+}
+
+.table-pen table tr:nth-child(odd) {
+    background: linear-gradient(to bottom, #3fecff 0%, #2597ff 100%);
+}
+
+.table-pen table tr td {
+    padding: 10px;
+    font-size: 12px;
+    text-align: right;
+    color: #000;
+    border: 1px solid #0897be;
+}
+
+.table-pen table tr:first-child td {
+    width: 38%;
+    color: #000000;
+    text-align: left;
+}
+.table-pen table tr td:first-child{
+    text-align: left;
+}
+.datepicker{
+    display: flex;
+}
+.btn-all-af-2{
+    margin-top: 10px;
+}
+.date-content {
+    display: none;
+}
+.af-history .btn-group{
+    grid-gap: 10px;
+    flex-wrap: wrap;
+}
+.af-history .af-btn-hst{
+    border-radius: 25px!important;
+    max-width: 151px!important;
+    padding: 10px;
+    text-align: center;
+}
+.table-pen table tr:nth-child(odd) td{
+    color: #000;
+}

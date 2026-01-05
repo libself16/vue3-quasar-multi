@@ -1,0 +1,132 @@
+@import "src/common/css/_variable.sass";
+@import "app/template/set_ed3/assets/css/_variable.scss";
+
+.field-input {
+  @apply px-2 mb-4;
+  border-radius: .625rem;
+  height: 2.75rem;
+  color: #fff !important;
+  background: $green03;
+
+  ::v-deep(input) {
+    color: $input-text-color !important;
+  }
+
+  ::v-deep(.q-field__label) {
+    color: $input-placeholder-color !important;
+
+  }
+
+  .field-icon {
+    @apply text-base ml-1;
+    color: $input-text-color;
+  }
+}
+
+.btn-submit {
+  @apply w-full capitalize my-[1.25rem];
+  background: $gradient03;
+  border-radius: 0.625rem;
+}
+
+::v-deep(.q-field__control) {
+  background: $green03 !important;
+  color: $white01 !important;
+
+  .q-field__label {
+    color: $white01 !important;
+  }
+
+  .q-icon {
+    color: $input-text-color !important;
+  }
+
+  .q-field__native {
+    color: $white01 !important;
+  }
+
+  input {
+    color: $input-text-color !important;
+  }
+}
+
+.bg-input {
+  background-color: $modal-bg-light !important;
+}
+
+.form-btn-wrapper {
+  @apply mt-[1.25rem] mb-4 flex;
+
+  .form-btn-submit {
+    @apply w-full font-extrabold text-[.875rem];
+    background: $gradient03;
+    color: $green10;
+
+    &:hover {
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+.calendar-content {
+  ::v-deep(.q-date__header) {
+    background: $gradient03;
+    color: $green10;
+  }
+
+  ::v-deep(.bg-primary) {
+    background: $green03 !important;
+  }
+
+  ::v-deep(.q-date__today) {
+    box-shadow: 0 0 0 .0625rem $pink-shadow-color;
+  }
+}
+
+// History & Pending Transaction
+.transaction-history-wrapper {
+  .btn-submit {
+    @apply w-full mt-2 mb-0;
+    background: $gradient03;
+    color: $green10;
+  }
+}
+
+.history-search-wrapper {
+  @apply flex flex-col justify-center p-2 gap-1;
+  background: $history-search-wrapper-bg;
+
+  @include phone-width() {
+    @apply p-0;
+    background: transparent;
+  }
+
+  .search-type-content {
+    @apply flex w-full gap-1;
+
+    @include phone-width() {
+      @apply p-2 flex-wrap;
+      background: $history-search-wrapper-bg;
+    }
+  }
+
+  .search-type-time {
+    @include phone-width() {
+      @apply mt-1;
+
+      .btn-history {
+        flex: 0 0 calc(50% - 0.25rem);
+      }
+    }
+  }
+
+  .btn-history {
+    @apply text-white flex-1 h-[3.125rem];
+    background: $green03;
+
+    &.active {
+      color: $text01;
+      background: $green10;
+    }
+  }
+}

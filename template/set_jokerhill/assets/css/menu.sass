@@ -1,0 +1,60 @@
+@import "src/common/css/_variable.sass"
+
+// common btn text color
+.menu-btn
+  font-family: "NotoSansTC"
+  font-style: normal
+  font-weight: 700
+  line-height: normal
+  text-transform: uppercase
+  font-size: 0.8rem
+  color: #6288D2
+  +pad-width
+    font-size: 0.7rem
+  +iphone-width
+    font-size: 0.6rem
+  &.home
+    color: #D7170A
+  &.slots
+    color: #C76FCF
+  &.casino
+    color: #BC6FDA
+  &.fishing
+    color: #A56EF0
+  &.sports
+    color: #867AE8
+  &.poker
+    color: #6288D2
+  &.esport
+    color: #4096BE
+  &.p2p
+    color: #14A8A4
+  &.vsport
+    color: #F5503A
+  &.promotion
+    color: #53B996
+  &.cockfighting
+    color: #FFD43D
+  &.lottery
+    color: #FDB03C
+  &.cardboard
+    color: #FF792F
+  &.other
+    color: #D7170A
+
+::v-deep(.q-expansion-item)
+  background: none
+  margin-bottom: 15px
+  padding: 0px
+  border-radius: .5rem
+  background: #24262B
+  border: 1px solid rgba(#fff, .5)
+  .q-item
+    padding: 1rem
+  .q-card
+    background: #000
+    border-radius: 0 0 .5rem .5rem
+  .q-card__section
+    padding: 15px
+    display: flex
+    justify-content: flex-start

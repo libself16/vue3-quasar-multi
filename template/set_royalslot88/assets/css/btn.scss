@@ -1,0 +1,62 @@
+@import "src/common/css/_variable.sass";
+
+.operation-btn {
+  @apply flex h-[3vw] w-[10vw] cursor-pointer items-center justify-center whitespace-nowrap;
+  font-size: 1.2vw;
+  border-radius: 0.8vw;
+  text-transform: uppercase;
+  filter: drop-shadow(rgb(0, 0, 0) 0px 6px 4px);
+
+  @include pad-width {
+    font-size: clamp(.4rem, 3vw, 1rem);
+    width: 100%;
+    height: clamp(32px, 8vw, 3rem);
+    padding: 0px 2vw;
+  }
+}
+
+.login-btn {
+  background: #1499ad;
+  border: 1px solid #6237f0;
+  box-shadow: inset 0px -2px 7px #081f23, inset 0px 1px 3px 1px #93f1ff;
+  text-shadow: 2px 2px 7px #000;
+}
+
+.register-btn {
+  background: #aa1e74;
+  border: 1px solid #6237f0;
+  box-shadow: inset 0rem -2px 7px #2b061d, inset 0px 1px 3px 1px #ffb6e3;
+  text-shadow: 2px 2px 7px #000;
+}
+
+.nav-link {
+  @apply flex w-full justify-center p-[.5rem];
+  color: rgb(255 255 255 / 67%);
+  background-color: #081c4c;
+  border-radius: 0.625rem;
+  // height: 100%;
+  border: 0.0625rem solid #6237f0;
+  box-shadow: inset 0rem -0.125rem 0.4375rem #2b061d, inset 0rem 0.0625rem 0.1875rem 0.0625rem #ffb6e3;
+  text-shadow: 0.125rem 0.125rem 0.4375rem #000;
+  list-style: none;
+
+  &.active,
+  &:hover {
+    @apply cursor-pointer;
+    color: rgb(255, 255, 255);
+    border: 0.0625rem solid #6237f0;
+    box-shadow: inset 0rem -0.125rem 0.4375rem #2b061d, inset 0rem 0.0625rem 0.1875rem 0.0625rem #ffb6e3;
+    text-shadow: 0.125rem 0.125rem 0.4375rem #000;
+    background: #aa1e74;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

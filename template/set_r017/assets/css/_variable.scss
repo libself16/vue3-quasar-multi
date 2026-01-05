@@ -1,0 +1,311 @@
+$emotional002: #3ecc31;
+$emotional01: #ff3b3b;
+$emotional02: #ffe2e3;
+$emotional03: #00d0ff;
+$emotional04: #009d46;
+$emotional05: #ddf6e8;
+$emotional06: #00d0ff;
+$emotional07: #008ae6;
+$emotional08: #d2edff;
+
+$neutral01: #ffffff;
+$neutral02: #ffffffc4;
+$neutral03: #ffffff78;
+$neutral04: #d2d2d23d;
+$neutral05: #262626;
+$neutral06: #ffffff1a;
+$neutral07: #0000000d;
+$neutral08: #262626;
+$neutral10: #000000;
+$neutral100: #000000;
+
+$primany01: #f26319;
+$primany02: #d12d00;
+
+$secondary01: #1d125d;
+$secondary02: #0c0c1c;
+$secondary03: #b1a79e;
+$secondary04: #64594f;
+$secondary05: #000025;
+$secondary06: #070609;
+$secondary07: #79739e;
+$secondary08: #03032357;
+$secondary09: #14144a61;
+$secondary10: #030323;
+$secondary11: #3f3b52;
+$secondary12: #2d2941;
+$secondary13: #1c192e;
+$secondary14: #25167f;
+$secondary15: #ff8181;
+$secondary16: #78d3f8;
+
+$gradient01: linear-gradient(90deg, $primany01 0%, $primany02 100%);
+
+$shadoe01: 0px 2px 4px 0px #00000080;
+$shadoe02: 0px 4px 4px 0px #00000066;
+$shadoe03: 0px 2px 4px 0px #00000050;
+
+$bg01: #8139ff;
+$bg02: #0004ff;
+$bg03: #d000ff;
+$bg04: $secondary12;
+$bg05: $secondary10;
+$bg06: $secondary13;
+$bg07: $secondary14;
+$bg08: $secondary11;
+$bg09: $primany01;
+$bg10: $primany02;
+$bg11: $secondary08;
+$bg12: $neutral05;
+$bg13: $secondary01;
+$bg14: $neutral02;
+$bg15: $secondary15;
+$bg16: $secondary16;
+$bg17: $secondary03;
+$bgFooter: $neutral100;
+$bgHeader: $secondary12;
+$bgLine01: $neutral02;
+$bgLine02: $neutral05;
+$bgLine03: $neutral03;
+$bgNavbar: $secondary11;
+$btnBg01: $primany01;
+$btnBg02: $primany02;
+$btnBg03: #f2631900;
+$btnBg04: $neutral03;
+$btnBg05: $neutral04;
+$btnBg06: $secondary11;
+$btnBorder01: $neutral05;
+$btnBorder02: $primany01;
+$btnBorder03: $neutral01;
+$btnIcon01: $neutral01;
+$btnText01: $neutral01;
+$btnText02: $neutral04;
+$btnText03: $neutral07;
+$btnText04: $primany01;
+$cardBg01: $neutral100;
+$cardBorder01: $primany01;
+$cardText01: $primany01;
+$cardText02: $neutral01;
+$cardText03: $neutral04;
+$dialogBg: $secondary08;
+$dialogText01: $neutral01;
+$icon01: $neutral01;
+$icon02: $neutral03;
+$icon03: $neutral04;
+$icon04: $primany01;
+$icon05: $emotional01;
+$iconBg01: $primany01;
+$iconBg02: $neutral01;
+$iconBg03: $secondary01;
+$iconBg04: $secondary08;
+$iconBg05: $secondary09;
+$iconBg06: $emotional01;
+$iconBg07: $secondary14;
+$iconBg08: $secondary07;
+$iconBorder01: $neutral03;
+$iconNavber01: $neutral01;
+$iconNavber02: $secondary06;
+$iconNavber03: $primany01;
+$iconNavber04: $primany02;
+$inputDropdownBg01: $secondary10;
+$inputDropdownBorder01: $neutral05;
+$inputDropdownBorder02: $emotional01;
+$inputDropdownText01: $neutral04;
+$inputDropdownText02: $neutral01;
+$inputDropdownText03: $neutral05;
+$tabBg01: $primany01;
+$tabBg02: $primany02;
+$tabBg03: $secondary10;
+$tabBg04: $neutral05;
+$tabText01: $neutral01;
+$tagBg01: $neutral05;
+$tagBg02: $emotional02;
+$tagBg03: $emotional05;
+$tagBg04: $emotional08;
+$tagText01: $neutral01;
+$tagText02: $emotional01;
+$tagText03: $emotional04;
+$tagText04: $emotional07;
+$text01: $neutral01;
+$text02: $neutral03;
+$text03: $neutral04;
+$text04: $secondary16;
+
+@mixin scrollbar01($thumb-color: #6034DB,
+  $thumb-hover-color: #6034DB,
+  $track-color: #6034DB,
+  $width: .25rem,
+  $radius: .25rem) {
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #{$thumb-color} #{$track-color};
+
+  /* WebKit-based browsers */
+  &::-webkit-scrollbar {
+    width: $width;
+    height: $width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $track-color;
+    border-radius: $radius;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $thumb-color;
+    border-radius: $radius;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $thumb-hover-color;
+  }
+}
+
+/* base */
+:root {
+  /* Ai */
+  /* color */
+  --emotional-002: #3ecc31;
+  --emotional-01: #ff3b3b;
+  --emotional-02: #3ECC31;
+  --emotional-04: #009d46;
+  --emotional-05: #ddf6e8;
+  --emotional-06: #00d0ff;
+  --emotional-07: #008ae6;
+  --emotional-08: #d2edff;
+  --neutral-01: #ffffff;
+  --neutral-02: #ffffff1a;
+  --neutral-03: #ffffff78;
+  --neutral-04: #ffffffc4;
+  --neutral-05: #d2d2d23d;
+  --neutral-06: #0000000d;
+  --neutral-07: #676767;
+  --neutral-08: #262626;
+  --neutral-100: #000000;
+  --primany-01: #f26319;
+  --primany-02: #d12d00;
+  --secondary-01: #03032366;
+  --secondary-02: #14144a59;
+  --secondary-03: #00000099;
+  --secondary-04: #b1a79e;
+  --secondary-05: #64594f;
+  --secondary-06: #79739e;
+  --secondary-07: #25167f;
+  --secondary-08: #1d125d;
+  --secondary-09: #3f3b52;
+  --secondary-10: #070609;
+  --secondary-11: #0c0c1c;
+  --secondary-12: #000025;
+  --secondary-13: #2d2941;
+  --secondary-14: #1c192e;
+  --secondary-15: #4064ff;
+  --secondary-16: #78d3f8;
+}
+
+/* component */
+:root {
+  /* R017 */
+  /* color */
+  --bg-01: #8139ff;
+  --bg-02: #0004ff;
+  --bg-03: #d000ff;
+  --bg-04: var(--secondary-12);
+  --bg-05: var(--secondary-10);
+  --bg-06: var(--secondary-13);
+  --bg-07: var(--secondary-14);
+  --bg-08: var(--secondary-11);
+  --bg-09: var(--primany-01);
+  --bg-10: var(--primany-02);
+  --bg-11: var(--secondary-08);
+  --bg-12: var(--neutral-05);
+  --bg-13: var(--secondary-01);
+  --bg-14: var(--neutral-02);
+  --bg-15: var(--secondary-15);
+  --bg-16: var(--secondary-16);
+  --bg-17: var(--secondary-03);
+  --bg-18: var(--secondary-07);
+  --bg-19: #4c38c0;
+  --bg-20: #f7a491;
+  --bg-21: #f47458;
+  --bg-footer: var(--neutral-100);
+  --bg-header: var(--secondary-12);
+  --bg-line-01: var(--neutral-02);
+  --bg-line-02: var(--neutral-05);
+  --bg-line-03: var(--neutral-03);
+  --bg-line-04: var(--emotional-002);
+  --bg-line-05: var(--emotional-06);
+  --bg-navbar: var(--secondary-11);
+  --btn-bg-01: var(--primany-01);
+  --btn-bg-02: var(--primany-02);
+  --btn-bg-03: #f2631900;
+  --btn-bg-04: var(--neutral-03);
+  --btn-bg-05: var(--neutral-04);
+  --btn-bg-06: var(--secondary-11);
+  --btn-bg-07: var(--neutral-05);
+  --btn-bg-08: var(--secondary-14);
+  --btn-border-01: var(--neutral-05);
+  --btn-border-02: var(--primany-01);
+  --btn-border-03: var(--neutral-01);
+  --btn-icon-01: var(--neutral-01);
+  --btn-text-01: var(--neutral-01);
+  --btn-text-02: var(--neutral-04);
+  --btn-text-03: var(--neutral-07);
+  --btn-text-04: var(--primany-01);
+  --card-bg-01: var(--neutral-100);
+  --card-bg-02: var(--secondary-07);
+  --card-bg-03: var(--secondary-06);
+  --card-bg-04: var(--neutral-08);
+  --card-border-01: var(--primany-01);
+  --card-text-01: var(--primany-01);
+  --card-text-02: var(--neutral-01);
+  --card-text-03: var(--neutral-04);
+  --dialog-bg: var(--secondary-08);
+  --dialog-text-01: var(--neutral-01);
+  --icon-01: var(--neutral-01);
+  --icon-02: var(--neutral-03);
+  --icon-03: var(--neutral-04);
+  --icon-04: var(--primany-01);
+  --icon-05: var(--emotional-01);
+  --icon-06: var(--emotional-002);
+  --icon-bg-01: var(--primany-01);
+  --icon-bg-02: var(--neutral-01);
+  --icon-bg-03: var(--secondary-01);
+  --icon-bg-04: var(--secondary-08);
+  --icon-bg-05: var(--secondary-09);
+  --icon-bg-06: var(--emotional-01);
+  --icon-bg-07: var(--secondary-14);
+  --icon-bg-08: var(--secondary-07);
+  --icon-border-01: var(--neutral-03);
+  --icon-navber-01: var(--neutral-01);
+  --icon-navber-02: var(--secondary-06);
+  --icon-navber-03: var(--primany-01);
+  --icon-navber-04: var(--primany-02);
+  --input-dropdown-bg-01: var(--secondary-10);
+  --input-dropdown-border-01: var(--neutral-05);
+  --input-dropdown-border-02: var(--emotional-01);
+  --input-dropdown-text-01: var(--neutral-04);
+  --input-dropdown-text-02: var(--neutral-01);
+  --input-dropdown-text-03: var(--neutral-05);
+  --tab-bg-01: var(--primany-01);
+  --tab-bg-02: var(--primany-02);
+  --tab-bg-03: var(--secondary-10);
+  --tab-bg-04: var(--neutral-05);
+  --tab-bg-05: var(--secondary-07);
+  --tab-line-01: var(--neutral-05);
+  --tab-text-01: var(--neutral-01);
+  --tag-bg-01: var(--neutral-05);
+  --tag-bg-02: var(--emotional-02);
+  --tag-bg-03: var(--emotional-05);
+  --tag-bg-04: var(--emotional-08);
+  --tag-text-01: var(--neutral-01);
+  --tag-text-02: var(--emotional-01);
+  --tag-text-03: var(--emotional-04);
+  --tag-text-04: var(--emotional-07);
+  --text-01: var(--neutral-01);
+  --text-02: var(--neutral-03);
+  --text-03: var(--neutral-04);
+  --text-04: var(--secondary-16);
+  --text-05: var(--emotional-002);
+  --text-06: var(--emotional-01);
+  --text-07: var(--primany-01);
+}

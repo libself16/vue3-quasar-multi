@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 900
+
+.noto-serif-jp-<uniquifier> {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+body{
+	background-color: #212121 !important;
+	font-family: "Noto Serif JP";
+
+}
+p{
+	background: linear-gradient(90deg, #F0C48F 0%, #835120 36%, #EAD69C 100%);
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
+    font-weight: 600;
+    margin: 0;
+    box-shadow: 1.44px 1.93px 1.93px 0px #272727;
+
+}
+.main-container{
+	width: 1300px;
+	margin: 0 auto;
+}
+.main-container section{
+	padding: 20px;
+	display: flex;
+}
+/**Section 1**/
+.section-1{
+	background: url("../images/coins.png"), url("../images/section1-bg.jpg");
+	background-repeat: no-repeat, no-repeat;
+	background-size: 565px, cover;
+	background-position: center 390px, top center;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 150px !important;
+}
+.logo{
+	width: 450px;
+}
+.coins{
+	width: 600px;
+}
+.card-section{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.section1-row1{
+	margin-top: 650px;
+}
+.card-section img{
+	width: 33.33%;
+}
+
+/**Section title**/
+.section-title{
+	background: url("../images/grittery-bg.jpg")no-repeat;
+	background-size: cover;
+	padding: 300px 200px !important;
+	text-align: center;
+	justify-content: center;
+}
+
+/**Section 3**/
+.section-3{
+	background: url("../images/background.png")repeat-y;
+	padding: 100px 0 !important;
+	background-position: bottom;
+}
+
+/**Section 5**/
+.section-5{
+	background: url("../images/background.png")repeat-y;
+	justify-content: center;
+	padding: 150px 40px !important;
+}
+.section-5 img{
+	width: 680px;
+}
+.section-5 .center-div{
+	width: 100%;
+    text-align: center;
+    padding: 50px;
+    background: url("../images/border.png")no-repeat;
+    background-size: 100%;
+}
+
+
+/**Section 6**/
+.section-6{
+	background: url("../images/section6/section6-bg.png")no-repeat;
+	background-size: cover;
+	justify-content: center;
+	padding: 150px 40px !important;
+}
+.sec6-div{
+	text-align: center;
+	min-height: 1200px;
+}
+
+/**Section 7**/
+.section-7{
+	background: #000;
+	justify-content: center;
+	padding: 150px 0px !important;
+	flex-direction: column;
+	overflow: hidden;
+}
+.sub-footer{
+	padding: 50px;
+	align-items: center;
+}
+.footer{
+	background: url("../images/suit-bg.png")no-repeat;
+	background-position: right -160px center;
+	margin-top: 200px;
+}
+.section-7 .logo{
+		margin-bottom: 0;
+	}
+.txt53{
+    font-size: 53px; 
+}
+.txt80{
+    font-size: 80px; 
+}
+.txt117{
+    font-size: 117px; 
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+.txt64{
+    font-size: 64px; 
+    margin-top: 100px;
+}
+
+@media (max-width: 600px){
+	.main-container{
+		width: 100%;
+	}
+	img{
+		max-width: 100%;
+	}
+	.section-1{
+		background: url("../images/coins.png")no-repeat, url("../images/section1-bg-m.png")no-repeat;	
+		background-size: 235px, 100%;
+		background-position: center 390px, top center;
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: 150px !important;
+	}
+	.section1-row1{
+		margin-top: 430px;
+	}
+	.logo{
+		width: 250px;
+		margin-bottom: 20px;
+	}
+	.sec1-div1 img:nth-child(1){
+		width: 320px;
+	}
+	.sec1-div1 img:nth-child(2){
+		width: 302px;
+	}
+	.sec1-div2{
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.sec1-div2 img:nth-child(1){
+		width: 312px;
+	}
+	.sec1-div2 img:nth-child(2){
+		width: 360px;
+	}
+	.section-title{
+		padding: 100px 20px !important;
+	}
+	.sec2-div1 img:nth-child(1){
+		width: 360px;
+	}
+	.sec2-div1 img:nth-child(2){
+		width: 270px;
+	}
+	.section-3{
+		padding: 50px 20px !important;
+	}
+	.sec3-div1 img:nth-child(1){
+		width: 262px;
+	}
+	.sec3-div1 img:nth-child(2){
+		width: 340px;
+	}
+	.sec3-div1 img:nth-child(3){
+		width: 209px;
+		margin-top: 20px;
+	}
+	.sec3-div1 img:nth-child(4){
+		width: 340px;
+		margin-bottom: 40px;
+	}
+	.sec3-div1 img:nth-child(5){
+		width: 340px;
+		margin-bottom: 60px;
+	}
+	.sec4-div1 img:nth-child(1){
+		width: 251px;
+	}
+	.sec4-div1 img:nth-child(2){
+		width: 129px;
+	}
+	.section-5{
+		padding: 50px 40px !important;
+	}
+	.section-5 .center-div{
+		width: 100%;
+	    text-align: center;
+	    padding: 40px 38px;
+	    background: url("../images/border-m.png")no-repeat;
+	    background-size: 100%;
+	}
+	.section-6{
+		background: url("../images/section6/section6-bg-m.png")no-repeat;
+		background-size: 100%;
+		justify-content: center;
+		padding: 120px 40px 170px !important;
+	}
+	.sec6-div{
+		min-height: 540px;
+	}
+	.sub-footer{
+		flex-direction: column-reverse;
+		padding: 20px;
+	}
+	.section-7{
+		padding: 40px 0 !important;
+	}
+	.section-7 .txt-center{
+		text-align: center;
+	}
+	.footer{
+		margin-top: 60px;
+		background: none;
+	}
+	.sec7-div1 img:nth-child(2){
+		width: 225px;
+	}
+	.sec7-div1 img:nth-child(3){
+		width: 354px;
+	}
+	.sec7-div1 img:nth-child(4){
+		width: 315px;
+	}
+	.sec7-div1 img:nth-child(5){
+		width: 330px;
+	}
+
+
+
+}

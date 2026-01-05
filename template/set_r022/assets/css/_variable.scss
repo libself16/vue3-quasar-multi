@@ -1,0 +1,110 @@
+$themes: (
+  light: (--bg-headerbottom: #ffffff,
+    --bg-main-bg: #f6f7f8,
+    --bg-side: #ffffff,
+    --emotional-correct-01: #67c23a,
+    --emotional-correct-02: #9ace7f,
+    --emotional-danger-01: #ff4343,
+    --emotional-danger-02: #ff0000,
+    --emotional-default-01: #1677ff,
+    --emotional-default-02: #79bbff,
+    --emotional-warning-01: #ffd600,
+    --emotional-warning-02: #ffe5b9,
+    --neutral-01: #ffffff,
+    --neutral-02: #ffffff99,
+    --neutral-03: #dfdfdf,
+    --neutral-04: #f1f1f1,
+    --neutral-05: #8a8a8a,
+    --neutral-06: #333333,
+    --neutral-07: #0000001a,
+    --neutral-08: #0000003d,
+    --neutral-09: #000000e0,
+    --neutral-10: #000000,
+    --primary-01: #025be8,
+    --primary-02: #6c7890,
+    --primary-03: #1677ff,
+    --primary-04: #025be814,
+    --primary-05: #d4f1fe,
+    --primary-06: #bec7dc,
+    --primary-07: #f6f7f8,
+    --primary-08: #92A1C2,
+    --primary-09: #74aaff,
+    --secondary-01: #0d2245,
+    --secondary-02: #45260d,
+    --secondary-03: #ffebcd,
+    --secondary-04: #191e2d,
+    --secondary-05: #1bc870,
+    --secondary-06: #009d46,
+    --secondary-07: #ddf6e8,
+    --secondary-08: #ffe2e3,
+    --text-01: #ffffff,
+    --text-link: #0054FB,
+    --white-01: #ffffff,
+    --black-01: #000000,
+    --black-01-rgb: (0, 0, 0),
+    --gray-01-rgb: (191, 201, 235),
+  ),
+  dark: (--bg-headerbottom: #0b283a,
+    --bg-main-bg: #081f2d,
+    --bg-side: #0d2533,
+    --emotional-correct-01: #67c23a,
+    --emotional-correct-02: #9ace7f,
+    --emotional-danger-01: #ff4343,
+    --emotional-danger-02: #ff0000,
+    --emotional-default-01: #1677ff,
+    --emotional-default-02: #79bbff,
+    --emotional-warning-01: #e6a23c,
+    --emotional-warning-02: #ffe5b9,
+    --neutral-01: #143241,
+    --neutral-02: #14384d,
+    --neutral-03: #215a78,
+    --neutral-04: #0b1f2a,
+    --neutral-05: #8a8a8a,
+    --neutral-06: #333333,
+    --neutral-07: #ffffff1a,
+    --neutral-08: #ffffff3d,
+    --neutral-09: #ffffffe0,
+    --neutral-10: #ffffff,
+    --primary-01: #2d7eff,
+    --primary-02: #b7d0de,
+    --primary-03: #1677ff,
+    --primary-04: #025be814,
+    --primary-05: #d4f1fe,
+    --primary-06: #ffffff4d,
+    --primary-07: #0d2533,
+    --primary-08: #ADB8D2,
+    --primary-09: #74aaff,
+    --secondary-01: #ffffff,
+    --secondary-02: #45260d,
+    --secondary-03: #ffebcd,
+    --secondary-04: #191e2d,
+    --secondary-05: #1bc870,
+    --secondary-06: #009d46,
+    --secondary-07: #ddf6e8,
+    --secondary-08: #ffe2e3,
+    --text-01: #ffffff,
+    --text-link: #1A72FF,
+    --white-01: #ffffff,
+    --black-01: #000000,
+    --black-01-rgb: (0, 0, 0),
+    --gray-01-rgb: (191, 201, 235),
+  )
+);
+
+@mixin theme-vars($theme) {
+  @each $key, $value in map-get($themes , $theme) {
+    #{$key}: #{$value};
+  }
+}
+
+@mixin light {
+  .body--light & {
+    @content;
+  }
+}
+
+@mixin dark {
+  .body--dark & {
+    @content;
+  }
+}

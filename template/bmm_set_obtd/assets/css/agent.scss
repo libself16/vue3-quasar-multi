@@ -1,0 +1,114 @@
+@import "src/common/css/_variable.sass";
+@import "app/template/bmm_set_obtd/assets/css/_variable.sass";
+
+.separator {
+  @apply my-4;
+  background: $background-pale-gray-color;
+}
+
+.setting-input-container {
+  @apply flex gap-[.625rem] mt-[.625rem];
+
+  :deep(.q-field--outlined .q-field__control) {
+    @apply h-[2.25rem] rounded-[.25rem];
+    background: $background-light-color;
+  }
+}
+
+.bet-item-container {
+  @apply flex flex-col items-start gap-1;
+}
+
+.bet-item-title {
+  @apply text-sm font-bold;
+}
+
+.bet-item-text {
+  @apply inline-flex py-1 px-2 rounded-[.5rem] justify-center items-center;
+  background: $card-betting-item-color;
+}
+
+.card-edit-btn {
+  @apply flex w-full rounded-[.5rem] mt-4;
+  border: 2px solid $background-primary-color;
+  color: $text-primary-color;
+}
+
+.betting-disk-container {
+  :deep(.q-btn__content) {
+    justify-content: space-between !important;
+  }
+
+  :deep(.q-btn:before) {
+    box-shadow: none !important;
+    border: 1px solid $ai-border-color;
+  }
+}
+
+.setting-input-tips {
+  @apply text-[.625rem];
+  color: $tips-text;
+}
+
+.card-wrapper {
+  @apply rounded-[.75rem];
+}
+
+.card-header {
+  @apply flex items-center justify-between;
+
+  .card-header-title {
+    @apply flex items-center gap-2;
+
+    .title-icon {
+      @apply flex w-[.1875rem] h-[1.125rem];
+      background: $background-primary-color;
+    }
+
+    .title-text {
+      @apply text-base font-bold;
+    }
+  }
+}
+
+.card-disk-item {
+  @apply flex flex-1 flex-col items-start gap-1;
+}
+
+.condition-wrapper {
+  @apply p-[.75rem];
+
+  .condition-card {
+    @apply flex flex-col p-4 rounded-[.75rem];
+  }
+}
+
+.toggle-btn-container {
+  .toggle-btn {
+    @apply w-[3.1875rem] h-[1.9375rem] p-[.125rem] rounded-[6.25rem] cursor-pointer;
+    background: $toggle-inactive-btn-bg;
+    transition: background-color 0.3s ease;
+
+    &.active {
+      background: $toggle-active-btn-bg;
+    }
+  }
+
+  .btn-circle {
+    @apply flex w-[1.6875rem] h-[1.6875rem] rounded-[50%];
+    background: $white-color;
+    transition: transform 0.3s ease;
+  }
+}
+
+// Desktop
+.card-footer {
+  @apply flex justify-between;
+
+  .edit-btn {
+    @apply flex items-center justify-center w-[12.5rem] h-[2.3125rem] rounded-[.5rem];
+    padding: 0.625rem 0.25rem;
+    border: 2px solid $background-primary-color;
+    color: $text-primary-color;
+  }
+}

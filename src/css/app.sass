@@ -1,0 +1,78 @@
+// app global css in SASS form
+
+@tailwind base
+@tailwind components
+@tailwind utilities
+
+@import 'src/common/css/_variable.sass'
+@import 'app/template/set_r022/assets/css/_variable.scss'
+
+@import 'src/css/_font.scss'
+// 透過 index.html 載入
+// @import 'src/css/_fontawesome.scss'
+@import 'src/css/_material-ui-icons.scss'
+
+:root
+  @include theme-vars('light')
+
+.body--dark
+  @include theme-vars('dark')
+
+@import './push_slide.scss'
+
+@import 'animate.css'
+
+@import './tailwind/custom-base-styles.sass'
+
+//捲軸底色
+// ::-webkit-scrollbar-track
+//   -webkit-box-shadow: 2.15px 0px 8.6px 0px rgba(0, 0, 0, 0.25) inset, -2.15px 0px 8.6px 0px rgba(0, 0, 0, 0.25) inset
+//   background: #24262B
+// //捲軸寬度
+// ::-webkit-scrollbar
+//   width: 0.5vw
+//   height: 0.4vw
+//   background-color: #24262B
+// //捲軸本體顏色
+// ::-webkit-scrollbar-thumb
+//   cursor: pointer
+//   background-color: #b46ffd
+// ::-webkit-scrollbar
+//   display: none
+
+body,
+html
+  font-size: 16px
+  font-family: 'OpenSans', 'NotoSans', 'NotoSansTC', sans-serif
+  :deep(.q-menu)
+    z-index: 9999
+
+
+body.desktop .q-hoverable.no-ripple
+  transition: 0.2s
+body.desktop .q-hoverable.no-ripple:hover
+  filter: brightness(0.8)
+
+body.desktop .q-hoverable.no-ripple:hover > .q-focus-helper
+  background: transparent
+  opacity: 0
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+  background-color: transparent
+  -webkit-box-shadow: 0 0 0px 1000px white inset
+  box-shadow: 0 0 0px 1000px white inset
+  -webkit-text-fill-color: #000
+  border-radius: 50em
+
+input:-moz-autofill
+  background-color: transparent
+  box-shadow: 0 0 0px 1000px white inset
+  -moz-text-fill-color: #000
+  border-radius: 50em
+
+.q-field--outlined .q-field__native:-webkit-autofill
+  margin-top: 0
+  margin-bottom: 0

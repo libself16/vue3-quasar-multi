@@ -1,0 +1,23 @@
+::v-deep(.q-table) {
+  background: #08192b;
+  color: #fff;
+}
+::v-deep(.q-table) th, ::v-deep(.q-table) td {
+  border: 1px solid #0c9bd5;
+  border-collapse: collapse;
+}
+::v-deep(.q-table) th {
+  background: linear-gradient(to bottom, rgb(16, 183, 243) 0%, rgb(12, 112, 170) 33%, rgb(8, 93, 143) 100%);
+}
+
+::v-deep(.q-table__bottom) {
+  background: #08192b;
+  color: #fff;
+}
+
+::v-deep(.q-table__control) .q-select span {
+  color: #fff;
+}
+::v-deep(.q-table__control) .q-select i {
+  color: #fff;
+}/*# sourceMappingURL=table.css.map */

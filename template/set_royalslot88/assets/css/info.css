@@ -1,0 +1,11 @@
+.bank-table tr.trans td{
+    background: #aa1e74;
+    border: 1px solid #6237f0;
+}
+.bank-table tr.trans1 td{
+    background: #081c4c;
+    border: 1px solid #6237f0;
+}
+.bank-table tr.dwbox td{
+    border: 1px solid #6237f0;
+}

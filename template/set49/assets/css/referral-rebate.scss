@@ -1,0 +1,362 @@
+@import "src/common/css/_variable.sass";
+@import "app/template/set49/assets/css/_variable.scss";
+
+.referral-rebate {
+  .referral-rebate-header {
+    @apply w-full bg-black/70;
+    @apply aspect-[1570/354] bg-cover bg-center;
+  }
+
+  .referral-rebate-content {
+    @apply w-[62.5rem] mt-[6.125rem] max-w-[82.5%] mx-auto;
+    @apply p-[2.5rem] text-white/70;
+    background-color: $primary-modal-bg;
+    border-radius: 0.75rem;
+
+    @include iphone-width() {
+      @apply w-full mt-[20px] max-w-[100%] mx-auto;
+      @apply p-[28px] bg-transparent;
+      border-radius: 0;
+    }
+
+    .title {
+      @apply flex leading-none items-center gap-[.5rem];
+      @apply font-bold text-[1.5rem];
+      color: #fff;
+
+      span {
+        @apply block w-[.5rem] h-[1.5rem];
+        background-color: $primary-color;
+      }
+    }
+
+    .currency-select {
+      @apply flex items-center gap-[0.75rem] mt-[4.25rem];
+
+      @include iphone-width() {
+        @apply flex-col items-start;
+      }
+
+      .currency-select-title {
+        @apply text-[1.25rem] font-semibold;
+      }
+
+      :deep(.q-btn-dropdown) {
+        @apply border-white/50 border-solid border text-white/70;
+        border-radius: 0.5rem;
+        background: #24262b;
+      }
+    }
+
+    .summary-wrapper {
+      @apply flex gap-[2.5rem] mt-[1.25rem];
+
+      @include iphone-width() {
+        @apply flex-col items-start gap-[.75rem];
+      }
+
+      .summary {
+        @apply flex-1 flex flex-col gap-[.625rem];
+
+        @include iphone-width() {
+          @apply w-full;
+        }
+
+        .summary-content {
+          @apply bg-[#600000] py-[.75rem] text-center;
+          border-radius: 0.5rem;
+
+          @include iphone-width() {
+            @apply bg-[#4A0000];
+          }
+
+          .summary-title {
+            @apply font-bold;
+          }
+
+          .summary-value {
+            @apply font-['OpenSans'] font-extrabold text-[2rem] text-white;
+          }
+        }
+      }
+
+      .referral-code {
+        @apply flex-1;
+        @apply flex flex-col items-center justify-center;
+        @apply bg-white/10 border-[#802827] border;
+        border-radius: 0.5rem;
+
+        @include iphone-width() {
+          @apply w-full py-[20px];
+        }
+
+        .referral-code-title {
+          @apply text-white font-semibold text-[1.25rem];
+        }
+
+        .referral-code-value {
+          @apply mt-[1.25rem];
+
+          @include iphone-width() {
+            @apply mt-[4px];
+          }
+        }
+      }
+    }
+
+    .proxy-tabs {
+      margin-top: 3.75rem;
+      margin-bottom: 1.25rem;
+
+      ::v-deep(.q-tabs__content) {
+        gap: 10px;
+
+        .q-tab {
+          min-height: 0;
+          padding: 0.5rem 0.75rem;
+          border-radius: 0.5rem;
+
+          .q-tab__content {
+            padding: 0;
+          }
+        }
+
+        .q-tab--active {
+          @apply bg-[#FFC002] text-[#24262B];
+
+          .q-tab__indicator {
+            @apply h-0;
+          }
+
+          .q-tab__label {
+            @apply font-bold leading-none;
+          }
+        }
+      }
+    }
+
+    .proxy-tab-panels {
+      @apply bg-white/15;
+      border-radius: 0.625rem;
+
+      @include iphone-width() {
+        @apply bg-black/20;
+      }
+    }
+
+    .events-detail-header {
+      @apply flex justify-end mb-4 mt-12;
+
+      .back-btn {
+        border: 1px solid;
+        border-color: #ffc002 !important;
+        border-radius: 0.5rem;
+
+        ::v-deep(.q-icon) {
+          color: #ffc002 !important;
+        }
+      }
+    }
+  }
+}
+
+.table-content {
+  &.events-detail {
+    @apply p-4 bg-white/15;
+    border-radius: 0.625rem;
+
+    @include iphone-width() {
+      @apply bg-black/20;
+    }
+  }
+
+  .search-content-title {
+    @apply font-bold text-[1.5rem] mb-[1.5rem];
+  }
+
+  .member-number {
+    @apply flex items-center gap-[1.5rem];
+
+    @include iphone-width() {
+      @apply flex-col items-start gap-[.5rem];
+    }
+
+    .label {
+      @apply text-[1rem];
+    }
+
+    ::v-deep(.q-field__control) {
+      border-radius: 0.5rem;
+    }
+  }
+
+  .actions {
+    @apply flex items-center gap-[1.25rem] mt-[1.5rem];
+
+    @include iphone-width() {
+      @apply flex-col items-start mt-[1rem] w-full;
+    }
+
+    .currency-action {
+      @include iphone-width() {
+        @apply w-full;
+      }
+
+      .currency-select {
+        @apply flex items-center gap-[1.25rem] mt-0;
+
+        @include iphone-width() {
+          @apply flex-col items-start gap-[.5rem];
+        }
+
+        .currency-select-title {
+          @apply text-[1rem] font-normal;
+        }
+
+        :deep(.q-btn-dropdown) {
+          @apply text-black;
+          border-radius: 0.5rem;
+          background: #fff;
+        }
+      }
+    }
+
+    .gametype-action {
+      @include iphone-width() {
+        @apply w-full;
+      }
+
+      .gametype-select {
+        @apply flex items-center gap-[1.25rem];
+
+        @include iphone-width() {
+          @apply flex-col items-start gap-[.5rem];
+        }
+
+        .gametype-select-title {
+          @apply text-[1rem] font-normal;
+        }
+
+        :deep(.q-btn-dropdown) {
+          @apply text-black;
+          border-radius: 0.5rem;
+          background: #fff;
+        }
+      }
+    }
+
+    .date-action {
+      @include iphone-width() {
+        @apply w-full;
+      }
+
+      .date-select {
+        @apply flex items-center gap-[1.25rem];
+
+        @include iphone-width() {
+          @apply flex-col items-start gap-[.5rem];
+        }
+
+        .date-select-title {
+          @apply text-[1rem] font-normal;
+        }
+
+        :deep(.q-btn-dropdown) {
+          @apply text-black;
+          border-radius: 0.5rem;
+          background: #fff;
+        }
+      }
+    }
+
+    .search-btn {
+      @apply bg-[#FFC002] text-[#24262B] leading-none;
+      padding: 0.7rem 0.75rem;
+      border-radius: 0.5rem;
+      min-height: 0;
+
+      @include iphone-width() {
+        @apply w-full;
+      }
+    }
+  }
+
+  .tables {
+    @apply mt-[40px];
+
+    .no-data {
+      @apply text-center text-sm font-bold py-12;
+    }
+
+    .q-table__card {
+      @apply bg-transparent shadow-none text-white/70;
+
+      ::v-deep(th) {
+        @apply text-[18px] font-bold text-center;
+        @apply border-b-2 border-white/15;
+      }
+
+      ::v-deep(tr) {
+        border-color: #fff;
+        @apply border-b border-white/15;
+      }
+
+      ::v-deep(td) {
+        @apply text-center;
+        @apply border-b-2 border-white/15;
+      }
+    }
+
+    .r-pagination {
+      @apply justify-end mt-[2rem];
+
+      ::v-deep(.q-pagination__middle) {
+        gap: 2px;
+
+        .q-btn {
+          background-color: #fff;
+          color: #1c1e22b2 !important;
+        }
+      }
+
+      ::v-deep(.q-btn) {
+        border-radius: 0.35rem;
+      }
+
+      ::v-deep(.q-icon) {
+        color: #ffc002;
+      }
+
+      ::v-deep(.q-btn--standard) {
+        background-color: #ffc002 !important;
+        color: #1c1e22b2 !important;
+      }
+    }
+
+    ::v-deep(.q-table__grid-content) {
+      @apply flex flex-col gap-4;
+      .q-card {
+        @apply flex flex-col gap-[0.25rem];
+        @apply text-white p-4;
+        border-radius: 0.5rem;
+        border: 1px solid #802827;
+        background-color: #1c1e2280;
+
+        .row-item {
+          @apply flex justify-between text-sm font-bold;
+          @apply border-b border-white/20 pb-2;
+
+          &:last-child {
+            @apply border-b-0 pb-0;
+          }
+        }
+
+        .detail-btn {
+          @apply bg-[#FFC002] text-[#24262B];
+          @apply w-full mt-2;
+          border-radius: .5rem;
+        }
+      }
+    }
+  }
+}

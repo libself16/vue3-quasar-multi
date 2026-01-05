@@ -1,0 +1,177 @@
+$c1: #fff
+$c2: #000
+$c3: #d8c99f
+$c4: #75442f
+$cRed: #bc0e14
+$cPurple: #c43aeb
+$cBlue: #35a6e3
+$cGreen: #00843b
+
+$common-white-color: #ffffff
+$common-black-color: #000000
+
+$headerBg: linear-gradient(to right, rgba(19,0,0,0.7) 0%,rgba(19,0,0,0.8) 25%,rgba(19,0,0,1) 50%,rgba(19,0,0,0.8) 75%,rgba(19,0,0,0.7) 100%) //--【電腦版】header：背景色
+$headerBorder: #dccca0 //--【電腦版】header：邊框色
+$headerMainColor: #dccca0 //--【電腦版】header：元件主色
+
+$mbMenuBg: #5a0000 //--【手機版】側選單：選單背色
+$mbActBg: #7d0000 //--【手機版】側選單：活動連結區塊背色
+$mbBtnBg: #e3c66f //--【手機版】側選單：立即登入按鈕背景色
+$mbMainColor: #ffffff //--【手機版】header & 側選單：元件主色
+
+$main: #652DCC
+$main-cancel:#6E39CB
+$white-7: rgba(255, 255, 255, 0.7)
+$white-3: rgba(255, 255, 255, 0.3)
+$yellow-active:#FFC002
+$blue-active:#6288D2
+$blue-active-hover:rgba(98, 136, 210, 0.9)
+
+$pc-2xl-media: 1900px
+$pc-xl-media: 1600px
+$pc-lg-media: 1400px
+$pc-media: 1200px
+$pad-large: 1000px
+$pad-media: 992px
+$phone-media: 768px
+$iphone-media: 575px
+$iphone-pro-media: 390px
+$iphone-se-media: 376px
+
+.bg-main
+  background-color: $main !important
+
+.text-white-7
+  color: $white-7 !important
+
+
+//========== mixin ==========
+@mixin light
+  .body--light &
+    @content
+
+@mixin dark
+  .body--dark &
+    @content
+
+@mixin size($w,$h:$w)
+  width: $w
+  height: $h
+
+@mixin setAuto($w, $m:auto)
+  width: $w
+  margin: $m
+
+@mixin setImgBg($file, $w:null, $h:null, $size:initial, $post:top center, $repeat:no-repeat, $color:null)
+  background-image: url(~@img/#{$file})
+  background-repeat: $repeat
+  background-size: $size
+  background-position: $post
+  @if($color)
+    +setBg($color)
+  @if($w and $h)
+    +size($w, $h)
+
+@mixin setBg($color)
+  background-color: $color
+
+@mixin setBorder($w, $c)
+  border: $w solid $c
+
+@mixin position($type, $top, $left, $zindex:0)
+  position: $type
+  top: $top
+  left: $left
+  z-index: $zindex
+
+@mixin setPosAbs($top:0, $right:0, $bottom:null, $left:0, $zindex:0)
+  position: absolute
+  top: $top
+  right: $right
+  bottom: $bottom
+  left: $left
+  z-index: $zindex
+
+@mixin setFlex($horizontal:center, $vertical:center)
+  display: flex
+  align-items: $vertical
+  justify-content: $horizontal
+
+@mixin setFont($fz, $les:null, $lh:inherit, $fw:normal)
+  font-size: $fz
+  letter-spacing: $les
+  line-height: $lh
+  font-weight: $fw
+
+@mixin hideScrollBar()
+  -ms-overflow-style: none
+  scrollbar-width: none
+  ::-webkit-scrollbar
+    display: none
+
+//-pc-2xl 1900
+@mixin pc-2xl-width()
+  @media (max-width: $pc-2xl-media)
+    @content
+
+//-pc-4k 1600
+@mixin pc-xl-width()
+  @media (max-width: $pc-xl-media)
+    @content
+
+//-pc-2k 1400
+@mixin pc-lg-width()
+  @media (max-width: $pc-lg-media)
+    @content
+
+//-pc 1200
+@mixin pc-width()
+  @media (max-width: $pc-media)
+    @content
+
+//-pad-large 1000
+@mixin pad-large-width()
+  @media (max-width: $pad-large)
+    @content
+
+//-pad 992
+@mixin pad-width()
+  @media (max-width: $pad-media)
+    @content
+
+//-pad 999
+@mixin pad-portrait()
+  @media  screen and (orientation: portrait) and (max-width: 999px)
+    @content
+
+//-pad 999
+@mixin pad-landscape()
+  @media  screen and (orientation: landscape) and (max-width: 999px)
+    @content
+
+//-phone 768
+@mixin phone-width()
+  @media (max-width: $phone-media)
+    @content
+
+//-iphone 575
+@mixin iphone-width()
+  @media (max-width: $iphone-media)
+    @content
+
+//-only iphone5
+@mixin iphone5-width()
+  @media (width: 320px) and (height: 568px)
+    @content
+
+//-only iphone pro
+@mixin iphone-pro-width()
+  @media (max-width: $iphone-pro-media)
+    @content
+
+//-only iphone SE
+@mixin iphone-se-width()
+  @media (max-width: $iphone-se-media)
+    @content
+
+//===================================

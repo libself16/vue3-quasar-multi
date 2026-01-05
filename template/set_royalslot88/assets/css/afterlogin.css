@@ -1,0 +1,131 @@
+.currency-wrap {
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.currency-head {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    /* display: flex; */
+    text-align: center;
+}
+
+.currency-head .pref {
+    border: 1px solid #6237f0;
+    box-shadow: inset 0px -2px 7px #2b061d, inset 0px 1px 3px 1px #ffb6e3;
+    text-shadow: 2px 2px 7px #000;
+    background: #aa1e74;
+    color: #ffffff;
+    border-radius: 5px 0px 0px 0px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.currency-head .bal {
+    border: 1px solid #6237f0;
+    box-shadow: inset 0px -2px 7px #2b061d, inset 0px 1px 3px 1px #ffb6e3;
+    text-shadow: 2px 2px 7px #000;
+    background: #aa1e74;
+    color: #ffffff;
+    border-radius: 0px 5px 0px 0px;
+    padding: 5px 10px;
+    margin-left: 3px;
+    font-size: 14px;
+}
+
+.af-currency {
+    margin-top: 5px;
+}
+
+.af-amt label {
+    align-items: center;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 20% 75%;
+    background: #09112b;
+    margin-bottom: 3px;
+    padding: 4px;
+}
+
+.option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    left: 26%;
+    height: 30px;
+    width: 30px;
+    transition: all 0.15s ease-out 0s;
+    background: #cbd1d8;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+}
+
+.option-input:hover {
+    background: #9faab7;
+}
+
+.option-input:checked::before {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    content: '\f00c';
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Font Awesome 5 Free';
+}
+
+.option-input:checked::after {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #40e0d0;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+
+.option-input.radio {
+    border-radius: 50%;
+}
+
+.option-input.radio::after {
+    border-radius: 50%;
+}
+
+.option-input.radio {
+    border-radius: 50%;
+}
+
+.option-input:checked {
+    background: #aa1e74;
+    color: #ffffff;
+}
+
+.currency-amt {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    margin-left: 3px;
+    color: #fff;
+}
+
+.currency-country {
+    color: #73a9ff;
+    font-weight: bold;
+}

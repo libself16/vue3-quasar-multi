@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="description" content="maintain-page" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <!-- 防止瀏覽器快取 -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <meta
+      name="viewport"
+      content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width"
+    />
+    <!--styleshieet-->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="maintain-page">
+      <div class="rocket">
+        <img src="./images/rocket.png" alt="" />
+        <h1 id="title"></h1>
+        <div class="api-response">
+          <p id="finishTime"></p>
+          <p id="utcDate"></p>
+          <p id="localDate"></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      /** 固定的維護時間 (暫定為UTC時間凌晨2點) */
+      const UTC_MAINTAIN_COMPLETE_TIME = 2
+
+      /** 欲延長的維護時間 */
+      const EXTENSION_HOURS = 0
+
+      /** 預設語系 */
+      const BASE_LANG = "en"
+
+      function i18n(lang) {
+        const language = localStorage.getItem("lang") ? localStorage.getItem("lang") : lang
+        switch (language) {
+          case "jp":
+            document.getElementById("title").textContent = "ウェブサイトも更新中ですので、楽しみにしていてください!!"
+            document.getElementById("finishTime").textContent = "完了時間"
+            break
+          case "zh-tw":
+            document.getElementById("title").textContent = "網站正在升級中，敬請期待!!"
+            document.getElementById("finishTime").textContent = "完成時間"
+            break
+          case "zh-cn":
+            document.getElementById("title").textContent = "网站正在升级中，敬请期待!!"
+            document.getElementById("finishTime").textContent = "完成时间"
+            break
+          case "en":
+            document.getElementById("title").textContent = "The website is being upgraded, please stay tuned!!"
+            document.getElementById("finishTime").textContent = "Complete time"
+            break
+
+          default:
+            document.getElementById("title").textContent = "The website is being upgraded, please stay tuned!!"
+            document.getElementById("finishTime").textContent = "Complete time"
+            break
+        }
+      }
+
+      // 運算時間用
+      function addHours(date, hours = 0) {
+        return new Date(new Date(date).getTime() + hours * 60 * 60 * 1000)
+      }
+      function addMins(date, hours = 0) {
+        return new Date(new Date(date).getTime() + hours * 60 * 1000)
+      }
+
+      function getSettingList(apiUrl) {
+        let url = `${apiUrl.baseApi}${apiUrl.apiPath}/settings`
+
+        fetch(url)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok")
+            }
+            return response.json()
+          })
+          .then((res) => {
+            // 計算維護時間(UTC+0)
+            const utcMaintainCompleteTime = addHours(getMaintainCompleteTime(), EXTENSION_HOURS)
+
+            // 透過API取得的代理設定的時區
+            const clientUtcOffset = res.data?.utc_offset ?? 0
+
+            const utcDate = formatDate(utcMaintainCompleteTime)
+            const localDate = formatDate(
+              addMins(utcMaintainCompleteTime, clientUtcOffset),
+              Math.floor(clientUtcOffset / 60)
+            )
+
+            document.getElementById("utcDate").textContent = utcDate
+            document.getElementById("localDate").textContent = localDate
+            res.data && res.data?.default_language ? i18n(res.data.default_language) : i18n(BASE_LANG)
+          })
+          .catch((error) => {
+            i18n(BASE_LANG)
+            document.querySelector(".api-response").hidden = true
+            console.error("There has been a problem with your fetch operation:", error)
+          })
+      }
+      function formatDate(date, offset = null) {
+        const year = date.getUTCFullYear()
+        const month = ("0" + (date.getUTCMonth() + 1)).slice(-2)
+        const day = ("0" + date.getUTCDate()).slice(-2)
+        const hours = ("0" + date.getUTCHours()).slice(-2)
+        const minutes = ("0" + date.getMinutes()).slice(-2)
+        const seconds = ("0" + date.getSeconds()).slice(-2)
+
+        return `${year}-${month}-${day} ${hours}:${minutes}:${seconds} UTC+${offset ? offset : "0"}`
+      }
+
+      function getMaintainCompleteTime() {
+        const now = new Date()
+
+        // 取得今天的年份、月份和日期
+        const year = now.getUTCFullYear()
+        const month = now.getUTCMonth()
+        const date = now.getUTCDate()
+
+        // 取得 UTC+0 時區的維護結束時間
+        return new Date(Date.UTC(year, month, date, UTC_MAINTAIN_COMPLETE_TIME, 0, 0))
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("../environment.json")
+          .then((response) => {
+            return response.json()
+          })
+          .then((jsondata) => {
+            getSettingList(jsondata)
+          })
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+@import "app/template/bmm_set_obtd/assets/css/_variable.sass";
+
+.hide-hover {
+  :deep(.q-focus-helper) {
+    opacity: 0 !important;
+    background-color: transparent !important;
+  }
+}
+
+:deep(.bg-primary) {
+  background: $primary-color !important;
+}
+
+:deep(.text-primary) {
+  color: $primary-color !important;
+}
+
+:deep(.text-term) {
+  color: $text-vivid-blue-color;
+}
+
+:deep(.bg-submit) {
+  background: linear-gradient(90deg, $background-bright-blue-color 0%, $background-vivid-blue-color 100%) !important;
+}
+
+.btn-play {
+  @apply capitalize z-20;
+  padding: 0.5rem 1.875rem;
+  background: $background-electric-blue-color;
+  color: $text-light-color;
+  border-radius: 2.375rem;
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 510;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+
+  :deep(.q-btn__content) {
+    @apply whitespace-nowrap;
+  }
+}
+
+@mixin btn-common {
+  position: relative;
+  font-family: "PingFang SC";
+  font-style: normal;
+  min-width: 5.375rem;
+  color: $text-charcoal-gray-color !important;
+  background-color: $background-pale-gray-color !important;
+  height: 1.875rem;
+  min-height: 1.875rem;
+  text-transform: capitalize;
+}
+
+@keyframes reFreshAni {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-refresh {
+  &.active {
+    animation: reFreshAni 1s linear infinite;
+  }
+}

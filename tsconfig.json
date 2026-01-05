@@ -1,0 +1,27 @@
+{
+  "extends": "@quasar/app-vite/tsconfig-preset",
+  "compilerOptions": {
+    "isolatedModules": false,
+    "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
+    "paths": {
+      "@router/build": ["./src/router/build*", "./build*"],
+      "app/*": ["./*"],
+      "src/*": ["./src/*"],
+      "@/*": ["./src/*"]
+    }
+  },
+  "exclude": [
+    "dist",
+    ".quasar",
+    "coverage",
+    "public",
+    "tests",
+    "cypress",
+    "**/*.spec.ts",
+    "**/__mocks__/**",
+    ".vscode",
+    "tool",
+    "src-cordova"
+  ]
+}

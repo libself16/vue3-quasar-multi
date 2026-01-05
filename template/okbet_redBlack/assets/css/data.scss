@@ -1,0 +1,14 @@
+@import "app/template/okbet_redBlack/assets/css/_variable.sass";
+
+.no-data {
+  @apply flex flex-col items-center justify-center text-[2rem];
+  color: $text-lightest-gray-color;
+
+  img {
+    @apply opacity-50 max-w-[10rem] max-h-[10rem];
+  }
+
+  span {
+    @apply mt-2;
+  }
+}

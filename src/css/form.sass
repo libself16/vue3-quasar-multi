@@ -1,0 +1,140 @@
+.form-title-content
+  +setFlex(flex-start)
+  gap: .625rem
+  +iphone-width
+    margin-top: 1.25rem
+    margin-left: 1.6875rem
+  .color-label
+    width: .5rem
+    height: 1.5rem
+    background: $yellow-active
+  .title
+    color: #FFF
+    font-family: "Century Gothic"
+    font-size: 1.875rem
+    font-style: normal
+    font-weight: 700
+    line-height: normal
+    text-transform: uppercase
+    +iphone-width
+      font-size: 1.25rem
+
+.form-item
+  margin-top: .625rem
+  margin-left: 2.6875rem
+  +iphone-width
+    margin-top: 0
+    margin-left: 0
+  .label
+    padding: .5rem
+    color:  $white-7
+    font-family: "Century Gothic"
+    font-size: 1.25rem
+    font-weight: 700
+    text-transform: uppercase
+    +iphone-width
+      font-size: 1rem
+
+.input-content
+  .select-placeholder
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    +setFlex('flex-start')
+    color: rgba(28, 30, 34, 0.30)
+    font-family: "Noto Sans CJK TC"
+    font-size: 1rem
+    font-weight: 500
+    +iphone-width
+      font-size: .8125rem
+  ::v-deep(.q-field__control)
+    background-color: #fff
+    border: 1px solid rgba(110, 57, 203, 0.60)
+    border-radius: 8px
+    .q-field__native
+      color: rgba(28, 30, 34, 0.80)
+      font-family: "Noto Sans CJK TC"
+      font-size: 1rem
+      font-weight: bold
+      &:focus
+        color: rgba(28, 30, 34, 0.90)
+      +iphone-width
+        font-size: 1rem
+
+.radio-content
+  overflow: auto
+  +hideScrollBar
+  ::v-deep(.q-radio)
+    .q-radio__inner
+      margin-left: .625rem
+      margin-right: .625rem
+      color: #fff
+      background-color: #fff
+      border-color: #fff
+    .q-icon
+      font-size: .625rem
+      color: $main
+    .q-radio__label
+      color: rgba(255, 255, 255, 0.70)
+      font-family: "Century Gothic"
+      font-size: 1rem
+      font-style: normal
+      font-weight: 700
+      line-height: normal
+      white-space: nowrap
+      +iphone-width
+        font-size: .875rem
+
+.btn-toggle-content
+  ::v-deep(.q-btn-group)
+    overflow: auto
+    +hideScrollBar
+    .q-btn
+      padding: .25rem .5rem
+      border-radius: 8px
+      border: 1px solid rgba(255, 255, 255, 0.3)
+      margin-right: .75rem
+      background-color: #383838
+      color: rgba(255, 255, 255, 0.3)
+      white-space: nowrap
+      font-size: .875rem
+      +iphone-width
+        font-size: .75rem
+        margin-right: .5rem
+
+.action-btns
+  gap: .75rem
+  margin-top: 3.75rem
+  +iphone-width
+    margin-top: 2rem
+    margin-bottom: 2rem
+    &.multi-btns
+      width: 83.333%
+      justify-content: space-between
+      margin-left: auto
+      margin-right: auto
+  .submit-btn
+    border-radius: 8px
+    background: $yellow-active
+    padding: .5rem 3.625rem
+    font-size: 1.25rem
+    &:hover
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), $yellow-active
+    +iphone-width
+      padding: .25rem 2rem
+      font-size: 1rem
+      width: 100%
+
+  .cancle-btn
+    border-radius: 8px
+    background: $main-cancel
+    padding: .5rem 3.625rem
+    font-size: 1.25rem
+    &:hover
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%), $main-cancel
+    +iphone-width
+      padding: .25rem 2rem
+      margin-left: .5rem
+      font-size: 1rem
