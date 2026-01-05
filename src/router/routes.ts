@@ -22,18 +22,12 @@ export default async function (siteKey?: string) {
   let routes: RouteRecordRaw[] = []
   let beforeEach: NavigationGuardWithThis<undefined> | null = null
   // 取得環境變數檔裡的siteKey
-  // if ((process.env.NODE_ENV === "development" || process.env.VITE_APP_BUILD_MODE === "all") && siteKey) {
-  //   // const module = await import(`../../template/${siteKey}/router/routes.ts`)
+  if ((process.env.NODE_ENV === "development" || process.env.VITE_APP_BUILD_MODE === "all") && siteKey) {
+    const module = await import(`../../template/${siteKey}/router/routes.ts`)
 
-  //   routes = routerModule.routes ? routerModule.routes : []
-  //   beforeEach = routerModule && routerModule.beforeEach ? routerModule.beforeEach : null
-  // } else {
-  //   const module = await import("./build")
-  //   routes = module.routes ? module.routes : []
-  //   beforeEach = module.beforeEach ? module.beforeEach : null
-  // }
-
-  if (siteKey) {
+    routes = module.routes ? module.routes : []
+    beforeEach = module && module.beforeEach ? module.beforeEach : null
+  } else {
     routes = routerModule.routes ? routerModule.routes : []
     beforeEach = routerModule && routerModule.beforeEach ? routerModule.beforeEach : null
   }
